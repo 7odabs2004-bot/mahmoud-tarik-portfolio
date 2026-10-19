@@ -1,0 +1,4609 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090a0d">
+  <meta name="description"
+    content="Mahmoud Tarik — UI/UX Designer, Odoo Developer, AI Automation (n8n), Graphic Designer.">
+  <title>Mahmoud Tarik — Portfolio</title>
+  <link rel="icon" href="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA2NCA2NCI+PHJlY3Qgd2lkdGg9IjY0IiBoZWlnaHQ9IjY0IiByeD0iMTIiIGZpbGw9IiMwOTBhMGQiLz48dGV4dCB4PSIzMiIgeT0iNDQiIGZvbnQtZmFtaWx5PSJBcmlhbCxIZWx2ZXRpY2Esc2Fucy1zZXJpZiIgZm9udC1zaXplPSIzNiIgZm9udC13ZWlnaHQ9IjgwMCIgZmlsbD0iI2M5YTQ1YSIgdGV4dC1hbmNob3I9Im1pZGRsZSI+TTwvdGV4dD48L3N2Zz4=">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://7odabs2004-bot.github.io/mahmoud-tarik-portfolio/">
+  <meta property="og:image" content="https://7odabs2004-bot.github.io/mahmoud-tarik-portfolio/assets/og-image.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta name="twitter:image" content="https://7odabs2004-bot.github.io/mahmoud-tarik-portfolio/assets/og-image.jpg">
+  <meta property="og:title" content="Mahmoud Tarik — Portfolio">
+  <meta property="og:description" content="UI/UX Designer, Odoo Developer, AI Automation (n8n) and Graphic Designer.">
+  <meta name="twitter:card" content="summary_large_image">
+
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&family=Space+Mono:wght@400;700&display=swap"
+    rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #090a0d;
+      --paper: #111318;
+      --ink: #f1eee6;
+      --muted: #9a9ca4;
+      --line: #292c33;
+      --gold: #c9a45a;
+      --gold-dark: #a88343;
+      --dark: #0d0f13;
+      --dark-2: #151820;
+      --white: #f5f2ea;
+      --max: 1240px;
+      --sans: "DM Sans", sans-serif;
+      --display: "Manrope", sans-serif;
+      --mono: "Space Mono", monospace;
+      --ease: cubic-bezier(.22, .61, .36, 1);
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      scroll-behavior: smooth
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      line-height: 1.55
+    }
+
+    /* =========================
+   SMART GOLD CURSOR
+========================= */
+
+    html.has-cursor body,
+    html.has-cursor a,
+    html.has-cursor button,
+    html.has-cursor .project,
+    html.has-cursor .tag {
+      cursor: none;
+    }
+
+    .smart-cursor {
+      position: fixed;
+      left: 0;
+      top: 0;
+      width: 10px;
+      height: 10px;
+      z-index: 999999;
+      pointer-events: none;
+
+      transform: translate(-50%, -50%);
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      transition:
+        width 0.25s ease,
+        height 0.25s ease,
+        background 0.25s ease,
+        border 0.25s ease,
+        box-shadow 0.25s ease;
+    }
+
+    .cursor-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+
+      background: #d4af5a;
+
+      box-shadow:
+        0 0 8px rgba(212, 175, 90, 0.9),
+        0 0 20px rgba(212, 175, 90, 0.5);
+
+      transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+    }
+
+    .cursor-label {
+      position: absolute;
+
+      font-family: var(--mono);
+      font-size: 8px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+
+      color: #d4af5a;
+
+      white-space: nowrap;
+
+      opacity: 0;
+      transform: scale(0.7);
+
+      transition:
+        opacity 0.2s ease,
+        transform 0.25s ease;
+    }
+
+
+    /* =========================
+   PROJECT / LINK HOVER
+========================= */
+
+    .smart-cursor.is-hover {
+      width: 58px;
+      height: 58px;
+
+      border: 1px solid rgba(212, 175, 90, 0.7);
+      border-radius: 50%;
+
+      background: rgba(212, 175, 90, 0.05);
+
+      box-shadow:
+        0 0 20px rgba(212, 175, 90, 0.18),
+        inset 0 0 20px rgba(212, 175, 90, 0.05);
+    }
+
+    .smart-cursor.is-hover .cursor-dot {
+      width: 4px;
+      height: 4px;
+    }
+
+    .smart-cursor.is-hover .cursor-label {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+
+    /* =========================
+   IMAGE HOVER
+========================= */
+
+    .smart-cursor.is-view {
+      width: 72px;
+      height: 72px;
+
+      border: 1px solid #d4af5a;
+      border-radius: 50%;
+
+      background: rgba(10, 10, 10, 0.35);
+
+      box-shadow:
+        0 0 25px rgba(212, 175, 90, 0.3),
+        inset 0 0 20px rgba(212, 175, 90, 0.08);
+    }
+
+    .smart-cursor.is-view .cursor-dot {
+      opacity: 0;
+    }
+
+    .smart-cursor.is-view .cursor-label {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+
+    /* =========================
+   MOBILE
+========================= */
+
+    @media (max-width: 768px) {
+      .smart-cursor {
+        display: none;
+      }
+
+      body,
+      a,
+      button,
+      .project,
+      .tag {
+        cursor: auto;
+      }
+    }
+
+    body.menu-open {
+      overflow: hidden
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none
+    }
+
+    button {
+      font: inherit
+    }
+
+    img {
+      display: block;
+      max-width: 100%
+    }
+
+    ::selection {
+      background: var(--ink);
+      color: var(--bg)
+    }
+
+    .container {
+      width: min(calc(100% - 48px), var(--max));
+      margin: auto
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      color: var(--gold-dark);
+      font: 700 11px/1 var(--mono);
+      letter-spacing: .14em;
+      text-transform: uppercase
+    }
+
+    .eyebrow:before {
+      content: "";
+      width: 24px;
+      height: 1px;
+      background: currentColor
+    }
+
+    .section {
+      padding: 130px 0
+    }
+
+    .section-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: end;
+      gap: 30px;
+      margin-bottom: 55px
+    }
+
+    .section-title {
+      font: 800 clamp(42px, 6vw, 76px)/.98 var(--display);
+      letter-spacing: -.055em;
+      margin: 16px 0 0
+    }
+
+    .section-intro {
+      max-width: 430px;
+      color: var(--muted);
+      font-size: 16px
+    }
+
+    .gold {
+      color: var(--gold)
+    }
+
+    /* NAV */
+    .nav {
+      position: fixed;
+      z-index: 50;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 78px;
+      display: flex;
+      align-items: center;
+      background: rgba(244, 240, 232, .82);
+      backdrop-filter: blur(14px);
+      border-bottom: 1px solid rgba(23, 23, 23, .06)
+    }
+
+    .nav-inner {
+      width: min(calc(100% - 48px), var(--max));
+      margin: auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center
+    }
+
+    .brand {
+      font: 800 16px/1 var(--display);
+      letter-spacing: -.02em
+    }
+
+    .brand span {
+      color: var(--gold)
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      align-items: center
+    }
+
+    .nav-links a {
+      font: 600 12px var(--mono);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #55504a;
+      transition: .25s
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--ink)
+    }
+
+    .nav-links a.active:after {
+      content: "";
+      display: block;
+      height: 1px;
+      background: var(--gold);
+      margin-top: 5px
+    }
+
+    .menu-btn {
+      display: none;
+      border: 0;
+      background: none;
+      padding: 8px
+    }
+
+    /* HERO */
+    .hero {
+      min-height: 100svh;
+      display: flex;
+      align-items: center;
+      padding: 135px 0 70px;
+      position: relative;
+      overflow: hidden
+    }
+
+    .hero:before {
+      content: "";
+      position: absolute;
+      width: 650px;
+      height: 650px;
+      border-radius: 50%;
+      right: -260px;
+      top: 90px;
+      background: radial-gradient(circle, rgba(170, 130, 64, .14), transparent 67%);
+      pointer-events: none
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.02fr .98fr;
+      gap: 70px;
+      align-items: center
+    }
+
+    .hero-kicker {
+      font: 700 11px var(--mono);
+      letter-spacing: .16em;
+      text-transform: uppercase;
+      color: var(--gold-dark);
+      margin-bottom: 20px
+    }
+
+    .hero h1 {
+      font: 800 clamp(64px, 8.7vw, 132px)/.86 var(--display);
+      letter-spacing: -.07em;
+      margin: 0 0 30px;
+      max-width: 760px
+    }
+
+    .hero h1 .outline {
+      -webkit-text-stroke: 1.5px var(--ink);
+      color: transparent
+    }
+
+    .hero-copy {
+      max-width: 610px;
+      color: var(--muted);
+      font-size: 18px;
+      line-height: 1.7
+    }
+
+    .role-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 9px;
+      margin: 28px 0 32px
+    }
+
+    .role {
+      border: 1px solid var(--line);
+      background: rgba(255, 255, 255, .35);
+      padding: 8px 12px;
+      font: 700 11px var(--mono);
+      letter-spacing: .08em;
+      text-transform: uppercase
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      min-height: 48px;
+      padding: 0 19px;
+      border: 1px solid var(--ink);
+      font: 700 11px var(--mono);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      transition: transform .25s var(--ease), background .25s, color .25s
+    }
+
+    .btn:hover {
+      transform: translateY(-3px)
+    }
+
+    .btn.primary {
+      background: var(--ink);
+      color: var(--white)
+    }
+
+    .btn.primary:hover {
+      background: var(--gold-dark);
+      border-color: var(--gold-dark)
+    }
+
+    .btn.secondary:hover {
+      background: var(--ink);
+      color: var(--white)
+    }
+
+    .portrait-wrap {
+      position: relative;
+      max-width: 410px;
+      width: 100%;
+      margin-left: auto
+    }
+
+    .portrait-frame {
+      position: relative;
+      padding: 14px;
+      background: var(--dark)
+    }
+
+    .portrait-frame:before,
+    .portrait-frame:after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      pointer-events: none
+    }
+
+    .portrait-frame:before {
+      left: -1px;
+      top: -1px;
+      width: 95px;
+      height: 95px;
+      border-left: 1px solid var(--gold);
+      border-top: 1px solid var(--gold)
+    }
+
+    .portrait-frame:after {
+      right: -1px;
+      bottom: -1px;
+      width: 95px;
+      height: 95px;
+      border-right: 1px solid var(--gold);
+      border-bottom: 1px solid var(--gold)
+    }
+
+    .portrait {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      object-position: center 25%;
+      filter: saturate(.78) contrast(1.03)
+    }
+
+    .portrait-note {
+      position: absolute;
+      left: -28px;
+      bottom: 28px;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      padding: 13px 15px;
+      box-shadow: 0 14px 30px rgba(0, 0, 0, .08)
+    }
+
+    .portrait-note small {
+      display: block;
+      font: 700 11px var(--mono);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--gold-dark)
+    }
+
+    .portrait-note strong {
+      font: 700 15px var(--display)
+    }
+
+    .scroll-cue {
+      position: absolute;
+      bottom: 28px;
+      left: 0;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      color: #80796e;
+      font: 700 11px var(--mono);
+      letter-spacing: .16em;
+      text-transform: uppercase
+    }
+
+    .scroll-cue i {
+      width: 34px;
+      height: 1px;
+      background: var(--line)
+    }
+
+    /* MARQUEE */
+    .marquee {
+      background: var(--ink);
+      color: var(--white);
+      overflow: hidden;
+      border-block: 1px solid #2c2a26
+    }
+
+    .marquee-track {
+      display: flex;
+      width: max-content;
+      animation: marquee 28s linear infinite
+    }
+
+    .marquee-item {
+      padding: 19px 28px;
+      font: 700 11px var(--mono);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      white-space: nowrap
+    }
+
+    .marquee-item span {
+      color: var(--gold)
+    }
+
+    @keyframes marquee {
+      to {
+        transform: translateX(-50%)
+      }
+    }
+
+    /* WORK */
+    .work-grid {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      gap: 22px
+    }
+
+    .project {
+      grid-column: span 7;
+      background: var(--paper);
+      border: 1px solid var(--line);
+      overflow: hidden;
+      transition: transform .45s var(--ease), box-shadow .45s
+    }
+
+    .project:nth-child(2) {
+      grid-column: span 5;
+      margin-top: 110px
+    }
+
+    .project:nth-child(3) {
+      grid-column: 3/span 7
+    }
+
+    .project:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 25px 60px rgba(23, 23, 23, .09)
+    }
+
+    .project-media {
+      position: relative;
+      aspect-ratio: 16/10;
+      background: #24221e;
+      overflow: hidden
+    }
+
+    .project-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform .7s var(--ease)
+    }
+
+    .project:hover .project-media img {
+      transform: scale(1.035)
+    }
+
+    .project-media .number {
+      position: absolute;
+      top: 17px;
+      left: 17px;
+      color: var(--white);
+      font: 700 11px var(--mono);
+      letter-spacing: .12em;
+      background: rgba(23, 23, 23, .72);
+      padding: 7px 9px
+    }
+
+    .project-body {
+      padding: 25px
+    }
+
+    .project-meta {
+      font: 700 11px var(--mono);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gold-dark)
+    }
+
+    .project h3 {
+      font: 800 clamp(25px, 3vw, 39px)/1.05 var(--display);
+      letter-spacing: -.04em;
+      margin: 10px 0
+    }
+
+    .project p {
+      color: var(--muted);
+      max-width: 620px;
+      margin: 0 0 20px
+    }
+
+    .project-foot {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 15px;
+      border-top: 1px solid var(--line);
+      padding-top: 16px
+    }
+
+    .tags {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px
+    }
+
+    .tag {
+      font: 700 11px var(--mono);
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: #6c665d;
+      border: 1px solid var(--line);
+      padding: 6px 8px
+    }
+
+    .project-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font: 700 11px var(--mono);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      white-space: nowrap;
+      border: 1px solid rgba(201, 164, 90, .62);
+      color: #e7dfcf;
+      padding: 10px 13px;
+      background: rgba(201, 164, 90, .05);
+      transition: transform .3s ease, background .3s ease, border-color .3s ease, box-shadow .3s ease, color .3s ease
+    }
+
+    .project-link span {
+      color: var(--gold);
+      margin-left: 1px;
+      transition: transform .3s ease
+    }
+
+    .project-link:hover {
+      transform: translateY(-2px);
+      background: rgba(201, 164, 90, .13);
+      border-color: var(--gold);
+      color: #fff;
+      box-shadow: 0 0 22px rgba(201, 164, 90, .16)
+    }
+
+    .project-link:hover span {
+      transform: translate(2px, -2px)
+    }
+
+    /* CAPABILITIES */
+    .dark-section {
+      background: var(--dark);
+      color: var(--white);
+      position: relative;
+      overflow: hidden
+    }
+
+    .dark-section:after {
+      content: "";
+      position: absolute;
+      right: -150px;
+      bottom: -300px;
+      width: 650px;
+      height: 650px;
+      border-radius: 50%;
+      border: 1px solid rgba(170, 130, 64, .18);
+      box-shadow: 0 0 0 70px rgba(170, 130, 64, .025), 0 0 0 140px rgba(170, 130, 64, .02)
+    }
+
+    .dark-section .eyebrow {
+      color: #c49a51
+    }
+
+    .dark-section .section-intro {
+      color: #aaa39a
+    }
+
+    .cap-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border-top: 1px solid #3b3934
+    }
+
+    .cap {
+      padding: 35px 24px 40px;
+      border-right: 1px solid #3b3934;
+      min-height: 290px;
+      transition: background .3s
+    }
+
+    .cap:last-child {
+      border-right: 0
+    }
+
+    .cap:hover {
+      background: #1d1c19
+    }
+
+    .cap-no {
+      font: 700 11px var(--mono);
+      color: #9f7a3c
+    }
+
+    .cap h3 {
+      font: 800 28px/1.05 var(--display);
+      letter-spacing: -.04em;
+      margin: 70px 0 16px
+    }
+
+    .cap p {
+      color: #a6a097;
+      font-size: 14px;
+      line-height: 1.7
+    }
+
+    .cap-list {
+      margin-top: 22px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 7px
+    }
+
+    .cap-list span {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      font: 700 11px var(--mono);
+      color: #d5d0c8;
+      border: 1px solid #45423c;
+      padding: 6px 8px;
+      transition: border-color .25s ease, background .25s ease, transform .25s ease
+    }
+
+    .cap-list span:hover {
+      border-color: rgba(201, 164, 90, .62);
+      background: rgba(201, 164, 90, .06);
+      transform: translateY(-2px)
+    }
+
+    .cap-list .brand-icon {
+      width: 14px;
+      height: 14px;
+      flex-basis: 14px;
+      margin: 0;
+      opacity: .9
+    }
+
+    .cap-list .mini-icon {
+      width: 14px;
+      height: 14px;
+      flex: 0 0 14px;
+      opacity: .85
+    }
+
+    /* SYSTEM */
+    .system-grid {
+      display: grid;
+      grid-template-columns: .85fr 1.15fr;
+      gap: 90px;
+      align-items: center
+    }
+
+    .system-copy h2 {
+      font: 800 clamp(45px, 6vw, 78px)/.98 var(--display);
+      letter-spacing: -.055em;
+      margin: 16px 0 24px
+    }
+
+    .system-copy p {
+      color: var(--muted);
+      max-width: 500px;
+      font-size: 16px
+    }
+
+    .flow {
+      border: 1px solid var(--line);
+      background: var(--paper);
+      padding: 25px
+    }
+
+    .flow-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 28px
+    }
+
+    .flow-label {
+      font: 700 11px var(--mono);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--gold-dark)
+    }
+
+    .live-dot {
+      width: 7px;
+      height: 7px;
+      border-radius: 50%;
+      background: #6d8a59;
+      box-shadow: 0 0 0 5px rgba(109, 138, 89, .1)
+    }
+
+    .flow-steps {
+      display: grid;
+      grid-template-columns: repeat(5, 1fr);
+      gap: 9px;
+      align-items: stretch
+    }
+
+    .step {
+      position: relative;
+      border: 1px solid var(--line);
+      padding: 20px 12px;
+      min-height: 115px;
+      background: #f7f3eb
+    }
+
+    .step:not(:last-child):after {
+      content: "→";
+      position: absolute;
+      right: -17px;
+      top: 45px;
+      color: var(--gold);
+      z-index: 2;
+      font-weight: 700
+    }
+
+    .step b {
+      display: block;
+      font: 700 11px var(--mono);
+      letter-spacing: .08em;
+      color: var(--gold-dark);
+      text-transform: uppercase
+    }
+
+    .step strong {
+      display: block;
+      font: 800 18px var(--display);
+      margin-top: 24px;
+      letter-spacing: -.03em
+    }
+
+    .integration-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      margin-top: 22px
+    }
+
+    .integration {
+      font: 700 11px var(--mono);
+      letter-spacing: .05em;
+      border: 1px solid var(--line);
+      padding: 7px 9px
+    }
+
+    /* ABOUT */
+    .about-grid {
+      display: grid;
+      grid-template-columns: .8fr 1.2fr;
+      gap: 100px
+    }
+
+    .about-big {
+      font: 800 clamp(38px, 5vw, 68px)/1 var(--display);
+      letter-spacing: -.055em;
+      margin: 0
+    }
+
+    .about-text {
+      font-size: 18px;
+      line-height: 1.8;
+      color: #4f4b45
+    }
+
+    .about-text p {
+      margin: 0 0 20px
+    }
+
+    .principles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 15px;
+      margin-top: 42px
+    }
+
+    .principle {
+      border-top: 1px solid var(--line);
+      padding-top: 15px
+    }
+
+    .principle b {
+      font: 700 11px var(--mono);
+      letter-spacing: .1em;
+      color: var(--gold-dark)
+    }
+
+    .principle h3 {
+      font: 800 22px var(--display);
+      margin: 13px 0 7px
+    }
+
+    .principle p {
+      font-size: 13px;
+      color: var(--muted);
+      margin: 0
+    }
+
+    /* SKILLS */
+    .skills-wrap {
+      display: grid;
+      grid-template-columns: .7fr 1.3fr;
+      gap: 90px
+    }
+
+    .skills-title {
+      font: 800 clamp(44px, 5.5vw, 70px)/1 var(--display);
+      letter-spacing: -.055em;
+      margin: 15px 0
+    }
+
+    .skills-note {
+      color: var(--muted);
+      max-width: 380px
+    }
+
+    .skill-groups {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px
+    }
+
+    .skill-group {
+      border: 1px solid var(--line);
+      background: var(--paper);
+      padding: 24px
+    }
+
+    .skill-group h3 {
+      margin: 0 0 18px;
+      font: 800 18px var(--display)
+    }
+
+    .skill-pills {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px
+    }
+
+    .skill-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      border: 1px solid var(--line);
+      padding: 8px 10px;
+      font: 700 11px var(--mono);
+      letter-spacing: .04em;
+      color: #c8c9cf;
+      transition: border-color .25s ease, transform .25s ease, background .25s ease
+    }
+
+    .skill-pill:hover {
+      border-color: rgba(201, 164, 90, .55);
+      background: rgba(201, 164, 90, .05);
+      transform: translateY(-2px)
+    }
+
+    .skill-pill .brand-icon {
+      width: 15px;
+      height: 15px;
+      flex-basis: 15px
+    }
+
+    /* ================================
+   CERTIFICATION
+================================ */
+
+    .certificate-section {
+      position: relative;
+      padding: 140px 6vw;
+      background: #080808;
+      overflow: hidden;
+    }
+
+
+    /* HEADING */
+
+    .certificate-heading {
+      display: flex;
+      align-items: flex-start;
+      gap: 28px;
+      margin-bottom: 55px;
+    }
+
+    .certificate-number {
+      font-size: 72px;
+      line-height: 1;
+      font-weight: 300;
+      color: #c9a85c;
+      letter-spacing: -4px;
+    }
+
+    .certificate-heading .section-label {
+      display: block;
+      margin-bottom: 14px;
+      color: #c9a85c;
+      font-size: 12px;
+      letter-spacing: 4px;
+    }
+
+    .certificate-heading h2 {
+      margin: 0;
+      font-size: clamp(28px, 4vw, 52px);
+      font-weight: 400;
+      color: #f2f2f2;
+    }
+
+    .certificate-heading h2 span {
+      color: #c9a85c;
+    }
+
+
+    /* MAIN CARD */
+
+    .certificate-card {
+      position: relative;
+      display: grid;
+      grid-template-columns: 0.9fr 1.1fr;
+      min-height: 560px;
+
+      background:
+        radial-gradient(circle at 75% 50%,
+          rgba(201, 168, 92, 0.09),
+          transparent 35%),
+        #0d0d0d;
+
+      border: 1px solid rgba(201, 168, 92, 0.28);
+      border-radius: 24px;
+
+      overflow: hidden;
+
+      box-shadow:
+        0 0 80px rgba(201, 168, 92, 0.04),
+        inset 0 0 60px rgba(255, 255, 255, 0.015);
+
+      transition:
+        border-color 0.4s ease,
+        box-shadow 0.4s ease;
+    }
+
+    .certificate-card:hover {
+      border-color: rgba(201, 168, 92, 0.55);
+
+      box-shadow:
+        0 0 90px rgba(201, 168, 92, 0.08),
+        inset 0 0 60px rgba(255, 255, 255, 0.02);
+    }
+
+
+    /* LEFT CONTENT */
+
+    .certificate-content {
+      position: relative;
+      z-index: 2;
+      padding: 70px 55px;
+    }
+
+
+    .certificate-category {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 45px;
+    }
+
+    .certificate-icon {
+      width: 52px;
+      height: 52px;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      border: 1px solid rgba(201, 168, 92, 0.5);
+      border-radius: 10px;
+
+      color: #c9a85c;
+      font-size: 22px;
+
+      box-shadow:
+        0 0 25px rgba(201, 168, 92, 0.08);
+    }
+
+    .certificate-category>div:last-child {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
+
+    .certificate-category span {
+      color: #c9a85c;
+      font-size: 13px;
+      letter-spacing: 3px;
+    }
+
+    .certificate-category small {
+      color: rgba(255, 255, 255, 0.45);
+      font-size: 10px;
+      letter-spacing: 3px;
+    }
+
+
+    /* TITLE */
+
+    .certificate-content h3 {
+      margin: 0 0 28px;
+
+      color: #f5f5f5;
+
+      font-size: clamp(36px, 4vw, 58px);
+      line-height: 1.05;
+      font-weight: 400;
+      letter-spacing: -2px;
+    }
+
+    .certificate-content h3 strong {
+      display: block;
+      color: #c9a85c;
+      font-weight: 400;
+    }
+
+
+    /* ROUTE BRAND */
+
+    .academy-brand {
+      margin-bottom: 30px;
+    }
+
+    .academy-brand img {
+      display: block;
+
+      width: 170px;
+      max-width: 100%;
+      height: auto;
+
+      object-fit: contain;
+
+      filter:
+        brightness(1.15) drop-shadow(0 0 12px rgba(201, 168, 92, 0.12));
+    }
+
+
+    /* DESCRIPTION */
+
+    .certificate-description {
+      max-width: 480px;
+
+      margin: 0 0 32px;
+
+      color: rgba(255, 255, 255, 0.55);
+
+      font-size: 15px;
+      line-height: 1.8;
+    }
+
+
+    /* META */
+
+    .certificate-meta {
+      display: flex;
+      gap: 35px;
+
+      margin-bottom: 38px;
+    }
+
+    .meta-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .meta-icon {
+      color: #c9a85c;
+      font-size: 20px;
+    }
+
+    .meta-item div {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .meta-item small {
+      color: rgba(255, 255, 255, 0.35);
+      font-size: 9px;
+      letter-spacing: 2px;
+    }
+
+    .meta-item strong {
+      color: #ddd;
+      font-size: 12px;
+      letter-spacing: 2px;
+    }
+
+
+    /* BUTTON */
+
+    .certificate-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 13px;
+
+      padding: 15px 22px;
+
+      color: #c9a85c;
+      text-decoration: none;
+
+      border: 1px solid #c9a85c;
+      border-radius: 8px;
+
+      font-size: 11px;
+      letter-spacing: 2px;
+
+      transition:
+        background 0.35s ease,
+        color 0.35s ease,
+        box-shadow 0.35s ease,
+        transform 0.35s ease;
+    }
+
+    .certificate-button:hover {
+      background: #c9a85c;
+      color: #080808;
+
+      box-shadow:
+        0 0 30px rgba(201, 168, 92, 0.28);
+
+      transform: translateY(-3px);
+    }
+
+    .button-icon {
+      font-size: 12px;
+    }
+
+    .button-arrow {
+      font-size: 18px;
+      line-height: 0;
+    }
+
+
+    /* ================================
+   CERTIFICATE PREVIEW
+================================ */
+
+    .certificate-preview {
+      position: relative;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 55px;
+
+      text-decoration: none;
+
+      cursor: pointer;
+    }
+
+
+    /* GOLD AMBIENT GLOW */
+
+    .certificate-preview::before {
+      content: "";
+
+      position: absolute;
+
+      width: 70%;
+      height: 70%;
+
+      background: rgba(201, 168, 92, 0.10);
+
+      filter: blur(80px);
+
+      opacity: 0.8;
+
+      transition: opacity 0.5s ease;
+    }
+
+    .certificate-preview:hover::before {
+      opacity: 1;
+    }
+
+
+    /* FRAME */
+
+    .certificate-frame {
+      position: relative;
+
+      width: 100%;
+      max-width: 650px;
+
+      padding: 13px;
+
+      background: linear-gradient(135deg,
+          rgba(201, 168, 92, 0.8),
+          rgba(255, 255, 255, 0.12),
+          rgba(201, 168, 92, 0.7));
+
+      border-radius: 15px;
+
+      transform: perspective(1200px) rotateY(-3deg);
+
+      transition:
+        transform 0.6s cubic-bezier(.2, .8, .2, 1),
+        box-shadow 0.6s ease;
+    }
+
+    .certificate-frame::before {
+      content: "";
+
+      position: absolute;
+      inset: 4px;
+
+      border: 1px solid rgba(255, 255, 255, 0.18);
+
+      border-radius: 11px;
+
+      pointer-events: none;
+    }
+
+    .certificate-frame img {
+      display: block;
+
+      width: 100%;
+      height: auto;
+
+      border-radius: 8px;
+
+      transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+    }
+
+    .certificate-preview:hover .certificate-frame {
+      transform:
+        perspective(1200px) rotateY(0deg) translateY(-8px) scale(1.015);
+
+      box-shadow:
+        0 25px 70px rgba(0, 0, 0, 0.55),
+        0 0 45px rgba(201, 168, 92, 0.16);
+    }
+
+    .certificate-preview:hover .certificate-frame img {
+      filter: brightness(0.72);
+    }
+
+
+    /* BADGE */
+
+    .certificate-badge {
+      position: absolute;
+
+      top: 25px;
+      right: 25px;
+
+      width: 82px;
+      height: 95px;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      background: #0c0c0c;
+
+      border: 1px solid #c9a85c;
+
+      color: #c9a85c;
+
+      box-shadow:
+        0 10px 30px rgba(0, 0, 0, 0.45);
+
+      z-index: 3;
+    }
+
+    .certificate-badge span {
+      font-size: 18px;
+      margin-bottom: 5px;
+    }
+
+    .certificate-badge small {
+      font-size: 8px;
+      letter-spacing: 2px;
+    }
+
+    .certificate-badge strong {
+      font-size: 7px;
+      letter-spacing: 1px;
+      margin-top: 4px;
+    }
+
+
+    /* HOVER LABEL */
+
+    .certificate-hover {
+      position: absolute;
+      inset: 0;
+
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      pointer-events: none;
+
+      opacity: 0;
+
+      transition: opacity 0.4s ease;
+    }
+
+    .certificate-hover span {
+      padding: 14px 22px;
+
+      background: rgba(8, 8, 8, 0.85);
+
+      border: 1px solid #c9a85c;
+
+      color: #c9a85c;
+
+      font-size: 10px;
+      letter-spacing: 2px;
+
+      box-shadow:
+        0 0 30px rgba(201, 168, 92, 0.15);
+    }
+
+    .certificate-preview:hover .certificate-hover {
+      opacity: 1;
+    }
+
+
+    /* ================================
+   MOBILE
+================================ */
+
+    @media (max-width: 900px) {
+
+      .certificate-card {
+        grid-template-columns: 1fr;
+      }
+
+      .certificate-content {
+        padding: 45px 30px;
+      }
+
+      .certificate-preview {
+        padding: 25px 30px 45px;
+      }
+
+      .certificate-frame {
+        transform: none;
+      }
+
+      .certificate-meta {
+        flex-wrap: wrap;
+      }
+
+    }
+
+
+    @media (max-width: 600px) {
+
+      .certificate-section {
+        padding: 90px 20px;
+      }
+
+      .certificate-heading {
+        gap: 15px;
+      }
+
+      .certificate-number {
+        font-size: 48px;
+      }
+
+      .certificate-content h3 {
+        font-size: 38px;
+      }
+
+      .certificate-category {
+        margin-bottom: 30px;
+      }
+
+      .certificate-meta {
+        gap: 20px;
+      }
+
+      .certificate-badge {
+        width: 65px;
+        height: 75px;
+
+        top: 15px;
+        right: 15px;
+      }
+
+    }
+
+
+
+    /* GRAPHIC DESIGN GALLERY */
+    .gallery-section {
+      position: relative;
+      overflow: hidden;
+      background: #08090c;
+      border-block: 1px solid #191c22
+    }
+
+    .gallery-section:before {
+      content: "";
+      position: absolute;
+      width: 520px;
+      height: 520px;
+      right: -220px;
+      top: 70px;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(201, 164, 90, .10), transparent 68%);
+      pointer-events: none
+    }
+
+    /* LIGHTBOX */
+    .lightbox {
+      position: fixed;
+      inset: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      background: rgba(3, 4, 6, .92);
+      backdrop-filter: blur(14px);
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+      transition: opacity .35s, visibility .35s
+    }
+
+    .lightbox.open {
+      opacity: 1;
+      visibility: visible;
+      pointer-events: auto
+    }
+
+    .lightbox-inner {
+      width: min(1100px, 94vw);
+      max-height: 90vh;
+      position: relative;
+      transform: translateY(15px) scale(.98);
+      transition: transform .45s var(--ease)
+    }
+
+    .lightbox.open .lightbox-inner {
+      transform: none
+    }
+
+    .lightbox-image-wrap {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 300px;
+      border: 1px solid #292c33;
+      background: #090a0d;
+      box-shadow: 0 30px 100px rgba(0, 0, 0, .65);
+      overflow: hidden
+    }
+
+    .lightbox-image {
+      max-width: 100%;
+      max-height: 78vh;
+      width: auto;
+      height: auto;
+      object-fit: contain
+    }
+
+    .lightbox-placeholder {
+      display: none;
+      padding: 100px 30px;
+      text-align: center;
+      color: #858993;
+      font: 700 11px var(--mono);
+      letter-spacing: .12em;
+      text-transform: uppercase
+    }
+
+    .lightbox-close {
+      position: absolute;
+      right: -10px;
+      top: -10px;
+      z-index: 4;
+      width: 42px;
+      height: 42px;
+      border: 1px solid rgba(201, 164, 90, .55);
+      background: #0d0f13;
+      color: #f1eee6;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      transition: .3s
+    }
+
+    .lightbox-close:hover {
+      background: var(--gold);
+      color: #090a0d;
+      transform: rotate(90deg)
+    }
+
+    .lightbox-caption {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: end;
+      padding: 16px 2px 0
+    }
+
+    .lightbox-caption small {
+      display: block;
+      color: var(--gold);
+      font: 700 11px var(--mono);
+      letter-spacing: .12em;
+      text-transform: uppercase
+    }
+
+    .lightbox-caption h3 {
+      margin: 5px 0 0;
+      color: #eeeae2;
+      font: 800 24px var(--display)
+    }
+
+    .lightbox-caption p {
+      margin: 3px 0 0;
+      color: #888c96;
+      font-size: 12px
+    }
+
+    .lightbox-tip {
+      color: #686c75;
+      font: 700 11px var(--mono);
+      letter-spacing: .08em;
+      text-transform: uppercase
+    }
+
+    /* CONTACT */
+    .contact {
+      background: var(--gold-dark);
+      color: var(--white);
+      position: relative;
+      overflow: hidden
+    }
+
+    .contact:before {
+      content: "";
+      position: absolute;
+      right: -130px;
+      top: -180px;
+      width: 520px;
+      height: 520px;
+      border-radius: 50%;
+      border: 1px solid rgba(255, 255, 255, .15);
+      box-shadow: 0 0 0 70px rgba(255, 255, 255, .025), 0 0 0 140px rgba(255, 255, 255, .018)
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr .9fr;
+      gap: 80px;
+      align-items: end
+    }
+
+    .contact h2 {
+      font: 800 clamp(55px, 8vw, 108px)/.9 var(--display);
+      letter-spacing: -.075em;
+      margin: 15px 0 25px;
+      max-width: 760px
+    }
+
+    .contact p {
+      color: #e2d6c1;
+      max-width: 520px;
+      font-size: 17px
+    }
+
+    .contact-list {
+      border-top: 1px solid rgba(255, 255, 255, .22)
+    }
+
+    .contact-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding: 18px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, .22);
+      font-size: 14px
+    }
+
+    .contact-row span:first-child {
+      font: 700 11px var(--mono);
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: #dcccae
+    }
+
+    .contact-row span:last-child {
+      font-weight: 600
+    }
+
+    .contact-row:hover span:last-child {
+      text-decoration: underline
+    }
+
+    /* FOOTER */
+    footer {
+      background: var(--ink);
+      color: #d8d3ca;
+      padding: 24px 0
+    }
+
+    .footer-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px
+    }
+
+    footer small {
+      font: 700 11px var(--mono);
+      letter-spacing: .08em;
+      color: #88827a;
+      text-transform: uppercase
+    }
+
+    .footer-links {
+      display: flex;
+      gap: 18px
+    }
+
+    .footer-links a {
+      font: 700 11px var(--mono);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: #b5afa7
+    }
+
+    .footer-links a:hover {
+      color: var(--white)
+    }
+
+    /* REVEAL */
+    [data-reveal] {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .8s var(--ease), transform .8s var(--ease)
+    }
+
+    [data-reveal].show {
+      opacity: 1;
+      transform: none
+    }
+
+    .delay-1 {
+      transition-delay: .08s
+    }
+
+    .delay-2 {
+      transition-delay: .16s
+    }
+
+    .delay-3 {
+      transition-delay: .24s
+    }
+
+
+
+    /* BRAND ICONS */
+    .brand-icon {
+      width: 20px;
+      height: 20px;
+      display: inline-block;
+      flex: 0 0 20px;
+      object-fit: contain;
+      filter: grayscale(1) brightness(1.65);
+      opacity: .9;
+      transition: transform .25s ease, filter .25s ease, opacity .25s ease;
+    }
+
+    .brand-icon.gold {
+      filter: grayscale(1) sepia(1) saturate(.55) brightness(1.25)
+    }
+
+    .icon-label {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px
+    }
+
+    .role .brand-icon {
+      width: 16px;
+      height: 16px;
+      flex-basis: 16px;
+      filter: grayscale(1) brightness(1.7)
+    }
+
+    .project .brand-icon {
+      width: 18px;
+      height: 18px;
+      flex-basis: 18px
+    }
+
+    .cap .brand-icon {
+      width: 24px;
+      height: 24px;
+      flex-basis: 24px;
+      margin-bottom: 14px
+    }
+
+    .skill-group .brand-icon {
+      width: 22px;
+      height: 22px;
+      flex-basis: 22px
+    }
+
+    .contact-row .brand-icon {
+      width: 21px;
+      height: 21px;
+      flex-basis: 21px
+    }
+
+    .contact-row:hover .brand-icon {
+      filter: grayscale(1) sepia(1) saturate(.7) brightness(1.35);
+      transform: translateY(-1px)
+    }
+
+    .flow-tool .brand-icon {
+      width: 17px;
+      height: 17px;
+      flex-basis: 17px;
+      vertical-align: middle
+    }
+
+    /* DARK THEME — final visual pass */
+    body {
+      background: var(--bg);
+      color: var(--ink)
+    }
+
+    ::selection {
+      background: var(--gold);
+      color: #090a0d
+    }
+
+    .nav {
+      background: rgba(9, 10, 13, .82);
+      border-bottom: 1px solid rgba(255, 255, 255, .07);
+    }
+
+    .nav-links a {
+      color: #8f929a
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      color: var(--ink)
+    }
+
+    .menu-btn {
+      color: var(--ink)
+    }
+
+    .hero {
+      background: var(--bg)
+    }
+
+    .hero:before {
+      background: radial-gradient(circle, rgba(201, 164, 90, .11), transparent 67%);
+    }
+
+    .hero h1 {
+      color: #f3f0e8;
+      text-shadow: 0 18px 55px rgba(0, 0, 0, .28);
+    }
+
+    .hero h1 .outline {
+      -webkit-text-stroke: 0;
+      color: var(--gold);
+      position: relative;
+      display: inline-block;
+    }
+
+    .hero h1 .outline:after {
+      content: "";
+      position: absolute;
+      left: 3px;
+      bottom: -10px;
+      width: 62%;
+      height: 2px;
+      background: linear-gradient(90deg, var(--gold), transparent);
+      opacity: .7;
+    }
+
+    .hero-copy {
+      color: #a5a7ae
+    }
+
+    .role {
+      border-color: #2b2e35;
+      background: #111318;
+      color: #b9bbc1;
+    }
+
+    .btn {
+      border-color: #454850
+    }
+
+    .btn.primary {
+      background: #f1eee6;
+      color: #090a0d;
+      border-color: #f1eee6
+    }
+
+    .btn.primary:hover {
+      background: var(--gold);
+      border-color: var(--gold)
+    }
+
+    .btn.secondary {
+      color: #e5e2da
+    }
+
+    .btn.secondary:hover {
+      background: #f1eee6;
+      color: #090a0d
+    }
+
+    .portrait-frame {
+      background: #050608;
+      box-shadow: 0 30px 80px rgba(0, 0, 0, .35);
+    }
+
+    .portrait-note {
+      background: #111318;
+      border-color: #2b2e35;
+      box-shadow: 0 18px 40px rgba(0, 0, 0, .35);
+      color: var(--ink);
+    }
+
+    .portrait-note strong {
+      color: #ece9e1
+    }
+
+    .scroll-cue {
+      color: #777b84
+    }
+
+    .marquee {
+      background: #050608;
+      color: #e8e5dd;
+      border-color: #202329;
+    }
+
+    .section-title,
+    .system-copy h2,
+    .about-big,
+    .skills-title {
+      color: #eeeae2
+    }
+
+    .section-intro,
+    .about-text,
+    .skills-note {
+      color: #999ca4
+    }
+
+    .project {
+      background: #111318;
+      border-color: #292c33;
+      box-shadow: none;
+    }
+
+    .project:hover {
+      box-shadow: 0 25px 70px rgba(0, 0, 0, .35);
+    }
+
+    .project-media {
+      background: #08090c
+    }
+
+    .project-body {
+      color: #eeeae2
+    }
+
+    .project p {
+      color: #9699a1
+    }
+
+    .project-foot {
+      border-color: #292c33
+    }
+
+    .tag,
+    .skill-pill {
+      border-color: #30333a;
+      color: #a7a9b0;
+    }
+
+    .dark-section {
+      background: #0d0f13;
+      border-block: 1px solid #191c22;
+    }
+
+    .dark-section:after {
+      border-color: rgba(201, 164, 90, .13);
+      box-shadow: 0 0 0 70px rgba(201, 164, 90, .018), 0 0 0 140px rgba(201, 164, 90, .012);
+    }
+
+    .cap-grid {
+      border-color: #292c33
+    }
+
+    .cap {
+      border-color: #292c33
+    }
+
+    .cap:hover {
+      background: #13161c
+    }
+
+    .cap p {
+      color: #9b9da5
+    }
+
+    .cap-list span {
+      color: #c6c8cd;
+      border-color: #343740
+    }
+
+    .flow {
+      background: #111318;
+      border-color: #292c33;
+    }
+
+    .step {
+      background: #0d0f13;
+      border-color: #2b2e35;
+      color: #ece9e1;
+    }
+
+    .integration {
+      border-color: #30333a;
+      color: #aeb0b7
+    }
+
+    .about-text {
+      color: #a0a2aa
+    }
+
+    .principle {
+      border-color: #292c33
+    }
+
+    .principle p {
+      color: #92959d
+    }
+
+    .skill-group {
+      background: #111318;
+      border-color: #292c33;
+    }
+
+    .skill-group h3 {
+      color: #eeeae2
+    }
+
+    /* Contact: near-black, premium, not brown */
+    .contact {
+      background: #07080b;
+      color: #f1eee6;
+      border-top: 1px solid #24272d;
+    }
+
+    .contact:before {
+      border-color: rgba(201, 164, 90, .18);
+      box-shadow: 0 0 0 70px rgba(201, 164, 90, .018), 0 0 0 140px rgba(201, 164, 90, .012);
+    }
+
+    .contact h2 {
+      color: #f3f0e8;
+      text-shadow: 0 16px 45px rgba(0, 0, 0, .35);
+    }
+
+    .contact p {
+      color: #9da0a8
+    }
+
+    .contact-list {
+      border-color: #2b2e35
+    }
+
+    .contact-row {
+      border-color: #2b2e35
+    }
+
+    .contact-row span:first-child {
+      color: #d9b66d
+    }
+
+    .contact-row span:last-child {
+      color: #f0e6d1
+    }
+
+    .contact-row {
+      padding: 20px 16px;
+      border: 1px solid transparent;
+      border-bottom-color: #2b2e35;
+      transition: background .3s ease, border-color .3s ease, transform .3s ease, box-shadow .3s ease
+    }
+
+    .contact-row:hover {
+      background: rgba(201, 164, 90, .07);
+      border-color: rgba(201, 164, 90, .34);
+      transform: translateX(5px);
+      box-shadow: 0 0 24px rgba(201, 164, 90, .08)
+    }
+
+    .contact-row:hover span:last-child {
+      color: var(--gold);
+      text-decoration: none
+    }
+
+    .contact-row .icon-label {
+      color: #e5c987
+    }
+
+    .contact-row .brand-icon {
+      filter: grayscale(1) sepia(1) saturate(.7) brightness(1.3)
+    }
+
+    footer {
+      background: #050608;
+      border-top: 1px solid #191c21
+    }
+
+    @media(max-width:720px) {
+      .nav-links {
+        background: #090a0d;
+        border-color: #292c33
+      }
+    }
+
+    /* MOBILE */
+    @media(max-width:980px) {
+
+      .hero-grid,
+      .system-grid,
+      .about-grid,
+      .skills-wrap,
+      .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 55px
+      }
+
+      .hero {
+        padding-top: 120px
+      }
+
+      .portrait-wrap {
+        margin: auto;
+        max-width: 410px
+      }
+
+      .project {
+        grid-column: span 12 !important;
+        margin: 0 !important
+      }
+
+      .cap-grid {
+        grid-template-columns: 1fr 1fr
+      }
+
+      .cap:nth-child(2) {
+        border-right: 0
+      }
+
+      .cap:nth-child(1),
+      .cap:nth-child(2) {
+        border-bottom: 1px solid #3b3934
+      }
+
+      .flow-steps {
+        grid-template-columns: 1fr
+      }
+
+      .step {
+        min-height: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center
+      }
+
+      .step strong {
+        margin-top: 0
+      }
+
+      .step:not(:last-child):after {
+        content: "↓";
+        right: 50%;
+        top: auto;
+        bottom: -18px
+      }
+
+      .skills-wrap {
+        gap: 40px
+      }
+    }
+
+    @media(max-width:720px) {
+
+      .container,
+      .nav-inner {
+        width: min(calc(100% - 32px), var(--max))
+      }
+
+      .section {
+        padding: 90px 0
+      }
+
+      .section-head {
+        display: block;
+        margin-bottom: 38px
+      }
+
+      .section-intro {
+        margin-top: 18px
+      }
+
+      .nav {
+        height: 68px
+      }
+
+      .nav-links {
+        position: fixed;
+        inset: 68px 0 auto 0;
+        background: var(--bg);
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 25px 20px;
+        border-bottom: 1px solid var(--line);
+        transform: translateY(-130%);
+        transition: transform .35s var(--ease)
+      }
+
+      .nav-links.open {
+        transform: none
+      }
+
+      .menu-btn {
+        display: block
+      }
+
+      .hero {
+        min-height: auto;
+        padding: 115px 0 85px
+      }
+
+      .hero h1 {
+        font-size: clamp(58px, 17vw, 95px)
+      }
+
+      .hero-copy {
+        font-size: 16px
+      }
+
+      .portrait-note {
+        left: 10px;
+        bottom: 10px
+      }
+
+      .scroll-cue {
+        display: none
+      }
+
+      .work-grid {
+        display: block
+      }
+
+      .project {
+        margin-bottom: 18px !important
+      }
+
+      .project-body {
+        padding: 20px
+      }
+
+      .project h3 {
+        font-size: 28px
+      }
+
+      .project-foot {
+        align-items: flex-start;
+        flex-direction: column
+      }
+
+      .cap-grid,
+      .skill-groups,
+      .principles {
+        grid-template-columns: 1fr
+      }
+
+      .cap {
+        border-right: 0 !important;
+        border-bottom: 1px solid #3b3934 !important
+      }
+
+      .cap:last-child {
+        border-bottom: 0 !important
+      }
+
+      .system-grid {
+        gap: 35px
+      }
+
+      .flow {
+        padding: 16px
+      }
+
+      .contact-grid {
+        gap: 40px
+      }
+
+      .contact h2 {
+        font-size: clamp(54px, 16vw, 85px)
+      }
+
+      .footer-inner {
+        align-items: flex-start;
+        flex-direction: column
+      }
+    }
+
+
+
+    @media(max-width:720px) {
+
+      .lightbox {
+        padding: 18px
+      }
+
+      .lightbox-caption {
+        display: block
+      }
+
+      .lightbox-tip {
+        margin-top: 10px
+      }
+    }
+
+    @media(prefers-reduced-motion:reduce) {
+      html {
+        scroll-behavior: auto
+      }
+
+      *,
+      *:before,
+      *:after {
+        animation-duration: .001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: .001ms !important
+      }
+
+      [data-reveal] {
+        opacity: 1;
+        transform: none
+      }
+    }
+  
+    /* =========================
+   V2.1 FIXES + GRAPHIC CAROUSEL
+========================= */
+
+    /* selected work: three equal cards instead of the staggered grid */
+    .work-grid .project,
+    .work-grid .project:nth-child(n) {
+      grid-column: span 4;
+      margin-top: 0;
+      display: flex;
+      flex-direction: column
+    }
+
+    .work-grid .project-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column
+    }
+
+    .work-grid .project-body .project-foot {
+      margin-top: auto
+    }
+
+    /* cursor stays hidden unless a real mouse is present */
+    .smart-cursor {
+      display: none
+    }
+
+    html.has-cursor .smart-cursor {
+      display: flex
+    }
+
+    /* big headings: a bit more room between lines */
+    .contact h2 {
+      line-height: .98;
+      letter-spacing: -.06em
+    }
+
+    .section-title,
+    .about-big,
+    .skills-title,
+    .system-copy h2 {
+      line-height: 1.02
+    }
+
+    /* carousel */
+    .g-toolbar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+      margin-bottom: 26px
+    }
+
+    .g-filters {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px
+    }
+
+    .g-chip {
+      font: 700 11px var(--mono);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: #a7a9b0;
+      background: transparent;
+      border: 1px solid #30333a;
+      padding: 10px 15px;
+      cursor: pointer;
+      transition: .3s var(--ease)
+    }
+
+    .g-chip:hover {
+      border-color: rgba(201, 164, 90, .6);
+      color: #eeeae2
+    }
+
+    .g-chip.is-active {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: #090a0d
+    }
+
+    .g-nav {
+      display: flex;
+      gap: 8px;
+      margin-left: auto
+    }
+
+    .g-arrow {
+      width: 46px;
+      height: 46px;
+      display: grid;
+      place-items: center;
+      background: #0d0f13;
+      border: 1px solid rgba(201, 164, 90, .45);
+      color: var(--gold);
+      cursor: pointer;
+      transition: .3s var(--ease)
+    }
+
+    .g-arrow svg {
+      width: 18px;
+      height: 18px
+    }
+
+    .g-arrow:hover:not(:disabled) {
+      background: var(--gold);
+      color: #090a0d
+    }
+
+    .g-arrow:disabled {
+      opacity: .35;
+      cursor: default;
+      border-color: #292c33;
+      color: #686c75
+    }
+
+    .g-track {
+      display: flex;
+      gap: 18px;
+      overflow-x: auto;
+      overscroll-behavior-x: contain;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      padding: 12px 2px 24px;
+      margin: -12px -2px 0;
+      cursor: grab
+    }
+
+    .g-track::-webkit-scrollbar {
+      display: none
+    }
+
+    .g-track.dragging {
+      scroll-snap-type: none;
+      cursor: grabbing;
+      user-select: none
+    }
+
+    .g-track:focus-visible {
+      outline: 1px solid rgba(201, 164, 90, .5);
+      outline-offset: 4px
+    }
+
+    .g-slide {
+      flex: 0 0 31%;
+      scroll-snap-align: start;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      background: #101217;
+      border: 1px solid #292c33;
+      overflow: hidden;
+      transition: transform .45s var(--ease), border-color .35s, box-shadow .45s
+    }
+
+    .g-slide[hidden] {
+      display: none
+    }
+
+    .g-slide:hover {
+      transform: translateY(-7px);
+      border-color: rgba(201, 164, 90, .72);
+      box-shadow: 0 22px 60px rgba(0, 0, 0, .45), 0 0 28px rgba(201, 164, 90, .08)
+    }
+
+    .g-media {
+      position: relative;
+      aspect-ratio: 4/5;
+      overflow: hidden;
+      background: linear-gradient(135deg, #151820, #090a0d)
+    }
+
+    .g-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      -webkit-user-drag: none;
+      user-select: none;
+      transition: transform .7s var(--ease), filter .5s
+    }
+
+    .g-slide:hover .g-media img {
+      transform: scale(1.06);
+      filter: brightness(1.05)
+    }
+
+    .g-badge {
+      position: absolute;
+      z-index: 2;
+      left: 13px;
+      top: 13px;
+      padding: 7px 9px;
+      background: rgba(5, 6, 8, .82);
+      border: 1px solid rgba(255, 255, 255, .09);
+      color: #d7d9de;
+      font: 700 11px var(--mono);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      backdrop-filter: blur(8px)
+    }
+
+    .g-open {
+      position: absolute;
+      z-index: 3;
+      right: 13px;
+      top: 13px;
+      width: 34px;
+      height: 34px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid rgba(201, 164, 90, .45);
+      background: rgba(5, 6, 8, .72);
+      color: var(--gold);
+      opacity: 0;
+      transform: translateY(-5px);
+      transition: .35s var(--ease);
+      backdrop-filter: blur(8px)
+    }
+
+    .g-open svg {
+      width: 14px;
+      height: 14px
+    }
+
+    .g-slide:hover .g-open,
+    .g-slide:focus-within .g-open {
+      opacity: 1;
+      transform: none
+    }
+
+    .g-body {
+      flex: 1;
+      padding: 17px 18px 20px
+    }
+
+    .g-meta {
+      color: var(--gold);
+      font: 700 11px var(--mono);
+      letter-spacing: .09em;
+      text-transform: uppercase
+    }
+
+    .g-body h3 {
+      margin: 8px 0 0;
+      color: #eeeae2;
+      font: 800 22px/1.08 var(--display);
+      letter-spacing: -.035em
+    }
+
+    .g-body p {
+      margin: 8px 0 0;
+      color: #8f929a;
+      font-size: 13px;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden
+    }
+
+    .g-hit {
+      position: absolute;
+      inset: 0;
+      z-index: 4;
+      padding: 0;
+      border: 0;
+      background: none;
+      cursor: pointer
+    }
+
+    .g-hit:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: -2px
+    }
+
+    /* last card: link to the full archive */
+    .g-cta {
+      align-items: flex-start;
+      justify-content: flex-end;
+      gap: 12px;
+      padding: 28px;
+      border-style: dashed;
+      border-color: rgba(201, 164, 90, .45);
+      background: radial-gradient(circle at 85% 12%, rgba(201, 164, 90, .14), transparent 55%), #0d0f13;
+      color: inherit
+    }
+
+    .g-cta-icon {
+      width: 54px;
+      height: 54px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(201, 164, 90, .45);
+      margin-bottom: auto
+    }
+
+    .g-cta-icon .brand-icon {
+      width: 24px;
+      height: 24px;
+      flex-basis: 24px
+    }
+
+    .g-cta-kicker {
+      color: var(--gold);
+      font: 700 11px var(--mono);
+      letter-spacing: .12em;
+      text-transform: uppercase
+    }
+
+    .g-cta strong {
+      color: #eeeae2;
+      font: 800 26px/1.08 var(--display);
+      letter-spacing: -.04em
+    }
+
+    .g-cta-text {
+      color: #8f929a;
+      font-size: 13px
+    }
+
+    .g-cta-btn {
+      margin-top: 8px;
+      padding: 12px 16px;
+      border: 1px solid rgba(201, 164, 90, .6);
+      color: var(--gold);
+      font: 700 11px var(--mono);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      transition: .3s var(--ease)
+    }
+
+    .g-cta:hover .g-cta-btn {
+      background: var(--gold);
+      color: #090a0d
+    }
+
+    .g-footer {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+      margin-top: 4px
+    }
+
+    .g-progress {
+      position: relative;
+      flex: 1;
+      height: 2px;
+      background: #22252c
+    }
+
+    .g-progress span {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      background: var(--gold);
+      transition: left .15s linear, width .25s
+    }
+
+    .g-count {
+      min-width: 92px;
+      text-align: right;
+      color: #8f929a;
+      font: 700 11px var(--mono);
+      letter-spacing: .1em
+    }
+
+    .g-fb {
+      white-space: nowrap;
+      padding: 10px 14px;
+      border: 1px solid rgba(201, 164, 90, .45);
+      color: var(--gold);
+      font: 700 11px var(--mono);
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      transition: .3s var(--ease)
+    }
+
+    .g-fb:hover {
+      background: var(--gold);
+      color: #090a0d
+    }
+
+    /* lightbox arrows */
+    .lb-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 3;
+      width: 44px;
+      height: 44px;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(201, 164, 90, .55);
+      background: rgba(13, 15, 19, .85);
+      color: #f1eee6;
+      cursor: pointer;
+      transition: background .3s, color .3s
+    }
+
+    .lb-nav[hidden] {
+      display: none
+    }
+
+    .lb-nav svg {
+      width: 18px;
+      height: 18px
+    }
+
+    .lb-nav:hover {
+      background: var(--gold);
+      color: #090a0d
+    }
+
+    .lb-prev {
+      left: 12px
+    }
+
+    .lb-next {
+      right: 12px
+    }
+
+    @media(max-width:1100px) {
+      .g-slide {
+        flex-basis: 46%
+      }
+    }
+
+    @media(max-width:640px) {
+      .g-slide {
+        flex-basis: 82%
+      }
+
+      .g-arrow {
+        width: 40px;
+        height: 40px
+      }
+
+      .g-footer {
+        flex-wrap: wrap;
+        gap: 14px
+      }
+
+      .g-progress {
+        flex: 1 0 100%;
+        order: 1
+      }
+
+      .g-count {
+        order: 2;
+        text-align: left;
+        flex: 1
+      }
+
+      .g-fb {
+        order: 3
+      }
+
+      .lb-nav {
+        width: 38px;
+        height: 38px
+      }
+    }
+
+    @media(hover:none) {
+      .g-open {
+        opacity: 1;
+        transform: none
+      }
+    }
+  
+    .project-meta {
+      display: flex;
+      align-items: center;
+      gap: 8px
+    }
+  
+    /* =========================
+   AUTOMATION PROJECTS
+========================= */
+    .system-grid {
+      grid-template-columns: 1fr;
+      gap: 0
+    }
+
+    .system-copy {
+      margin-bottom: 46px
+    }
+
+    .system-copy p {
+      max-width: 620px
+    }
+
+    .auto-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px
+    }
+
+    .auto-card {
+      display: flex;
+      flex-direction: column;
+      background: #111318;
+      border: 1px solid #292c33;
+      overflow: hidden;
+      transition: transform .45s var(--ease), border-color .35s, box-shadow .45s
+    }
+
+    .auto-card:hover {
+      transform: translateY(-7px);
+      border-color: rgba(201, 164, 90, .72);
+      box-shadow: 0 25px 70px rgba(0, 0, 0, .35)
+    }
+
+    .auto-media {
+      position: relative;
+      aspect-ratio: 4/3;
+      overflow: hidden;
+      background: #1c1d1f;
+      display: flex;
+      align-items: center;
+      justify-content: center
+    }
+
+    .auto-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      transition: transform .7s var(--ease)
+    }
+
+    .auto-card:hover .auto-media img {
+      transform: scale(1.035)
+    }
+
+    .auto-media .number {
+      position: absolute;
+      z-index: 2;
+      top: 15px;
+      left: 15px;
+      color: var(--white);
+      font: 700 11px var(--mono);
+      letter-spacing: .12em;
+      background: rgba(5, 6, 8, .78);
+      padding: 7px 9px
+    }
+
+    .auto-body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      padding: 24px
+    }
+
+    .auto-meta {
+      color: var(--gold);
+      font: 700 11px var(--mono);
+      letter-spacing: .1em;
+      text-transform: uppercase
+    }
+
+    .auto-body h3 {
+      margin: 10px 0 0;
+      color: #eeeae2;
+      font: 800 24px/1.1 var(--display);
+      letter-spacing: -.035em
+    }
+
+    .auto-body p {
+      margin: 12px 0 22px;
+      color: #9699a1;
+      font-size: 14px
+    }
+
+    .auto-body .project-foot {
+      margin-top: auto
+    }
+
+    /* Odoo approval stages */
+    .rfq-flow {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 9px;
+      padding: 40px 34px 24px;
+      position: relative
+    }
+
+    .rfq-flow:before {
+      content: "";
+      position: absolute;
+      left: 52px;
+      top: 58px;
+      bottom: 42px;
+      width: 1px;
+      background: linear-gradient(#30333a, rgba(201, 164, 90, .6))
+    }
+
+    .rfq-step {
+      position: relative;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      padding: 8px 12px;
+      background: #14161b;
+      border: 1px solid #30333a;
+      color: #cfd1d6;
+      font: 700 12px var(--display);
+      letter-spacing: -.01em
+    }
+
+    .rfq-step b {
+      font: 700 11px var(--mono);
+      color: var(--gold);
+      letter-spacing: .08em
+    }
+
+    .rfq-step.is-last {
+      border-color: rgba(201, 164, 90, .7);
+      background: rgba(201, 164, 90, .1);
+      color: #f1eee6
+    }
+
+    @media(max-width:980px) {
+      .auto-grid {
+        grid-template-columns: 1fr
+      }
+    }
+  
+    .auto-media.is-zoom {
+      cursor: zoom-in
+    }
+
+    .auto-media.is-zoom:focus-visible {
+      outline: 2px solid var(--gold);
+      outline-offset: -2px
+    }
+  
+    .status-pill {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      margin: 16px 0 26px;
+      padding: 8px 14px 8px 12px;
+      border: 1px solid rgba(109, 190, 120, .35);
+      background: rgba(109, 190, 120, .08);
+      color: #cfe8d3;
+      font: 700 11px var(--mono);
+      letter-spacing: .1em;
+      text-transform: uppercase
+    }
+
+    .contact .status-pill {
+      margin: 24px 0 0
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #6dbe78;
+      box-shadow: 0 0 0 0 rgba(109, 190, 120, .6);
+      animation: statusPulse 2.2s infinite
+    }
+
+    @keyframes statusPulse {
+      70% {box-shadow: 0 0 0 9px rgba(109, 190, 120, 0)}
+      100% {box-shadow: 0 0 0 0 rgba(109, 190, 120, 0)}
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .status-dot {animation: none}
+    }
+  
+    /* =========================
+   GALLERIES + ODOO FEATURE
+========================= */
+    .g-multi {
+      position: absolute;
+      z-index: 2;
+      left: 13px;
+      bottom: 13px;
+      display: inline-flex;
+      align-items: center;
+      gap: 7px;
+      padding: 7px 10px;
+      background: rgba(5, 6, 8, .82);
+      border: 1px solid rgba(201, 164, 90, .45);
+      color: var(--gold);
+      font: 700 11px var(--mono);
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      backdrop-filter: blur(8px)
+    }
+
+    .g-multi svg {
+      width: 13px;
+      height: 13px
+    }
+
+    @media(min-width:981px) {
+      .auto-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 26px
+      }
+    }
+
+    .odoo-feature {
+      display: grid;
+      grid-template-columns: .9fr 1.1fr;
+      border: 1px solid #292c33;
+      background: #111318;
+      overflow: hidden;
+      transition: border-color .35s, box-shadow .45s
+    }
+
+    .odoo-feature:hover {
+      border-color: rgba(201, 164, 90, .6);
+      box-shadow: 0 25px 70px rgba(0, 0, 0, .35)
+    }
+
+    .odoo-visual {
+      position: relative;
+      display: flex;
+      align-items: center;
+      background: #1a1b1e;
+      border-right: 1px solid #292c33;
+      min-height: 440px
+    }
+
+    .odoo-visual .number {
+      position: absolute;
+      z-index: 2;
+      top: 18px;
+      left: 18px;
+      color: var(--white);
+      font: 700 11px var(--mono);
+      letter-spacing: .12em;
+      background: rgba(5, 6, 8, .78);
+      padding: 7px 9px
+    }
+
+    .odoo-visual .rfq-flow {
+      padding: 64px 40px 40px
+    }
+
+    .odoo-visual .rfq-flow:before {
+      left: 58px;
+      top: 84px;
+      bottom: 62px
+    }
+
+    .odoo-visual .rfq-step {
+      padding: 11px 14px;
+      font-size: 14px
+    }
+
+    .odoo-details {
+      display: flex;
+      flex-direction: column;
+      padding: 40px
+    }
+
+    .odoo-details h3 {
+      margin: 10px 0 0;
+      color: #eeeae2;
+      font: 800 clamp(26px, 3vw, 36px)/1.08 var(--display);
+      letter-spacing: -.04em
+    }
+
+    .odoo-details > p {
+      margin: 14px 0 22px;
+      color: #9699a1;
+      font-size: 15px
+    }
+
+    .odoo-points {
+      list-style: none;
+      margin: 0 0 28px;
+      padding: 0;
+      display: grid;
+      gap: 11px
+    }
+
+    .odoo-points li {
+      position: relative;
+      padding-left: 24px;
+      color: #b8bac1;
+      font-size: 14px
+    }
+
+    .odoo-points li:before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: .75em;
+      width: 12px;
+      height: 1px;
+      background: var(--gold)
+    }
+
+    .odoo-details .project-foot {
+      margin-top: auto
+    }
+
+    @media(max-width:980px) {
+      .odoo-feature {
+        grid-template-columns: 1fr
+      }
+
+      .odoo-visual {
+        min-height: 0;
+        border-right: 0;
+        border-bottom: 1px solid #292c33
+      }
+
+      .odoo-details {
+        padding: 26px
+      }
+    }
+  
+    /* softer photo: a pure-white studio backdrop sits better on the dark theme */
+    .portrait {
+      filter: saturate(.78) brightness(.9) contrast(1.03)
+    }
+  
+    .rfq-flow:before,
+    .odoo-visual .rfq-flow:before {
+      display: none
+    }
+
+    .rfq-step:not(:last-child):after {
+      content: "";
+      position: absolute;
+      left: 26px;
+      top: 100%;
+      width: 1px;
+      height: 9px;
+      background: rgba(201, 164, 90, .6)
+    }
+  </style>
+</head>
+
+<body>
+  <div class="smart-cursor">
+    <span class="cursor-dot"></span>
+    <span class="cursor-label"></span>
+  </div>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#home"> <span>Mahmoud Tarik</span> </a>
+      <nav class="nav-links" id="navLinks">
+        <a href="#home">Home</a>
+        <a href="#work">Work</a>
+        <a href="#graphic-design">Graphic</a>
+        <a href="#automation">Automation</a>
+        <a href="#odoo">Odoo</a>
+        <a href="#about">About</a>
+        <a href="#skills">Skills</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu" aria-expanded="false">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M4 7h16M4 12h16M4 17h16" />
+        </svg>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          <div data-reveal>
+            <div class="hero-kicker">Independent digital creative · Egypt</div>
+            <div class="status-pill"><span class="status-dot" aria-hidden="true"></span>Available for work</div>
+            <h1>MAHMOUD<br><span class="outline">TARIK</span></h1>
+            <p class="hero-copy">
+              I design interfaces, build business systems, and automate repetitive work.
+              My practice sits between <strong>design, development, and AI automation</strong>.
+            </p>
+
+            <div class="role-list">
+              <span class="role">UI/UX Designer</span>
+              <span class="role">Odoo Developer</span>
+              <span class="role">AI Automation · n8n</span>
+              <span class="role">Graphic Designer</span>
+            </div>
+
+            <div class="hero-actions">
+              <a class="btn primary" href="#work">View my work <span>↗</span></a>
+              <a class="btn secondary" href="#contact">Let's work together</a>
+            </div>
+          </div>
+
+          <div class="portrait-wrap" data-reveal>
+            <div class="portrait-frame">
+              <img class="portrait" src="assets/profile.webp" alt="Mahmoud Tarik" fetchpriority="high">
+            </div>
+            <div class="portrait-note">
+              <small>Current focus</small>
+              <strong>Design → Build → Automate</strong>
+            </div>
+          </div>
+        </div>
+        <div class="scroll-cue"><i></i> Scroll to explore</div>
+      </div>
+    </section>
+
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee-track">
+        <div class="marquee-item">Design <span>+</span> Development <span>+</span> Automation <span>+</span></div>
+        <div class="marquee-item">Design <span>+</span> Development <span>+</span> Automation <span>+</span></div>
+        <div class="marquee-item">Design <span>+</span> Development <span>+</span> Automation <span>+</span></div>
+        <div class="marquee-item">Design <span>+</span> Development <span>+</span> Automation <span>+</span></div>
+      </div>
+    </div>
+
+    <section class="section" id="work">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div>
+            <div class="eyebrow">01 — Selected work</div>
+            <h2 class="section-title">Work that<br><span class="gold">speaks first.</span></h2>
+          </div>
+          <p class="section-intro">
+            A selection of interface work, product thinking, and systems I have been building.
+            The work stays visual; the details stay easy to understand.
+          </p>
+        </div>
+
+        <div class="work-grid">
+          <article class="project" data-reveal>
+            <div class="project-media">
+              <span class="number">01 / 03</span>
+              <img src="assets/design-preview.webp" alt="Aurevia project preview" loading="lazy" decoding="async">
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><img class="brand-icon" data-icon="figma"
+                  src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+RmlnbWE8L3RpdGxlPjxwYXRoIGQ9Ik0xNS44NTIgOC45ODFoLTQuNTg4VjBoNC41ODhjMi40NzYgMCA0LjQ5IDIuMDE0IDQuNDkgNC40OXMtMi4wMTQgNC40OTEtNC40OSA0LjQ5MXpNMTIuNzM1IDcuNTFoMy4xMTdjMS42NjUgMCAzLjAxOS0xLjM1NSAzLjAxOS0zLjAxOXMtMS4zNTUtMy4wMTktMy4wMTktMy4wMTloLTMuMTE3VjcuNTF6bTAgMS40NzFIOC4xNDhjLTIuNDc2IDAtNC40OS0yLjAxNC00LjQ5LTQuNDlTNS42NzIgMCA4LjE0OCAwaDQuNTg4djguOTgxem0tNC41ODctNy41MWMtMS42NjUgMC0zLjAxOSAxLjM1NS0zLjAxOSAzLjAxOXMxLjM1NCAzLjAyIDMuMDE5IDMuMDJoMy4xMTdWMS40NzFIOC4xNDh6bTQuNTg3IDE1LjAxOUg4LjE0OGMtMi40NzYgMC00LjQ5LTIuMDE0LTQuNDktNC40OXMyLjAxNC00LjQ5IDQuNDktNC40OWg0LjU4OHY4Ljk4ek04LjE0OCA4Ljk4MWMtMS42NjUgMC0zLjAxOSAxLjM1NS0zLjAxOSAzLjAxOXMxLjM1NSAzLjAxOSAzLjAxOSAzLjAxOWgzLjExN1Y4Ljk4MUg4LjE0OHpNOC4xNzIgMjRjLTIuNDg5IDAtNC41MTUtMi4wMTQtNC41MTUtNC40OXMyLjAxNC00LjQ5IDQuNDktNC40OWg0LjU4OHY0LjQ0MWMwIDIuNTAzLTIuMDQ3IDQuNTM5LTQuNTYzIDQuNTM5em0tLjAyNC03LjUxYTMuMDIzIDMuMDIzIDAgMCAwLTMuMDE5IDMuMDE5YzAgMS42NjUgMS4zNjUgMy4wMTkgMy4wNDQgMy4wMTkgMS43MDUgMCAzLjA5My0xLjM3NiAzLjA5My0zLjA2OHYtMi45N0g4LjE0OHptNy43MDQgMGgtLjA5OGMtMi40NzYgMC00LjQ5LTIuMDE0LTQuNDktNC40OXMyLjAxNC00LjQ5IDQuNDktNC40OWguMDk4YzIuNDc2IDAgNC40OSAyLjAxNCA0LjQ5IDQuNDlzLTIuMDE0IDQuNDktNC40OSA0LjQ5em0tLjA5Ny03LjUwOWMtMS42NjUgMC0zLjAxOSAxLjM1NS0zLjAxOSAzLjAxOXMxLjM1NSAzLjAxOSAzLjAxOSAzLjAxOWguMDk4YzEuNjY1IDAgMy4wMTktMS4zNTUgMy4wMTktMy4wMTlzLTEuMzU1LTMuMDE5LTMuMDE5LTMuMDE5aC0uMDk4eiIvPjwvc3ZnPg==" alt="" aria-hidden="true">Web UI · Luxury E-commerce · UI only
+              </div>
+              <h3>Aurevia — Luxury Perfume Website UI</h3>
+              <p>A UI-focused concept for a luxury perfume website. Built to showcase visual hierarchy, typography and product storytelling in a refined shopping experience.</p>
+              <div class="project-foot">
+                <div class="tags"><span class="tag">UI Design</span><span class="tag">Web Design</span><span
+                    class="tag">Figma</span></div>
+                <a class="project-link" target="_blank" rel="noopener"
+                  href="https://www.behance.net/gallery/246640741/Aurevia-Luxury-Perfume-Website-UI">View case study
+                  <span>↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" data-reveal>
+            <div class="project-media">
+              <span class="number">02 / 03</span>
+              <img src="assets/brand-preview.webp" alt="Food delivery project preview" loading="lazy" decoding="async">
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><img class="brand-icon" data-icon="figma"
+                  src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+RmlnbWE8L3RpdGxlPjxwYXRoIGQ9Ik0xNS44NTIgOC45ODFoLTQuNTg4VjBoNC41ODhjMi40NzYgMCA0LjQ5IDIuMDE0IDQuNDkgNC40OXMtMi4wMTQgNC40OTEtNC40OSA0LjQ5MXpNMTIuNzM1IDcuNTFoMy4xMTdjMS42NjUgMCAzLjAxOS0xLjM1NSAzLjAxOS0zLjAxOXMtMS4zNTUtMy4wMTktMy4wMTktMy4wMTloLTMuMTE3VjcuNTF6bTAgMS40NzFIOC4xNDhjLTIuNDc2IDAtNC40OS0yLjAxNC00LjQ5LTQuNDlTNS42NzIgMCA4LjE0OCAwaDQuNTg4djguOTgxem0tNC41ODctNy41MWMtMS42NjUgMC0zLjAxOSAxLjM1NS0zLjAxOSAzLjAxOXMxLjM1NCAzLjAyIDMuMDE5IDMuMDJoMy4xMTdWMS40NzFIOC4xNDh6bTQuNTg3IDE1LjAxOUg4LjE0OGMtMi40NzYgMC00LjQ5LTIuMDE0LTQuNDktNC40OXMyLjAxNC00LjQ5IDQuNDktNC40OWg0LjU4OHY4Ljk4ek04LjE0OCA4Ljk4MWMtMS42NjUgMC0zLjAxOSAxLjM1NS0zLjAxOSAzLjAxOXMxLjM1NSAzLjAxOSAzLjAxOSAzLjAxOWgzLjExN1Y4Ljk4MUg4LjE0OHpNOC4xNzIgMjRjLTIuNDg5IDAtNC41MTUtMi4wMTQtNC41MTUtNC40OXMyLjAxNC00LjQ5IDQuNDktNC40OWg0LjU4OHY0LjQ0MWMwIDIuNTAzLTIuMDQ3IDQuNTM5LTQuNTYzIDQuNTM5em0tLjAyNC03LjUxYTMuMDIzIDMuMDIzIDAgMCAwLTMuMDE5IDMuMDE5YzAgMS42NjUgMS4zNjUgMy4wMTkgMy4wNDQgMy4wMTkgMS43MDUgMCAzLjA5My0xLjM3NiAzLjA5My0zLjA2OHYtMi45N0g4LjE0OHptNy43MDQgMGgtLjA5OGMtMi40NzYgMC00LjQ5LTIuMDE0LTQuNDktNC40OXMyLjAxNC00LjQ5IDQuNDktNC40OWguMDk4YzIuNDc2IDAgNC40OSAyLjAxNCA0LjQ5IDQuNDlzLTIuMDE0IDQuNDktNC40OSA0LjQ5em0tLjA5Ny03LjUwOWMtMS42NjUgMC0zLjAxOSAxLjM1NS0zLjAxOSAzLjAxOXMxLjM1NSAzLjAxOSAzLjAxOSAzLjAxOWguMDk4YzEuNjY1IDAgMy4wMTktMS4zNTUgMy4wMTktMy4wMTlzLTEuMzU1LTMuMDE5LTMuMDE5LTMuMDE5aC0uMDk4eiIvPjwvc3ZnPg==" alt="" aria-hidden="true">Mobile App · UI/UX · Learning phase</div>
+              <h3>Food Delivery App — UI/UX Case Study</h3>
+              <p>A full UI/UX project from my learning phase: a food delivery app on par with the leading ones, designed around the mistakes competitors commonly make.</p>
+              <div class="project-foot">
+                <div class="tags"><span class="tag">Mobile UI</span><span class="tag">UX</span><span
+                    class="tag">Prototype</span></div>
+                <a class="project-link" target="_blank" rel="noopener"
+                  href="https://www.behance.net/gallery/218330867/Food-Delivery-App-UIUX-Case-Study">View case study
+                  <span>↗</span></a>
+              </div>
+            </div>
+          </article>
+
+          <article class="project" data-reveal>
+            <div class="project-media">
+              <span class="number">03 / 03</span>
+              <img src="assets/automation-preview.webp" alt="Outfitly project preview" loading="lazy" decoding="async">
+            </div>
+            <div class="project-body">
+              <div class="project-meta"><img class="brand-icon" data-icon="figma"
+                  src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+RmlnbWE8L3RpdGxlPjxwYXRoIGQ9Ik0xNS44NTIgOC45ODFoLTQuNTg4VjBoNC41ODhjMi40NzYgMCA0LjQ5IDIuMDE0IDQuNDkgNC40OXMtMi4wMTQgNC40OTEtNC40OSA0LjQ5MXpNMTIuNzM1IDcuNTFoMy4xMTdjMS42NjUgMCAzLjAxOS0xLjM1NSAzLjAxOS0zLjAxOXMtMS4zNTUtMy4wMTktMy4wMTktMy4wMTloLTMuMTE3VjcuNTF6bTAgMS40NzFIOC4xNDhjLTIuNDc2IDAtNC40OS0yLjAxNC00LjQ5LTQuNDlTNS42NzIgMCA4LjE0OCAwaDQuNTg4djguOTgxem0tNC41ODctNy41MWMtMS42NjUgMC0zLjAxOSAxLjM1NS0zLjAxOSAzLjAxOXMxLjM1NCAzLjAyIDMuMDE5IDMuMDJoMy4xMTdWMS40NzFIOC4xNDh6bTQuNTg3IDE1LjAxOUg4LjE0OGMtMi40NzYgMC00LjQ5LTIuMDE0LTQuNDktNC40OXMyLjAxNC00LjQ5IDQuNDktNC40OWg0LjU4OHY4Ljk4ek04LjE0OCA4Ljk4MWMtMS42NjUgMC0zLjAxOSAxLjM1NS0zLjAxOSAzLjAxOXMxLjM1NSAzLjAxOSAzLjAxOSAzLjAxOWgzLjExN1Y4Ljk4MUg4LjE0OHpNOC4xNzIgMjRjLTIuNDg5IDAtNC41MTUtMi4wMTQtNC41MTUtNC40OXMyLjAxNC00LjQ5IDQuNDktNC40OWg0LjU4OHY0LjQ0MWMwIDIuNTAzLTIuMDQ3IDQuNTM5LTQuNTYzIDQuNTM5em0tLjAyNC03LjUxYTMuMDIzIDMuMDIzIDAgMCAwLTMuMDE5IDMuMDE5YzAgMS42NjUgMS4zNjUgMy4wMTkgMy4wNDQgMy4wMTkgMS43MDUgMCAzLjA5My0xLjM3NiAzLjA5My0zLjA2OHYtMi45N0g4LjE0OHptNy43MDQgMGgtLjA5OGMtMi40NzYgMC00LjQ5LTIuMDE0LTQuNDktNC40OXMyLjAxNC00LjQ5IDQuNDktNC40OWguMDk4YzIuNDc2IDAgNC40OSAyLjAxNCA0LjQ5IDQuNDlzLTIuMDE0IDQuNDktNC40OSA0LjQ5em0tLjA5Ny03LjUwOWMtMS42NjUgMC0zLjAxOSAxLjM1NS0zLjAxOSAzLjAxOXMxLjM1NSAzLjAxOSAzLjAxOSAzLjAxOWguMDk4YzEuNjY1IDAgMy4wMTktMS4zNTUgMy4wMTktMy4wMTlzLTEuMzU1LTMuMDE5LTMuMDE5LTMuMDE5aC0uMDk4eiIvPjwvc3ZnPg==" alt="" aria-hidden="true">Mobile App · UI/UX · Learning phase</div>
+              <h3>Outfitly — Fashion Mobile App</h3>
+              <p>A full UI/UX project from my learning phase: a fashion shopping app comparable to existing ones, designed to avoid the usability mistakes competitors make.</p>
+              <div class="project-foot">
+                <div class="tags"><span class="tag">E-commerce</span><span class="tag">Mobile UI</span><span
+                    class="tag">Figma</span></div>
+                <a class="project-link" target="_blank" rel="noopener"
+                  href="https://www.behance.net/gallery/235618227/E-commerce-Fashion-Mobile-App">View case study
+                  <span>↗</span></a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+      <section class="certificate-section" id="certificate">
+
+        <div class="certificate-heading">
+          <div>
+            <span class="section-label">CERTIFICATION</span>
+            <h2>Continuous learning is part of <span>my growth.</span></h2>
+          </div>
+        </div>
+
+
+        <div class="certificate-card">
+
+          <!-- LEFT SIDE -->
+          <div class="certificate-content">
+
+            <div class="certificate-category">
+              <div class="certificate-icon">
+                <span>✦</span>
+              </div>
+
+              <div>
+                <span>UI/UX DESIGN</span>
+                <small>CERTIFICATION</small>
+              </div>
+            </div>
+
+
+            <h3>
+              UI/UX Design
+              <strong>Diploma</strong>
+            </h3>
+
+
+            <!-- ROUTE LOGO -->
+            <div class="academy-brand">
+
+              <img src="assets/certificate/route-academy.png" alt="Route Academy" loading="lazy" decoding="async">
+
+            </div>
+
+
+            <p class="certificate-description">
+              I obtained a UIUX diploma from ROUTE Academy on 27/12/2024
+            </p>
+
+
+            <div class="certificate-meta">
+
+              <div class="meta-item">
+                <span class="meta-icon">▣</span>
+                <div>
+                  <small>PROGRAM</small>
+                  <strong>3 MONTHS</strong>
+                </div>
+              </div>
+
+              <div class="meta-item">
+                <span class="meta-icon">◷</span>
+                <div>
+                  <small>COMPLETED</small>
+                  <strong>2024</strong>
+                </div>
+              </div>
+
+            </div>
+
+
+            <!-- PDF BUTTON -->
+            <a href="assets/certificate/uiux-certificate.pdf" target="_blank" rel="noopener" class="certificate-button">
+              <span class="button-icon">◉</span>
+              VIEW CERTIFICATE
+              <span class="button-arrow">↗</span>
+            </a>
+
+          </div>
+
+
+          <!-- RIGHT SIDE -->
+          <a href="assets/certificate/uiux-certificate.pdf" target="_blank" rel="noopener" class="certificate-preview">
+
+            <div class="certificate-frame">
+
+              <img src="assets/certificate/uiux-certificate.webp" alt="Mahmoud Tarik UI/UX Design Diploma Certificate" loading="lazy" decoding="async">
+
+              <div class="certificate-badge">
+                <span>✓</span>
+                <small>VERIFIED</small>
+                <strong>CERTIFICATE</strong>
+              </div>
+
+            </div>
+
+            <div class="certificate-hover">
+              <span>VIEW FULL CERTIFICATE ↗</span>
+            </div>
+
+          </a>
+
+        </div>
+
+      </section>
+    </section>
+
+    <section class="section dark-section" id="capabilities">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div>
+            <div class="eyebrow">02 — What I build</div>
+            <h2 class="section-title">Four disciplines.<br>One <span class="gold">practice.</span></h2>
+          </div>
+          <p class="section-intro">
+            I like working across the layers of a digital product: how it looks, how the system works,
+            and what can be automated behind it.
+          </p>
+        </div>
+
+        <div class="cap-grid">
+          <article class="cap" data-reveal>
+            <div class="cap-no">01</div>
+            <h3>UI / UX</h3>
+            <p>Interfaces designed through the Design Thinking process, with a focus on hierarchy, usability, flow, and
+              a strong visual system.</p>
+            <div class="cap-list"><span><img class="brand-icon" src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+RmlnbWE8L3RpdGxlPjxwYXRoIGQ9Ik0xNS44NTIgOC45ODFoLTQuNTg4VjBoNC41ODhjMi40NzYgMCA0LjQ5IDIuMDE0IDQuNDkgNC40OXMtMi4wMTQgNC40OTEtNC40OSA0LjQ5MXpNMTIuNzM1IDcuNTFoMy4xMTdjMS42NjUgMCAzLjAxOS0xLjM1NSAzLjAxOS0zLjAxOXMtMS4zNTUtMy4wMTktMy4wMTktMy4wMTloLTMuMTE3VjcuNTF6bTAgMS40NzFIOC4xNDhjLTIuNDc2IDAtNC40OS0yLjAxNC00LjQ5LTQuNDlTNS42NzIgMCA4LjE0OCAwaDQuNTg4djguOTgxem0tNC41ODctNy41MWMtMS42NjUgMC0zLjAxOSAxLjM1NS0zLjAxOSAzLjAxOXMxLjM1NCAzLjAyIDMuMDE5IDMuMDJoMy4xMTdWMS40NzFIOC4xNDh6bTQuNTg3IDE1LjAxOUg4LjE0OGMtMi40NzYgMC00LjQ5LTIuMDE0LTQuNDktNC40OXMyLjAxNC00LjQ5IDQuNDktNC40OWg0LjU4OHY4Ljk4ek04LjE0OCA4Ljk4MWMtMS42NjUgMC0zLjAxOSAxLjM1NS0zLjAxOSAzLjAxOXMxLjM1NSAzLjAxOSAzLjAxOSAzLjAxOWgzLjExN1Y4Ljk4MUg4LjE0OHpNOC4xNzIgMjRjLTIuNDg5IDAtNC41MTUtMi4wMTQtNC41MTUtNC40OXMyLjAxNC00LjQ5IDQuNDktNC40OWg0LjU4OHY0LjQ0MWMwIDIuNTAzLTIuMDQ3IDQuNTM5LTQuNTYzIDQuNTM5em0tLjAyNC03LjUxYTMuMDIzIDMuMDIzIDAgMCAwLTMuMDE5IDMuMDE5YzAgMS42NjUgMS4zNjUgMy4wMTkgMy4wNDQgMy4wMTkgMS43MDUgMCAzLjA5My0xLjM3NiAzLjA5My0zLjA2OHYtMi45N0g4LjE0OHptNy43MDQgMGgtLjA5OGMtMi40NzYgMC00LjQ5LTIuMDE0LTQuNDktNC40OXMyLjAxNC00LjQ5IDQuNDktNC40OWguMDk4YzIuNDc2IDAgNC40OSAyLjAxNCA0LjQ5IDQuNDlzLTIuMDE0IDQuNDktNC40OSA0LjQ5em0tLjA5Ny03LjUwOWMtMS42NjUgMC0zLjAxOSAxLjM1NS0zLjAxOSAzLjAxOXMxLjM1NSAzLjAxOSAzLjAxOSAzLjAxOWguMDk4YzEuNjY1IDAgMy4wMTktMS4zNTUgMy4wMTktMy4wMTlzLTEuMzU1LTMuMDE5LTMuMDE5LTMuMDE5aC0uMDk4eiIvPjwvc3ZnPg==" alt=""
+                  aria-hidden="true">Figma</span><span><svg class="mini-icon" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                  <path d="M12 3v18M3 12h18" />
+                  <circle cx="12" cy="12" r="8" />
+                </svg>Prototyping</span><span><svg class="mini-icon" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                  <rect x="4" y="4" width="16" height="16" rx="2" />
+                  <path d="M8 8h8M8 12h5M8 16h8" />
+                </svg>Design Systems</span></div>
+          </article>
+          <article class="cap" data-reveal>
+            <div class="cap-no">02</div>
+            <h3>Odoo</h3>
+            <p>Business systems, custom modules, reports and workflows that make operations easier to manage.</p>
+            <div class="cap-list"><span><img class="brand-icon" src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+UHl0aG9uPC90aXRsZT48cGF0aCBkPSJNMTQuMjUuMThsLjkuMi43My4yNi41OS4zLjQ1LjMyLjM0LjM0LjI1LjM0LjE2LjMzLjEuMy4wNC4yNi4wMi4yLS4wMS4xM1Y4LjVsLS4wNS42My0uMTMuNTUtLjIxLjQ2LS4yNi4zOC0uMy4zMS0uMzMuMjUtLjM1LjE5LS4zNS4xNC0uMzMuMS0uMy4wNy0uMjYuMDQtLjIxLjAySDguNzdsLS42OS4wNS0uNTkuMTQtLjUuMjItLjQxLjI3LS4zMy4zMi0uMjcuMzUtLjIuMzYtLjE1LjM3LS4xLjM1LS4wNy4zMi0uMDQuMjctLjAyLjIxdjMuMDZIMy4xN2wtLjIxLS4wMy0uMjgtLjA3LS4zMi0uMTItLjM1LS4xOC0uMzYtLjI2LS4zNi0uMzYtLjM1LS40Ni0uMzItLjU5LS4yOC0uNzMtLjIxLS44OC0uMTQtMS4wNS0uMDUtMS4yMy4wNi0xLjIyLjE2LTEuMDQuMjQtLjg3LjMyLS43MS4zNi0uNTcuNC0uNDQuNDItLjMzLjQyLS4yNC40LS4xNi4zNi0uMS4zMi0uMDUuMjQtLjAxaC4xNmwuMDYuMDFoOC4xNnYtLjgzSDYuMThsLS4wMS0yLjc1LS4wMi0uMzcuMDUtLjM0LjExLS4zMS4xNy0uMjguMjUtLjI2LjMxLS4yMy4zOC0uMi40NC0uMTguNTEtLjE1LjU4LS4xMi42NC0uMS43MS0uMDYuNzctLjA0Ljg0LS4wMiAxLjI3LjA1em0tNi4zIDEuOThsLS4yMy4zMy0uMDguNDEuMDguNDEuMjMuMzQuMzMuMjIuNDEuMDkuNDEtLjA5LjMzLS4yMi4yMy0uMzQuMDgtLjQxLS4wOC0uNDEtLjIzLS4zMy0uMzMtLjIyLS40MS0uMDktLjQxLjA5em0xMy4wOSAzLjk1bC4yOC4wNi4zMi4xMi4zNS4xOC4zNi4yNy4zNi4zNS4zNS40Ny4zMi41OS4yOC43My4yMS44OC4xNCAxLjA0LjA1IDEuMjMtLjA2IDEuMjMtLjE2IDEuMDQtLjI0Ljg2LS4zMi43MS0uMzYuNTctLjQuNDUtLjQyLjMzLS40Mi4yNC0uNC4xNi0uMzYuMDktLjMyLjA1LS4yNC4wMi0uMTYtLjAxaC04LjIydi44Mmg1Ljg0bC4wMSAyLjc2LjAyLjM2LS4wNS4zNC0uMTEuMzEtLjE3LjI5LS4yNS4yNS0uMzEuMjQtLjM4LjItLjQ0LjE3LS41MS4xNS0uNTguMTMtLjY0LjA5LS43MS4wNy0uNzcuMDQtLjg0LjAxLTEuMjctLjA0LTEuMDctLjE0LS45LS4yLS43My0uMjUtLjU5LS4zLS40NS0uMzMtLjM0LS4zNC0uMjUtLjM0LS4xNi0uMzMtLjEtLjMtLjA0LS4yNS0uMDItLjIuMDEtLjEzdi01LjM0bC4wNS0uNjQuMTMtLjU0LjIxLS40Ni4yNi0uMzguMy0uMzIuMzMtLjI0LjM1LS4yLjM1LS4xNC4zMy0uMS4zLS4wNi4yNi0uMDQuMjEtLjAyLjEzLS4wMWg1Ljg0bC42OS0uMDUuNTktLjE0LjUtLjIxLjQxLS4yOC4zMy0uMzIuMjctLjM1LjItLjM2LjE1LS4zNi4xLS4zNS4wNy0uMzIuMDQtLjI4LjAyLS4yMVY2LjA3aDIuMDlsLjE0LjAxem0tNi40NyAxNC4yNWwtLjIzLjMzLS4wOC40MS4wOC40MS4yMy4zMy4zMy4yMy40MS4wOC40MS0uMDguMzMtLjIzLjIzLS4zMy4wOC0uNDEtLjA4LS40MS0uMjMtLjMzLS4zMy0uMjMtLjQxLS4wOC0uNDEuMDh6Ii8+PC9zdmc+" alt=""
+                  aria-hidden="true">Python</span><span><svg class="mini-icon" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                  <path d="M5 5h14v14H5z" />
+                  <path d="m8 9 3 3-3 3M13 15h3" />
+                </svg>XML</span><span><img class="brand-icon" src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+UG9zdGdyZVNRTDwvdGl0bGU+PHBhdGggZD0iTTIzLjU1OTQgMTQuNzIyOGEuNTI2OS41MjY5IDAgMCAwLS4wNTYzLS4xMTkxYy0uMTM5LS4yNjMyLS40NzY4LS4zNDE4LTEuMDA3NC0uMjMyMS0xLjY1MzMuMzQxMS0yLjI5MzUuMTMxMi0yLjUyNTYtLjAxOTEgMS4zNDItMi4wNDgyIDIuNDQ1LTQuNTIyIDMuMDQxMS02LjgyOTcuMjcxNC0xLjA1MDcuNzk4Mi0zLjUyMzcuMTIyMi00LjczMTZhMS41NjQxIDEuNTY0MSAwIDAgMC0uMTUwOS0uMjM1QzIxLjY5MzEuOTA4NiAxOS44MDA3LjAyNDggMTcuNTA5OS4wMDA1Yy0xLjQ5NDctLjAxNTgtMi43NzA1LjM0NjEtMy4xMTYxLjQ3OTRhOS40NDkgOS40NDkgMCAwIDAtLjUxNTktLjA4MTYgOC4wNDQgOC4wNDQgMCAwIDAtMS4zMTE0LS4xMjc4Yy0xLjE4MjItLjAxODQtMi4yMDM4LjI2NDItMy4wNDk4Ljg0MDYtLjg1NzMtLjMyMTEtNC43ODg4LTEuNjQ1LTcuMjIxOS4wNzg4Qy45MzU5IDIuMTUyNi4zMDg2IDMuODczMy40MzAyIDYuMzA0M2MuMDQwOS44MTguNTA2OSAzLjMzNCAxLjI0MjMgNS43NDM2LjQ1OTggMS41MDY1LjkzODcgMi43MDE5IDEuNDMzNCAzLjU4Mi41NTMuOTk0MiAxLjEyNTkgMS41OTMzIDEuNzE0MyAxLjc4OTUuNDQ3NC4xNDkxIDEuMTMyNy4xNDQxIDEuODU4MS0uNzI3OS44MDEyLS45NjM1IDEuNTkwMy0xLjgyNTggMS45NDQ2LTIuMjA2OS40MzUxLjIzNTUuOTA2NC4zNjI1IDEuMzkuMzc3MmEuMDU2OS4wNTY5IDAgMCAwIC4wMDA0LjAwNDEgMTEuMDMxMiAxMS4wMzEyIDAgMCAwLS4yNDcyLjMwNTRjLS4zMzg5LjQzMDItLjQwOTQuNTE5Ny0xLjUwMDIuNzQ0My0uMzEwMi4wNjQtMS4xMzQ0LjIzMzktMS4xNDY0LjgxMTUtLjAwMjUuMTIyNC4wMzI5LjIzMDkuMDkxOS4zMjY4LjIyNjkuNDIzMS45MjE2LjYwOTcgMS4wMTUuNjMzMSAxLjMzNDUuMzMzNSAyLjUwNDQuMDkyIDMuMzcxNC0uNjc4Ny0uMDE3IDIuMjMxLjA3NzUgNC40MTc0LjM0NTQgNS4wODc0LjIyMTIuNTUyOS43NjE4IDEuOTA0NSAyLjQ2OTIgMS45MDQzLjI1MDUgMCAuNTI2My0uMDI5MS44Mjk2LS4wOTQxIDEuNzgxOS0uMzgyMSAyLjU1NTctMS4xNjk2IDIuODU1LTIuOTA1OS4xNTAzLS44NzA3LjQwMTYtMi44NzUzLjUzODgtNC4xMDEyLjAxNjktLjA3MDMuMDM1Ny0uMTIwNy4wNTctLjEzNjIuMDAwNy0uMDAwNS4wNjk3LS4wNDcxLjQyNzIuMDMwN2EuMzY3My4zNjczIDAgMCAwIC4wNDQzLjAwNjhsLjI1MzkuMDIyMy4wMTQ5LjAwMWMuODQ2OC4wMzg0IDEuOTExNC0uMTQyNiAyLjUzMTItLjQzMDguNjQzOC0uMjk4OCAxLjgwNTctMS4wMzIzIDEuNTk1MS0xLjY2OTh6TTIuMzcxIDExLjg3NjVjLS43NDM1LTIuNDM1OC0xLjE3NzktNC44ODUxLTEuMjEyMy01LjU3MTktLjEwODYtMi4xNzE0LjQxNzEtMy42ODI5IDEuNTYyMy00LjQ5MjcgMS44MzY3LTEuMjk4NiA0LjgzOTgtLjU0MDggNi4xMDgtLjEzLS4wMDMyLjAwMzItLjAwNjYuMDA2MS0uMDA5OC4wMDk0LTIuMDIzOCAyLjA0NC0xLjk3NTggNS41MzYtMS45NzA4IDUuNzQ5NS0uMDAwMi4wODIzLjAwNjYuMTk4OS4wMTYyLjM1OTMuMDM0OC41ODczLjA5OTYgMS42ODA0LS4wNzM1IDIuOTE4NC0uMTYwOSAxLjE1MDQuMTkzNyAyLjI3NjQuOTcyOCAzLjA4OTIuMDgwNi4wODQxLjE2NDguMTYzMS4yNTE4LjIzNzQtLjM0NjguMzcxNC0xLjEwMDQgMS4xOTI2LTEuOTAyNSAyLjE1NzYtLjU2NzcuNjgyNS0uOTU5Ny41NTE3LTEuMDg4Ni41MDg3LS4zOTE5LS4xMzA3LS44MTMtLjU4NzEtMS4yMzgxLTEuMzIyMy0uNDc5Ni0uODM5LS45NjM1LTIuMDMxNy0xLjQxNTUtMy41MTI2em02LjAwNzIgNS4wODcxYy0uMTcxMS0uMDQyOC0uMzI3MS0uMTEzMi0uNDMyMi0uMTc3Mi4wODg5LS4wMzk0LjIzNzQtLjA5MDIuNDgzMy0uMTQwOSAxLjI4MzMtLjI2NDEgMS40ODE1LS40NTA2IDEuOTE0My0xLjAwMDIuMDk5Mi0uMTI2LjIxMTYtLjI2ODcuMzY3My0uNDQyNmEuMzU0OS4zNTQ5IDAgMCAwIC4wNzM3LS4xMjk4Yy4xNzA4LS4xNTEzLjI3MjQtLjEwOTkuNDM2OS0uMDQxNy4xNTYuMDY0Ni4zMDc4LjI2LjM2OTUuNDc1Mi4wMjkxLjEwMTYuMDYxOS4yOTQ1LS4wNDUyLjQ0NDQtLjkwNDMgMS4yNjU4LTIuMjIxNiAxLjI0OTQtMy4xNjc2IDEuMDEyOHptMi4wOTQtMy45ODgtLjA1MjUuMTQxYy0uMTMzLjM1NjYtLjI1NjcuNjg4MS0uMzMzNCAxLjAwMy0uNjY3NC0uMDAyMS0xLjMxNjgtLjI4NzItMS44MTA1LS44MDI0LS42Mjc5LS42NTUxLS45MTMxLTEuNTY2NC0uNzgyNS0yLjUwMDQuMTgyOC0xLjMwNzkuMTE1My0yLjQ0NjguMDc5LTMuMDU4Ni0uMDA1LS4wODU3LS4wMDk1LS4xNjA3LS4wMTIyLS4yMTk5LjI5NTctLjI2MjEgMS42NjU5LS45OTYyIDIuNjQyOS0uNzcyNC40NDU5LjEwMjIuNzE3Ni40MDU3LjgzMDUuOTI4LjU4NDYgMi43MDM4LjA3NzQgMy44MzA3LS4zMzAyIDQuNzM2My0uMDg0LjE4NjYtLjE2MzMuMzYyOS0uMjMxMS41NDU0em03LjM2MzcgNC41NzI1Yy0uMDE2OS4xNzY4LS4wMzU4LjM3Ni0uMDYxOC41OTU5bC0uMTQ2LjQzODNhLjM1NDcuMzU0NyAwIDAgMC0uMDE4Mi4xMDc3Yy0uMDA1OS40NzQ3LS4wNTQuNjQ4OS0uMTE1Ljg2OTMtLjA2MzQuMjI5Mi0uMTM1My40ODkxLS4xNzk0IDEuMDU3NS0uMTEgMS40MTQzLS44NzgyIDIuMjI2Ny0yLjQxNzIgMi41NTY1LTEuNTE1NS4zMjUxLTEuNzg0My0uNDk2OC0yLjAyMTItMS4yMjE3YTYuNTgyNCA2LjU4MjQgMCAwIDAtLjA3NjktLjIyNjZjLS4yMTU0LS41ODU4LS4xOTExLTEuNDExOS0uMTU3NC0yLjU1NTEuMDE2NS0uNTYxMi0uMDI0OS0xLjkwMTMtLjMzMDItMi42NDYyLjAwNDQtLjI5MzIuMDEwNi0uNTkwOS4wMTktLjg5MThhLjM1MjkuMzUyOSAwIDAgMC0uMDE1My0uMTEyNiAxLjQ5MjcgMS40OTI3IDAgMCAwLS4wNDM5LS4yMDhjLS4xMjI2LS40MjgzLS40MjEzLS43ODY2LS43Nzk3LS45MzUxLS4xNDI0LS4wNTktLjQwMzgtLjE2NzItLjcxNzgtLjA4NjkuMDY3LS4yNzYuMTgzMS0uNTg3NS4zMDktLjkyNDlsLjA1MjktLjE0MmMuMDU5NS0uMTYuMTM0LS4zMjU3LjIxMy0uNTAxMi40MjY1LS45NDc2IDEuMDEwNi0yLjI0NTMuMzc2Ni01LjE3NzItLjIzNzQtMS4wOTgxLTEuMDMwNC0xLjYzNDMtMi4yMzI0LTEuNTA5OC0uNzIwNy4wNzQ2LTEuMzc5OS4zNjU0LTEuNzA4OC41MzIxYTUuNjcxNiA1LjY3MTYgMCAwIDAtLjE5NTguMTA0MWMuMDkxOC0xLjEwNjQuNDM4Ni0zLjE3NDEgMS43MzU3LTQuNDgyM2E0LjAzMDYgNC4wMzA2IDAgMCAxIC4zMDMzLS4yNzYuMzUzMi4zNTMyIDAgMCAwIC4xNDQ3LS4wNjQ0Yy43NTI0LS41NzA2IDEuNjk0NS0uODUwNiAyLjgwMi0uODMyNS40MDkxLjAwNjcuODAxNy4wMzM5IDEuMTc0Mi4wODEgMS45MzkuMzU0NCAzLjI0MzkgMS40NDY4IDQuMDM1OSAyLjM4MjcuODE0My45NjIzIDEuMjU1MiAxLjkzMTUgMS40MzEyIDIuNDU0My0xLjMyMzItLjEzNDYtMi4yMjM0LjEyNjgtMi42Nzk3Ljc3OS0uOTkyNiAxLjQxODkuNTQzIDQuMTcyOSAxLjI4MTEgNS40OTY0LjEzNTMuMjQyNi4yNTIyLjQ1MjIuMjg4OS41NDEzLjI0MDMuNTgyNS41NTE1Ljk3MTMuNzc4NyAxLjI1NTIuMDY5Ni4wODcuMTM3Mi4xNzE0LjE4ODUuMjQ1LS40MDA4LjExNTUtMS4xMjA4LjM4MjUtMS4wNTUyIDEuNzE3LS4wMTIzLjE1NjMtLjA0MjMuNDQ2OS0uMDgzNC44MTQ4LS4wNDYxLjIwNzctLjA3MDIuNDYwMy0uMDk5NC43NjYyem0uODkwNS0xLjYyMTFjLS4wNDA1LS44MzE2LjI2OTEtLjkxODUuNTk2Ny0xLjAxMDVhMi44NTY2IDIuODU2NiAwIDAgMCAuMTM1LS4wNDA2IDEuMjAyIDEuMjAyIDAgMCAwIC4xMzQyLjEwM2MuNTcwMy4zNzY1IDEuNTgyMy40MjEzIDMuMDA2OC4xMzQ0LS4yMDE2LjE3NjktLjUxODkuMzk5NC0uOTUzMy42MDExLS40MDk4LjE5MDMtMS4wOTU3LjMzMy0xLjc0NzMuMzYzNi0uNzE5Ny4wMzM2LTEuMDg1OS0uMDgwNy0xLjE3MjEtLjE1MXptLjU2OTUtOS4yNzEyYy0uMDA1OS4zNTA4LS4wNTQyLjY2OTItLjEwNTQgMS4wMDE3LS4wNTUuMzU3Ni0uMTEyLjcyNzQtLjEyNjQgMS4xNzYyLS4wMTQyLjQzNjguMDQwNC44OTA5LjA5MzIgMS4zMzAxLjEwNjYuODg3LjIxNiAxLjgwMDMtLjIwNzUgMi43MDE0YTMuNTI3MiAzLjUyNzIgMCAwIDEtLjE4NzYtLjM4NTZjLS4wNTI3LS4xMjc2LS4xNjY5LS4zMzI2LS4zMjUxLS42MTYyLS42MTU2LTEuMTA0MS0yLjA1NzQtMy42ODk2LTEuMzE5My00Ljc0NDYuMzc5NS0uNTQyNyAxLjM0MDgtLjU2NjEgMi4xNzgxLS40NjN6bS4yMjg0IDcuMDEzN2ExMi4zNzYyIDEyLjM3NjIgMCAwIDAtLjA4NTMtLjEwNzRsLS4wMzU1LS4wNDQ0Yy43MjYyLTEuMTk5NS41ODQyLTIuMzg2Mi40NTc4LTMuNDM4NS0uMDUxOS0uNDMxOC0uMTAwOS0uODM5Ni0uMDg4NS0xLjIyMjYuMDEyOS0uNDA2MS4wNjY2LS43NTQzLjExODUtMS4wOTExLjA2MzktLjQxNS4xMjg4LS44NDQzLjExMDktMS4zNTA1LjAxMzQtLjA1MzEuMDE4OC0uMTE1OC4wMTE4LS4xOTAyLS4wNDU3LS40ODU1LS41OTk5LTEuOTM4LTEuNzI5NC0zLjI1My0uNjA3Ni0uNzA3My0xLjQ4OTYtMS40OTcyLTIuNjg4OS0yLjAzOTUuNTI1MS0uMTA2NiAxLjIzMjgtLjIwMzUgMi4wMjQ0LS4xODU5IDIuMDUxNS4wNDU2IDMuNjc0Ni44MTM1IDQuODI0MiAyLjI4MjRhLjkwOC45MDggMCAwIDEgLjA2NjcuMTAwMmMuNzIzMSAxLjM1NTYtLjI3NjIgNi4yNzUxLTIuOTg2NyAxMC41NDA1em0tOC44MTY2LTYuMTE2MmMtLjAyNS4xNzk0LS4zMDg5LjQyMjUtLjYyMTEuNDIyNWEuNTgyMS41ODIxIDAgMCAxLS4wODA5LS4wMDU2Yy0uMTg3My0uMDI2LS4zNzY1LS4xNDQtLjUwNTktLjMxNTYtLjA0NTgtLjA2MDUtLjEyMDMtLjE3OC0uMTA1NS0uMjg0NC4wMDU1LS4wNDAxLjAyNjEtLjA5ODUuMDkyNS0uMTQ4OC4xMTgyLS4wODk0LjM1MTgtLjEyMjYuNjA5Ni0uMDg2Ny4zMTYzLjA0NDEuNjQyNi4xOTM4LjYxMTMuNDE4NnptNy45MzA1LS40MTE0Yy4wMTExLjA3OTItLjA0OS4yMDEtLjE1MzEuMzEwMi0uMDY4My4wNzE3LS4yMTIuMTk2MS0uNDA3OS4yMjMyYS41NDU2LjU0NTYgMCAwIDEtLjA3NS4wMDUyYy0uMjkzNSAwLS41NDE0LS4yMzQ0LS41NjA3LS4zNzE3LS4wMjQtLjE3NjUuMjY0MS0uMzEwNi41NjExLS4zNTIuMjk3LS4wNDE0LjYxMTEuMDA4OC42MzU2LjE4NTF6Ii8+PC9zdmc+" alt=""
+                  aria-hidden="true">PostgreSQL</span></div>
+          </article>
+          <article class="cap" data-reveal>
+            <div class="cap-no">03</div>
+            <h3>AI Automation</h3>
+            <p>n8n workflows connecting triggers, AI logic, APIs and business tools.</p>
+            <div class="cap-list"><span><img class="brand-icon" src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+bjhuPC90aXRsZT48cGF0aCBkPSJNMjEuNDczNyA1LjY4NDJjLTEuMTc3MiAwLTIuMTY2My44MDUxLTIuNDQ2OCAxLjg5NDdoLTIuODk1NWMtMS4yMzUgMC0yLjI4OS44OTMtMi40OTIgMi4xMTFsLS4xMDM4LjYyM2ExLjI2MyAxLjI2MyAwIDAgMS0xLjI0NiAxLjA1NTVIMTEuMjg5Yy0uMjgwNS0xLjA4OTYtMS4yNjk2LTEuODk0Ny0yLjQ0NjgtMS44OTQ3cy0yLjE2NjMuODA1MS0yLjQ0NjcgMS44OTQ3SDQuOTczYy0uMjgwNS0xLjA4OTYtMS4yNjk2LTEuODk0Ny0yLjQ0NjgtMS44OTQ3QzEuMTMxMSA5LjQ3MzcgMCAxMC42MDQ3IDAgMTJzMS4xMzEgMi41MjYzIDIuNTI2MyAyLjUyNjNjMS4xNzcyIDAgMi4xNjYzLS44MDUxIDIuNDQ2OC0xLjg5NDdoMS40MjIzYy4yODA0IDEuMDg5NiAxLjI2OTYgMS44OTQ3IDIuNDQ2NyAxLjg5NDcgMS4xNzcyIDAgMi4xNjYzLS44MDUxIDIuNDQ2OC0xLjg5NDdoMS4wMDA4YTEuMjYzIDEuMjYzIDAgMCAxIDEuMjQ1OSAxLjA1NTVsLjEwMzguNjIzYy4yMDMgMS4yMTggMS4yNTcgMi4xMTEgMi40OTIgMi4xMTFoLjM2OTJjLjI4MDQgMS4wODk1IDEuMjY5NiAxLjg5NDcgMi40NDY4IDEuODk0NyAxLjM5NTIgMCAyLjUyNjMtMS4xMzEgMi41MjYzLTIuNTI2M3MtMS4xMzEtMi41MjYzLTIuNTI2My0yLjUyNjNjLTEuMTc3MiAwLTIuMTY2NC44MDUtMi40NDY4IDEuODk0N2gtLjM2OTJhMS4yNjMgMS4yNjMgMCAwIDEtMS4yNDYtMS4wNTU1bC0uMTAzNy0uNjIzQTIuNTIgMi41MiAwIDAgMCAxMy45NjA3IDEyYTIuNTIgMi41MiAwIDAgMCAuODIxLTEuNDc5NGwuMTAzOC0uNjIzYTEuMjYzIDEuMjYzIDAgMCAxIDEuMjQ1OS0xLjA1NTVoMi44OTU1Yy4yODA1IDEuMDg5NiAxLjI2OTYgMS44OTQ3IDIuNDQ2OCAxLjg5NDcgMS4zOTUyIDAgMi41MjYzLTEuMTMxIDIuNTI2My0yLjUyNjNzLTEuMTMxLTIuNTI2My0yLjUyNjMtMi41MjYzbTAgMS4yNjMyYTEuMjYzIDEuMjYzIDAgMCAxIDEuMjYzMSAxLjI2MzEgMS4yNjMgMS4yNjMgMCAwIDEtMS4yNjMxIDEuMjYzMiAxLjI2MyAxLjI2MyAwIDAgMS0xLjI2MzItMS4yNjMyIDEuMjYzIDEuMjYzIDAgMCAxIDEuMjYzMi0xLjI2MzFNMi41MjYzIDEwLjczNjhBMS4yNjMgMS4yNjMgMCAwIDEgMy43ODk1IDEyYTEuMjYzIDEuMjYzIDAgMCAxLTEuMjYzMiAxLjI2MzJBMS4yNjMgMS4yNjMgMCAwIDEgMS4yNjMyIDEyYTEuMjYzIDEuMjYzIDAgMCAxIDEuMjYzMS0xLjI2MzJtNi4zMTU4IDBBMS4yNjMgMS4yNjMgMCAwIDEgMTAuMTA1MyAxMmExLjI2MyAxLjI2MyAwIDAgMS0xLjI2MzIgMS4yNjMyQTEuMjYzIDEuMjYzIDAgMCAxIDcuNTc5IDEyYTEuMjYzIDEuMjYzIDAgMCAxIDEuMjYzMi0xLjI2MzJtMTAuMTA1MyAzLjc4OTVhMS4yNjMgMS4yNjMgMCAwIDEgMS4yNjMxIDEuMjYzMiAxLjI2MyAxLjI2MyAwIDAgMS0xLjI2MzEgMS4yNjMxIDEuMjYzIDEuMjYzIDAgMCAxLTEuMjYzMi0xLjI2MzEgMS4yNjMgMS4yNjMgMCAwIDEgMS4yNjMyLTEuMjYzMiIvPjwvc3ZnPg==" alt=""
+                  aria-hidden="true">n8n</span><span><svg class="mini-icon" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                  <path d="M12 3 4 7v6c0 4.5 3.3 7.3 8 8 4.7-.7 8-3.5 8-8V7l-8-4Z" />
+                  <path d="M9 12h6M12 9v6" />
+                </svg>AI Agents</span><span><svg class="mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.7" aria-hidden="true">
+                  <path d="M8 7h8M8 17h8M7 4h10v4H7zM7 16h10v4H7zM12 8v8" />
+                </svg>APIs</span></div>
+          </article>
+          <article class="cap" data-reveal>
+            <div class="cap-no">04</div>
+            <h3>Graphic</h3>
+            <p>Branding and visual communication that keeps the same attention to composition and detail.</p>
+            <div class="cap-list"><span><svg class="mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.7" aria-hidden="true">
+                  <path d="m12 3 2.8 5.7L21 9.6l-4.5 4.4 1.1 6.2-5.6-2.9-5.6 2.9 1.1-6.2L3 9.6l6.2-.9L12 3Z" />
+                </svg>Branding</span><span><svg class="mini-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                  stroke-width="1.7" aria-hidden="true">
+                  <circle cx="12" cy="12" r="8" />
+                  <path d="M12 8v8M8 12h8" />
+                </svg>Visual Design</span><span><svg class="mini-icon" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="1.7" aria-hidden="true">
+                  <rect x="4" y="4" width="16" height="16" rx="4" />
+                  <circle cx="12" cy="12" r="3.5" />
+                  <path d="M17.5 6.8h.01" />
+                </svg>Social</span></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+
+    <section class="section gallery-section" id="graphic-design">
+      <div class="container">
+        <div class="section-head" data-reveal>
+          <div>
+            <div class="eyebrow">03 — Graphic design</div>
+            <h2 class="section-title">A visual<br><span class="gold">archive.</span></h2>
+          </div>
+          <p class="section-intro">A curated selection of my graphic design work, exploring visual identity,
+            composition, and creative direction. Pieces featuring real brands or artists are personal concept work.</p>
+        </div>
+
+        <div class="g-carousel" id="gCarousel" role="region" aria-roledescription="carousel" aria-label="Graphic design projects">
+          <div class="g-toolbar">
+            <div class="g-filters" id="gFilters" aria-label="Filter projects"></div>
+            <div class="g-nav">
+              <button class="g-arrow" id="gPrev" type="button" aria-label="Previous projects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+              <button class="g-arrow" id="gNext" type="button" aria-label="Next projects"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+            </div>
+          </div>
+
+          <!--
+            TO ADD A NEW DESIGN: copy one whole <article class="g-slide"> block below, paste it before the
+            "g-cta" card, then change data-image, data-title, data-tag (the filter name), data-desc,
+            the <img src/alt>, the <h3>, the <p> and the aria-label. Numbering and filters update by themselves.
+          -->
+          <div class="g-track" id="gTrack" tabindex="0" aria-label="Projects, scroll horizontally">
+
+          <article class="g-slide" data-image="assets/graphic/iphone/hero.webp" data-title="iPhone 18 Pro — Launch Campaign" data-tag="Campaign" data-desc="A concept launch campaign built in burgundy: hero shot, feature breakdowns, colors, camera and a call to action, designed as one consistent set." data-images="assets/graphic/iphone/hero.webp|assets/graphic/iphone/new-icon.webp|assets/graphic/iphone/new-era.webp|assets/graphic/iphone/features.webp|assets/graphic/iphone/a20-pro.webp|assets/graphic/iphone/camera.webp|assets/graphic/iphone/colors.webp|assets/graphic/iphone/order-now.webp" data-labels="Hero|The new icon|New era|New features|A20 Pro chip|Camera system|Colors|Order now">
+            <div class="g-media">
+              <span class="g-badge"></span>
+              <span class="g-open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5" /></svg></span>
+              <span class="g-multi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="7" y="7" width="13" height="13"/><path d="M4 16V4h12"/></svg>8 designs</span>
+              <img src="assets/graphic/iphone/hero.webp" alt="iPhone 18 Pro — Launch Campaign" width="1080" height="1350" loading="lazy" decoding="async" draggable="false">
+            </div>
+            <div class="g-body">
+              <div class="g-meta">Campaign · 8 designs</div>
+              <h3>iPhone 18 Pro — Launch Campaign</h3>
+              <p>A concept launch campaign built in burgundy: hero shot, feature breakdowns, colors, camera and a call to action, designed as one consistent set.</p>
+            </div>
+            <button class="g-hit" type="button" aria-label="Open iPhone 18 Pro — Launch Campaign"></button>
+          </article>
+
+          <article class="g-slide" data-image="assets/graphic/artists/marwan-pablo.webp" data-title="Marwan Pablo — Concept Artwork" data-tag="Creative" data-desc="A dark cinematic night scene with a Cybertruck, cash and a gravestone, blended through photo manipulation and Arabic typography.">
+            <div class="g-media">
+              <span class="g-badge"></span>
+              <span class="g-open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5" /></svg></span>
+              <img src="assets/graphic/artists/marwan-pablo.webp" alt="Marwan Pablo — Concept Artwork" width="1080" height="1350" loading="lazy" decoding="async" draggable="false">
+            </div>
+            <div class="g-body">
+              <div class="g-meta">Photo Manipulation</div>
+              <h3>Marwan Pablo — Concept Artwork</h3>
+              <p>A dark cinematic night scene with a Cybertruck, cash and a gravestone, blended through photo manipulation and Arabic typography.</p>
+            </div>
+            <button class="g-hit" type="button" aria-label="Open Marwan Pablo — Concept Artwork"></button>
+          </article>
+<article class="g-slide" data-image="assets/graphic/design-01.webp" data-title="Ads Design" data-tag="Ads" data-desc="A visually engaging advertisement designed to communicate the message clearly while maintaining a strong visual impact.">
+            <div class="g-media">
+              <span class="g-badge"></span>
+              <span class="g-open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5" /></svg></span>
+              <img src="assets/graphic/design-01.webp" alt="Ads Design" width="1500" height="1500" loading="lazy" decoding="async" draggable="false">
+            </div>
+            <div class="g-body">
+              <div class="g-meta">Visual Design</div>
+              <h3>Ads Design</h3>
+              <p>A visually engaging advertisement designed to communicate the message clearly while maintaining a strong visual impact.</p>
+            </div>
+            <button class="g-hit" type="button" aria-label="Open Ads Design"></button>
+          </article>
+<article class="g-slide" data-image="assets/graphic/design-02.webp" data-title="Social Media Design" data-tag="Social" data-desc="Visual content designed to strengthen brand presence, engage audiences, and communicate ideas clearly.">
+            <div class="g-media">
+              <span class="g-badge"></span>
+              <span class="g-open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5" /></svg></span>
+              <img src="assets/graphic/design-02.webp" alt="Social Media Design" width="1080" height="1350" loading="lazy" decoding="async" draggable="false">
+            </div>
+            <div class="g-body">
+              <div class="g-meta">Social Visual</div>
+              <h3>Social Media Design</h3>
+              <p>Visual content designed to strengthen brand presence, engage audiences, and communicate ideas clearly.</p>
+            </div>
+            <button class="g-hit" type="button" aria-label="Open Social Media Design"></button>
+          </article>
+
+          <article class="g-slide" data-image="assets/graphic/bmw/m4-giant-type.webp" data-title="BMW M4 G82 — Car Ad Posters" data-tag="Ads" data-desc="Three poster concepts for the BMW M4 G82, exploring oversized typography, split layouts and a clear spec-driven hierarchy." data-images="assets/graphic/bmw/m4-giant-type.webp|assets/graphic/bmw/m4-performance.webp|assets/graphic/bmw/m4-split.webp" data-labels="Giant type|Pure performance|Split layout">
+            <div class="g-media">
+              <span class="g-badge"></span>
+              <span class="g-open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5" /></svg></span>
+              <span class="g-multi"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"><rect x="7" y="7" width="13" height="13"/><path d="M4 16V4h12"/></svg>3 designs</span>
+              <img src="assets/graphic/bmw/m4-giant-type.webp" alt="BMW M4 G82 — Car Ad Posters" width="1080" height="1350" loading="lazy" decoding="async" draggable="false">
+            </div>
+            <div class="g-body">
+              <div class="g-meta">Automotive Ads · 3 designs</div>
+              <h3>BMW M4 G82 — Car Ad Posters</h3>
+              <p>Three poster concepts for the BMW M4 G82, exploring oversized typography, split layouts and a clear spec-driven hierarchy.</p>
+            </div>
+            <button class="g-hit" type="button" aria-label="Open BMW M4 G82 — Car Ad Posters"></button>
+          </article>
+
+          <article class="g-slide" data-image="assets/graphic/artists/wegz.webp" data-title="Wegz — Concept Artwork" data-tag="Creative" data-desc="A surreal coastal road scene with the artist on a motorcycle, a treasure chest, an arcade cabinet and a clock tower, finished with Arabic text.">
+            <div class="g-media">
+              <span class="g-badge"></span>
+              <span class="g-open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5" /></svg></span>
+              <img src="assets/graphic/artists/wegz.webp" alt="Wegz — Concept Artwork" width="1080" height="1350" loading="lazy" decoding="async" draggable="false">
+            </div>
+            <div class="g-body">
+              <div class="g-meta">Photo Manipulation</div>
+              <h3>Wegz — Concept Artwork</h3>
+              <p>A surreal coastal road scene with the artist on a motorcycle, a treasure chest, an arcade cabinet and a clock tower, finished with Arabic text.</p>
+            </div>
+            <button class="g-hit" type="button" aria-label="Open Wegz — Concept Artwork"></button>
+          </article>
+
+          <article class="g-slide" data-image="assets/graphic/ostora-parfum.webp" data-title="Al Ostora Parfum — Social Media" data-tag="Social" data-desc="A social media post for an Arabic fragrance brand, pairing calligraphy with a ribbon-wrapped bottle on a deep blue background.">
+            <div class="g-media">
+              <span class="g-badge"></span>
+              <span class="g-open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5" /></svg></span>
+              <img src="assets/graphic/ostora-parfum.webp" alt="Al Ostora Parfum — Social Media" width="1080" height="1350" loading="lazy" decoding="async" draggable="false">
+            </div>
+            <div class="g-body">
+              <div class="g-meta">Social Visual</div>
+              <h3>Al Ostora Parfum — Social Media</h3>
+              <p>A social media post for an Arabic fragrance brand, pairing calligraphy with a ribbon-wrapped bottle on a deep blue background.</p>
+            </div>
+            <button class="g-hit" type="button" aria-label="Open Al Ostora Parfum — Social Media"></button>
+          </article>
+<article class="g-slide" data-image="assets/graphic/design-03.webp" data-title="Event Visual Design" data-tag="Events" data-desc="Occasion-based visual design created for social media communication.">
+            <div class="g-media">
+              <span class="g-badge"></span>
+              <span class="g-open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5" /></svg></span>
+              <img src="assets/graphic/design-03.webp" alt="Event Visual Design" width="784" height="1168" loading="lazy" decoding="async" draggable="false">
+            </div>
+            <div class="g-body">
+              <div class="g-meta">Occasion</div>
+              <h3>Event Visual Design</h3>
+              <p>Occasion-based visual design created for social media communication.</p>
+            </div>
+            <button class="g-hit" type="button" aria-label="Open Event Visual Design"></button>
+          </article>
+
+          <article class="g-slide" data-image="assets/graphic/artists/abyusif.webp" data-title="Abyusif — Concept Artwork" data-tag="Creative" data-desc="A surreal portrait with an open mind full of characters and objects, framed by side panels and bold Arabic type.">
+            <div class="g-media">
+              <span class="g-badge"></span>
+              <span class="g-open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5" /></svg></span>
+              <img src="assets/graphic/artists/abyusif.webp" alt="Abyusif — Concept Artwork" width="1080" height="1350" loading="lazy" decoding="async" draggable="false">
+            </div>
+            <div class="g-body">
+              <div class="g-meta">Photo Manipulation</div>
+              <h3>Abyusif — Concept Artwork</h3>
+              <p>A surreal portrait with an open mind full of characters and objects, framed by side panels and bold Arabic type.</p>
+            </div>
+            <button class="g-hit" type="button" aria-label="Open Abyusif — Concept Artwork"></button>
+          </article>
+<article class="g-slide" data-image="assets/graphic/design-04.webp" data-title="Commercial Product Design" data-tag="Product" data-desc="A high-end advertising concept utilizing digital photo manipulation to showcase Sauvage perfume within a cinematic environment, featuring precise lighting integration and realistic foreground depth of field.">
+            <div class="g-media">
+              <span class="g-badge"></span>
+              <span class="g-open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5" /></svg></span>
+              <img src="assets/graphic/design-04.webp" alt="Commercial Product Design" width="1600" height="1600" loading="lazy" decoding="async" draggable="false">
+            </div>
+            <div class="g-body">
+              <div class="g-meta">Product Visualization</div>
+              <h3>Commercial Product Design</h3>
+              <p>A high-end advertising concept utilizing digital photo manipulation to showcase Sauvage perfume within a cinematic environment, featuring precise lighting integration and realistic foreground depth of field.</p>
+            </div>
+            <button class="g-hit" type="button" aria-label="Open Commercial Product Design"></button>
+          </article>
+
+          <article class="g-slide" data-image="assets/graphic/artists/afroto.webp" data-title="Afroto — Concept Artwork" data-tag="Creative" data-desc="A playful composition of the artist beside a blue alien, surrounded by retro and street details on a night skyline, with Arabic typography.">
+            <div class="g-media">
+              <span class="g-badge"></span>
+              <span class="g-open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5" /></svg></span>
+              <img src="assets/graphic/artists/afroto.webp" alt="Afroto — Concept Artwork" width="1080" height="1350" loading="lazy" decoding="async" draggable="false">
+            </div>
+            <div class="g-body">
+              <div class="g-meta">Photo Manipulation</div>
+              <h3>Afroto — Concept Artwork</h3>
+              <p>A playful composition of the artist beside a blue alien, surrounded by retro and street details on a night skyline, with Arabic typography.</p>
+            </div>
+            <button class="g-hit" type="button" aria-label="Open Afroto — Concept Artwork"></button>
+          </article>
+<article class="g-slide" data-image="assets/graphic/design-05.webp" data-title="Logo Design" data-tag="Logo" data-desc="Distinctive logo concepts designed to create a memorable and recognizable brand identity.">
+            <div class="g-media">
+              <span class="g-badge"></span>
+              <span class="g-open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5" /></svg></span>
+              <img src="assets/graphic/design-05.webp" alt="Logo Design" width="1600" height="1600" loading="lazy" decoding="async" draggable="false">
+            </div>
+            <div class="g-body">
+              <div class="g-meta">Digital Logo</div>
+              <h3>Logo Design</h3>
+              <p>Distinctive logo concepts designed to create a memorable and recognizable brand identity.</p>
+            </div>
+            <button class="g-hit" type="button" aria-label="Open Logo Design"></button>
+          </article>
+
+          <article class="g-slide" data-image="assets/graphic/artists/marwan-moussa.webp" data-title="Marwan Moussa — Concept Artwork" data-tag="Creative" data-desc="A surreal flooded landscape with the artist in a split jersey, road signs and a compass, mixing humor and storytelling.">
+            <div class="g-media">
+              <span class="g-badge"></span>
+              <span class="g-open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5" /></svg></span>
+              <img src="assets/graphic/artists/marwan-moussa.webp" alt="Marwan Moussa — Concept Artwork" width="1080" height="1350" loading="lazy" decoding="async" draggable="false">
+            </div>
+            <div class="g-body">
+              <div class="g-meta">Photo Manipulation</div>
+              <h3>Marwan Moussa — Concept Artwork</h3>
+              <p>A surreal flooded landscape with the artist in a split jersey, road signs and a compass, mixing humor and storytelling.</p>
+            </div>
+            <button class="g-hit" type="button" aria-label="Open Marwan Moussa — Concept Artwork"></button>
+          </article>
+
+          <article class="g-slide" data-image="assets/graphic/artists/mond.webp" data-title="Mond — Concept Artwork" data-tag="Creative" data-desc="A monochrome collage of photos and street textures around the artist, lifted by small red and pink accents and Arabic lettering.">
+            <div class="g-media">
+              <span class="g-badge"></span>
+              <span class="g-open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5" /></svg></span>
+              <img src="assets/graphic/artists/mond.webp" alt="Mond — Concept Artwork" width="1080" height="1350" loading="lazy" decoding="async" draggable="false">
+            </div>
+            <div class="g-body">
+              <div class="g-meta">Photo Manipulation</div>
+              <h3>Mond — Concept Artwork</h3>
+              <p>A monochrome collage of photos and street textures around the artist, lifted by small red and pink accents and Arabic lettering.</p>
+            </div>
+            <button class="g-hit" type="button" aria-label="Open Mond — Concept Artwork"></button>
+          </article>
+<article class="g-slide" data-image="assets/graphic/design-06.webp" data-title="Visual Exploration" data-tag="Creative" data-desc="Experimental visuals exploring composition, typography, and creative direction through different design approaches.">
+            <div class="g-media">
+              <span class="g-badge"></span>
+              <span class="g-open" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"><path d="M8 3H3v5M16 3h5v5M21 16v5h-5M3 16v5h5" /></svg></span>
+              <img src="assets/graphic/design-06.webp" alt="Visual Exploration" width="1080" height="1350" loading="lazy" decoding="async" draggable="false">
+            </div>
+            <div class="g-body">
+              <div class="g-meta">Creative</div>
+              <h3>Visual Exploration</h3>
+              <p>Experimental visuals exploring composition, typography, and creative direction through different design approaches.</p>
+            </div>
+            <button class="g-hit" type="button" aria-label="Open Visual Exploration"></button>
+          </article>
+
+          <a class="g-slide g-cta" href="https://www.facebook.com/profile.php?id=61553988694273&locale=ar_AR" target="_blank" rel="noopener">
+            <span class="g-cta-icon"><img class="brand-icon" src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+RmFjZWJvb2s8L3RpdGxlPjxwYXRoIGQ9Ik05LjEwMSAyMy42OTF2LTcuOThINi42Mjd2LTMuNjY3aDIuNDc0di0xLjU4YzAtNC4wODUgMS44NDgtNS45NzggNS44NTgtNS45NzguNDAxIDAgLjk1NS4wNDIgMS40NjguMTAzYTguNjggOC42OCAwIDAgMSAxLjE0MS4xOTV2My4zMjVhOC42MjMgOC42MjMgMCAwIDAtLjY1My0uMDM2IDI2LjgwNSAyNi44MDUgMCAwIDAtLjczMy0uMDA5Yy0uNzA3IDAtMS4yNTkuMDk2LTEuNjc1LjMwOWExLjY4NiAxLjY4NiAwIDAgMC0uNjc5LjYyMmMtLjI1OC40Mi0uMzc0Ljk5NS0uMzc0IDEuNzUydjEuMjk3aDMuOTE5bC0uMzg2IDIuMTAzLS4yODcgMS41NjRoLTMuMjQ2djguMjQ1QzE5LjM5NiAyMy4yMzggMjQgMTguMTc5IDI0IDEyLjA0NGMwLTYuNjI3LTUuMzczLTEyLTEyLTEycy0xMiA1LjM3My0xMiAxMmMwIDUuNjI4IDMuODc0IDEwLjM1IDkuMTAxIDExLjY0N1oiLz48L3N2Zz4=" alt="" aria-hidden="true" draggable="false"></span>
+            <span class="g-cta-kicker">Full archive</span>
+            <strong>More Photoshop work lives on Facebook.</strong>
+            <span class="g-cta-text">The complete collection of my Photoshop designs, all in one place.</span>
+            <span class="g-cta-btn">Open the page ↗</span>
+          </a>
+          </div>
+
+          <div class="g-footer">
+            <div class="g-progress" aria-hidden="true"><span id="gBar"></span></div>
+            <div class="g-count" id="gCount" aria-live="polite"></div>
+            <a class="g-fb" href="https://www.facebook.com/profile.php?id=61553988694273&locale=ar_AR" target="_blank" rel="noopener">Full archive on Facebook ↗</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+        <section class="section" id="automation">
+      <div class="container">
+        <div class="system-grid">
+          <div class="system-copy" data-reveal>
+            <div class="eyebrow">04 — AI Automation</div>
+            <h2>Make the system<br><span class="gold">do the work.</span></h2>
+            <p>
+              I build n8n workflows where an AI agent decides which tool to use and when, instead of a fixed pipeline.
+              The goal is simple: connect tools, remove repetitive steps, and turn a manual process into a reliable
+              workflow. Both projects below are open on GitHub.
+            </p>
+            <div class="integration-row">
+              <span class="integration">n8n</span>
+              <span class="integration">AI Agents</span>
+              <span class="integration">Telegram</span>
+              <span class="integration">Google Sheets</span>
+              <span class="integration">Google Calendar</span>
+              <span class="integration">APIs</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="auto-grid">
+          <article class="auto-card" data-reveal>
+            <div class="auto-media">
+              <span class="number">01 / 02</span>
+              <img src="assets/automation/estateflow.webp" alt="EstateFlow n8n workflow: Telegram trigger, AI Agent with Google Sheets, Calendar and Odoo tools" width="1308" height="1288" loading="lazy" decoding="async">
+            </div>
+            <div class="auto-body">
+              <div class="auto-meta">n8n · AI Agent · Odoo CRM</div>
+              <h3>EstateFlow — AI Real Estate Assistant</h3>
+              <p>A Telegram bot that qualifies buyers, matches live listings from Google Sheets, books viewings in Google Calendar and creates Odoo CRM opportunities for qualified leads, with no manual entry.</p>
+              <div class="project-foot">
+                <div class="tags"><span class="tag">n8n</span><span class="tag">AI Agent</span><span class="tag">Odoo CRM</span></div>
+                <a class="project-link" target="_blank" rel="noopener" href="https://github.com/7odabs2004-bot/estateflow-ai-real-estate-automation">View on GitHub <span>↗</span></a>
+              </div>
+            </div>
+          </article>
+          <article class="auto-card" data-reveal>
+            <div class="auto-media">
+              <span class="number">02 / 02</span>
+              <img src="assets/automation/restaurant.webp" alt="Restaurant ordering n8n workflow with intent classification and AI agent" width="1600" height="740" loading="lazy" decoding="async">
+            </div>
+            <div class="auto-body">
+              <div class="auto-meta">n8n · AI Agent · Telegram</div>
+              <h3>Restaurant AI Ordering System</h3>
+              <p>A Telegram assistant that classifies customer intent, then takes orders, answers menu questions, cancels orders, checks status and stores feedback in Google Sheets.</p>
+              <div class="project-foot">
+                <div class="tags"><span class="tag">n8n</span><span class="tag">AI Agent</span><span class="tag">Google Sheets</span></div>
+                <a class="project-link" target="_blank" rel="noopener" href="https://github.com/7odabs2004-bot/n8n-restaurant-ai-ordering-system">View on GitHub <span>↗</span></a>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="odoo">
+      <div class="container">
+        <div class="system-grid">
+          <div class="system-copy" data-reveal>
+            <div class="eyebrow">05 — Odoo Development</div>
+            <h2>Business rules,<br><span class="gold">built into Odoo.</span></h2>
+            <p>
+              I develop custom Odoo modules in Python and XML, with the security model, views and server-side
+              validation built in, so a business rule is enforced by the system and not left to habit.
+            </p>
+            <div class="integration-row">
+              <span class="integration">Odoo 17</span>
+              <span class="integration">Python</span>
+              <span class="integration">XML</span>
+              <span class="integration">Security groups</span>
+              <span class="integration">Approval workflows</span>
+            </div>
+          </div>
+        </div>
+
+        <article class="odoo-feature" data-reveal>
+          <div class="odoo-visual">
+            <span class="number">Custom module</span>
+            <div class="rfq-flow" role="img" aria-label="Approval stages: Draft, first, second and third approval, then approved to send"><span class="rfq-step"><b>01</b>Draft RFQ</span><span class="rfq-step"><b>02</b>1st approval</span><span class="rfq-step"><b>03</b>2nd approval</span><span class="rfq-step"><b>04</b>3rd approval</span><span class="rfq-step is-last"><b>05</b>Approved to send</span></div>
+          </div>
+          <div class="odoo-details">
+            <div class="auto-meta">Odoo 17 · Purchase</div>
+            <h3>RFQ Three-Level Approval</h3>
+            <p>A Purchase module that sends every RFQ through three sequential approvers before it can go to a vendor.</p>
+            <ul class="odoo-points">
+              <li>Three dedicated security groups, one per approval level</li>
+              <li>Server-side checks that block sending, printing, confirming and direct edits that bypass the approval</li>
+              <li>Editing is restricted during approval, and earlier approvals are cleared if commercial data changes</li>
+              <li>Audit log and rejection history on every RFQ</li>
+              <li>Compatible with the native Purchase states and double validation</li>
+            </ul>
+            <div class="project-foot">
+              <div class="tags"><span class="tag">Odoo 17</span><span class="tag">Python</span><span class="tag">XML</span></div>
+              <a class="project-link" target="_blank" rel="noopener" href="https://github.com/7odabs2004-bot/odoo/tree/main/purchase_rfq_approval">View on GitHub <span>↗</span></a>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <div class="container">
+        <div class="about-grid">
+          <div data-reveal>
+            <div class="eyebrow">06 — About me</div>
+            <h2 class="about-big">Curious about<br>what happens<br><span class="gold">behind the screen.</span></h2>
+          </div>
+
+          <div data-reveal>
+            <div class="about-text">
+              <p>I'm Mahmoud Tarik, a UI/UX designer and Odoo developer who builds business automation with n8n,
+                backed by a graphic design practice.</p>
+              <p>I started in design and moved into development because I wanted to understand how products and
+                business systems actually work behind the interface. That perspective shapes how I work: interfaces that
+                are clear to use, and systems that are reliable to run.</p>
+              <p>Today my work covers UI/UX design for web and mobile, custom Odoo modules in Python and XML, AI agent
+                workflows in n8n connected to tools like Telegram, Google Sheets and Odoo CRM, and visual design for
+                brands and social media.</p>
+              <p>I build projects end to end, from the first sketch to a working system, and I'm looking to work with
+                teams and clients who want to ship something useful.</p>
+            </div>
+
+            <div class="principles">
+              <div class="principle">
+                <b>01 / CLARITY</b>
+                <h3>Make it obvious.</h3>
+                <p>Good design reduces friction before it adds decoration.</p>
+              </div>
+              <div class="principle">
+                <b>02 / BUILD</b>
+                <h3>Understand the system.</h3>
+                <p>I enjoy knowing what happens behind the interface.</p>
+              </div>
+              <div class="principle">
+                <b>03 / AUTOMATE</b>
+                <h3>Remove repetition.</h3>
+                <p>Use tools and AI where they create real leverage.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="container">
+        <div class="skills-wrap">
+          <div data-reveal>
+            <div class="eyebrow">07 — Skills</div>
+            <h2 class="skills-title">Tools I use<br>to turn ideas<br><span class="gold">into systems.</span></h2>
+            <p class="skills-note">No artificial skill percentages. Just the tools and areas I actually work with.</p>
+          </div>
+
+          <div class="skill-groups">
+            <div class="skill-group" data-reveal>
+              <h3>Design</h3>
+              <div class="skill-pills">
+                <span class="skill-pill">UI/UX</span><span class="skill-pill">Figma</span><span
+                  class="skill-pill">Prototyping</span>
+                <span class="skill-pill">Design Systems</span><span class="skill-pill">Visual Design</span><span
+                  class="skill-pill">Branding</span>
+              </div>
+            </div>
+            <div class="skill-group" data-reveal>
+              <h3>Development</h3>
+              <div class="skill-pills">
+                <span class="skill-pill">Odoo</span><span class="skill-pill">Python</span><span
+                  class="skill-pill">XML</span><span class="skill-pill">PostgreSQL</span>
+              </div>
+            </div>
+            <div class="skill-group" data-reveal>
+              <h3>Automation</h3>
+              <div class="skill-pills">
+                <span class="skill-pill">n8n</span><span class="skill-pill">AI Agents</span><span
+                  class="skill-pill">APIs</span>
+                <span class="skill-pill">Workflows</span><span class="skill-pill">Integrations</span>
+              </div>
+            </div>
+            <div class="skill-group" data-reveal>
+              <h3>Creative</h3>
+              <div class="skill-pills">
+                <span class="skill-pill">Graphic Design</span><span class="skill-pill">Branding</span><span
+                  class="skill-pill">Composition</span><span class="skill-pill">Typography</span>
+              </div>
+            </div>
+            <div class="skill-group" data-reveal>
+              <h3>Tools</h3>
+              <div class="skill-pills">
+                <span class="skill-pill"><img class="brand-icon" src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+RmlnbWE8L3RpdGxlPjxwYXRoIGQ9Ik0xNS44NTIgOC45ODFoLTQuNTg4VjBoNC41ODhjMi40NzYgMCA0LjQ5IDIuMDE0IDQuNDkgNC40OXMtMi4wMTQgNC40OTEtNC40OSA0LjQ5MXpNMTIuNzM1IDcuNTFoMy4xMTdjMS42NjUgMCAzLjAxOS0xLjM1NSAzLjAxOS0zLjAxOXMtMS4zNTUtMy4wMTktMy4wMTktMy4wMTloLTMuMTE3VjcuNTF6bTAgMS40NzFIOC4xNDhjLTIuNDc2IDAtNC40OS0yLjAxNC00LjQ5LTQuNDlTNS42NzIgMCA4LjE0OCAwaDQuNTg4djguOTgxem0tNC41ODctNy41MWMtMS42NjUgMC0zLjAxOSAxLjM1NS0zLjAxOSAzLjAxOXMxLjM1NCAzLjAyIDMuMDE5IDMuMDJoMy4xMTdWMS40NzFIOC4xNDh6bTQuNTg3IDE1LjAxOUg4LjE0OGMtMi40NzYgMC00LjQ5LTIuMDE0LTQuNDktNC40OXMyLjAxNC00LjQ5IDQuNDktNC40OWg0LjU4OHY4Ljk4ek04LjE0OCA4Ljk4MWMtMS42NjUgMC0zLjAxOSAxLjM1NS0zLjAxOSAzLjAxOXMxLjM1NSAzLjAxOSAzLjAxOSAzLjAxOWgzLjExN1Y4Ljk4MUg4LjE0OHpNOC4xNzIgMjRjLTIuNDg5IDAtNC41MTUtMi4wMTQtNC41MTUtNC40OXMyLjAxNC00LjQ5IDQuNDktNC40OWg0LjU4OHY0LjQ0MWMwIDIuNTAzLTIuMDQ3IDQuNTM5LTQuNTYzIDQuNTM5em0tLjAyNC03LjUxYTMuMDIzIDMuMDIzIDAgMCAwLTMuMDE5IDMuMDE5YzAgMS42NjUgMS4zNjUgMy4wMTkgMy4wNDQgMy4wMTkgMS43MDUgMCAzLjA5My0xLjM3NiAzLjA5My0zLjA2OHYtMi45N0g4LjE0OHptNy43MDQgMGgtLjA5OGMtMi40NzYgMC00LjQ5LTIuMDE0LTQuNDktNC40OXMyLjAxNC00LjQ5IDQuNDktNC40OWguMDk4YzIuNDc2IDAgNC40OSAyLjAxNCA0LjQ5IDQuNDlzLTIuMDE0IDQuNDktNC40OSA0LjQ5em0tLjA5Ny03LjUwOWMtMS42NjUgMC0zLjAxOSAxLjM1NS0zLjAxOSAzLjAxOXMxLjM1NSAzLjAxOSAzLjAxOSAzLjAxOWguMDk4YzEuNjY1IDAgMy4wMTktMS4zNTUgMy4wMTktMy4wMTlzLTEuMzU1LTMuMDE5LTMuMDE5LTMuMDE5aC0uMDk4eiIvPjwvc3ZnPg==" alt=""
+                    aria-hidden="true">Figma</span>
+                <span class="skill-pill"><img class="brand-icon"
+                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48cGF0aCBmaWxsPSIjMDAxZTM2IiBkPSJNMjIuNjY2IDEuNkMxMC4xMzMgMS42IDAgMTEuNzM0IDAgMjQuMjY4djc5LjQ2NEMwIDExNi4yNjYgMTAuMTMzIDEyNi40IDIyLjY2NiAxMjYuNGg4Mi42NjhjMTIuNTMzIDAgMjIuNjY2LTEwLjEzNCAyMi42NjYtMjIuNjY4VjI0LjI2OEMxMjggMTEuNzM0IDExNy44NjcgMS42IDEwNS4zMzQgMS42SDIyLjY2NnptMjMuMjAxIDMxLjczNGM0LjM3MyAwIDggLjUzMiAxMC45ODYgMS42NTJBMTkuMDUgMTkuMDUgMCAwIDEgNjQgMzkuMzYxYTE2Ljk3NiAxNi45NzYgMCAwIDEgMy44OTQgNi4wNzljLjggMi4yNCAxLjIyNSA0LjUzMyAxLjIyNSA2LjkzMyAwIDQuNTg3LTEuMDY2IDguMzczLTMuMiAxMS4zNi0yLjEzMiAyLjk4Ni01LjExOCA1LjIyNy04LjU4NSA2LjUwNy0zLjYyNyAxLjMzNC03LjYyNyAxLjgxMy0xMiAxLjgxMy0xLjI4IDAtMi4xMzUgMC0yLjY2OC0uMDUzLS41MzMtLjA1My0xLjI4LS4wNTMtMi4yOTMtLjA1M3YxNy4xMmMuMDUzLjM3My0uMjEzLjY5NC0uNTg2Ljc0N0gyOS40NGMtLjQyNiAwLS42MzgtLjIxNS0uNjM4LS42OTVWMzQuMjRjMC0uMzczLjE2LS41ODguNTMzLS41ODguOTA3IDAgMS43NiAwIDIuOTg2LS4wNTIgMS4yOC0uMDU0IDIuNjEzLS4wNTIgNC4wNTMtLjEwNiAxLjQ0LS4wNTMgMi45ODctLjA1NCA0LjY0LS4xMDcgMS42NTQtLjA1NCAzLjI1NC0uMDUzIDQuODU0LS4wNTN6bTEuMTkgMTAuNTA0YTE4LjY4IDE4LjY4IDAgMCAwLS44MTcuMDAyYy0xLjM4NiAwLTIuNjEzLjAwMS0zLjYyNy4wNTUtMS4wNjYtLjA1NC0xLjgxMi0uMDAxLTIuMTg1LjA1MnYxNy45MmMuNzQ2LjA1NCAxLjQzOC4xMDYgMi4wNzguMTA2aDIuODI4YzIuMDggMCA0LjE2LS4zMiA2LjEzMy0uOTYgMS43MDctLjQ4IDMuMi0xLjQ5NCA0LjM3My0yLjgyNyAxLjEyLTEuMzM0IDEuNjU0LTMuMTQ2IDEuNjU0LTUuNDkzYTguNzc2IDguNzc2IDAgMCAwLTEuMjI2LTQuNzQ2Yy0uOTA3LTEuMzg2LTIuMTg4LTIuNDU0LTMuNzM1LTMuMDQtMS43MjctLjctMy41NzYtMS4wMzMtNS40NzYtMS4wN3ptNDQuNzMgMi43MjNjMi4xODcgMCA0LjQyNy4xNTggNi42MTMuNDc4IDEuNi4yMTMgMy4xNDYuNjQyIDQuNTg2IDEuMjI5LjIxNC4wNTMuNDI3LjI2NS41MzMuNDc4LjA1NC4yMTMuMTA4LjQyNy4xMDguNjR2OC42OTRhLjY1NS42NTUgMCAwIDEtLjI2Ni41MzNjLS40OC4xMDctLjc0Ny4xMDctLjk2IDAtMS42LS44NTMtMy4zMDgtMS40MzktNS4xMjItMS44MTItMS45NzMtLjQyNy0zLjk0Ni0uNjk1LTUuOTcyLS42OTUtMS4wNjctLjA1NC0yLjE4OC4xMDgtMy4yMDEuMzc0LS42OTQuMTYtMS4yOC41MzQtMS42NTMgMS4wNjctLjI2Ni40MjctLjQyNi45Ni0uNDI2IDEuNDRzLjIxNC45Ni41MzQgMS4zODZjLjQ4LjU4NyAxLjExOSAxLjA2OCAxLjgxMiAxLjQ0MmE0OC44IDQ4LjggMCAwIDAgMy43ODcgMS43NTdjMi44OC45NiA1LjY1MyAyLjI5NSA4LjIxMyAzLjg5NSAxLjc2IDEuMTIgMy4yIDIuNjE0IDQuMjEzIDQuNDI3YTExLjUwOSAxMS41MDkgMCAwIDEgMS4yMjggNS40OTMgMTIuNDEyIDEyLjQxMiAwIDAgMS0yLjA4MiA3LjA5MyAxMy4zNjIgMTMuMzYyIDAgMCAxLTUuOTcyIDQuNzQ2Yy0yLjYxNCAxLjEyLTUuODE0IDEuNzA3LTkuNjU0IDEuNzA3LTIuNDU0IDAtNC44NTItLjIxMy03LjI1Mi0uNjkzYTIxLjUxIDIxLjUxIDAgMCAxLTUuNDQtMS43MDdjLS4zNzMtLjIxMy0uNjQxLS41ODctLjU4OC0xLjAxNFY3OC4yNGMwLS4xNi4wNTMtLjM3NC4yMTMtLjQ4LjE2LS4xMDcuMzItLjA1Mi40OC4wNTRhMjIuODMgMjIuODMgMCAwIDAgNi42MTQgMi42MTRjMi4wMjcuNTMzIDQuMTYxLjc5OSA2LjI5NS43OTkgMi4wMjYgMCAzLjQ2Ni0uMjY3IDQuNDI2LS43NDcuODUzLS4zNzMgMS40MzktMS4yOCAxLjQzOS0yLjI0IDAtLjc0Ni0uNDI2LTEuNDQxLTEuMjgtMi4xMzUtLjg1My0uNjkzLTIuNjEzLTEuNDkyLTUuMjI2LTIuNTA1YTMyLjYzOCAzMi42MzggMCAwIDEtNy41NzQtMy44NCAxMy44MSAxMy44MSAwIDAgMS00LjA1My00LjUzMyAxMS40NCAxMS40NCAwIDAgMS0xLjIyNi01LjQ0YzAtMi4yOTMuNjM5LTQuNDggMS44MTItNi40NTMgMS4zMzMtMi4xMzMgMy4zMDgtMy44NCA1LjYwMi00LjkwNiAyLjUwNi0xLjI4IDUuNjUyLTEuODY3IDkuNDQtMS44Njd6Ii8+PC9zdmc+"
+                    style="filter: brightness(0) invert(1);" alt="" aria-hidden="true">Photoshop</span>
+                <span class="skill-pill"><img class="brand-icon" src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+UHlDaGFybTwvdGl0bGU+PHBhdGggZD0iTTcuODMzIDYuNjY2di0uMDU1YzAtMS0uNjY3LTEuNS0xLjc3OC0xLjVINC4zODl2My4wNTVoMS43MjNjMS4xMTEgMCAxLjcyMS0uNjY2IDEuNzIxLTEuNXpNMCAwdjI0aDI0VjBIMHptMi4yMjMgMy4xNjdoNGMyLjM4OSAwIDMuODMzIDEuMzg5IDMuODMzIDMuNDQ1di4wNTVjMCAyLjI3OC0xLjc3OCAzLjUtNC4wMDEgMy41SDQuMzg5djIuOTQ1SDIuMjIzVjMuMTY3ek0xMS4yNzcgMjFoLTl2LTEuNWg5VjIxem00Ljc3OS03Ljc3N2MtMi45NDQuMDU1LTUuMTExLTIuMjIzLTUuMTExLTUuMDU3QzEwLjk0NCA1LjMzMyAxMy4wNTYgMyAxNi4xMTEgM2MxLjg4OSAwIDMgLjYxMSAzLjk0NCAxLjU1NmwtMS4zODkgMS42MWMtLjc3OC0uNzIyLTEuNTU2LTEuMTExLTIuNTU2LTEuMTExLTEuNjU4IDAtMi44NzMgMS4zNzUtMi44ODcgMy4wODQuMDE0IDEuNzA5IDEuMTc0IDMuMDgzIDIuODg3IDMuMDgzIDEuMTExIDAgMS44MzMtLjQ0NSAyLjYxLTEuMTY3bDEuMzkgMS4zODljLS45OTkgMS4xMTItMi4xNjYgMS43NzktNC4wNTQgMS43Nzl6Ii8+PC9zdmc+" alt=""
+                    aria-hidden="true">PyCharm</span>
+                <span class="skill-pill"><img class="brand-icon"
+                    src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMjggMTI4Ij48bWFzayBpZD0iYSIgd2lkdGg9IjEyOCIgaGVpZ2h0PSIxMjgiIHg9IjAiIHk9IjAiIG1hc2tVbml0cz0idXNlclNwYWNlT25Vc2UiIHN0eWxlPSJtYXNrLXR5cGU6YWxwaGEiPjxwYXRoIGZpbGw9IiNmZmYiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTkwLjc2NyAxMjcuMTI2YTcuOTY4IDcuOTY4IDAgMCAwIDYuMzUtLjI0NGwyNi4zNTMtMTIuNjgxYTggOCAwIDAgMCA0LjUzLTcuMjA5VjIxLjAwOWE4IDggMCAwIDAtNC41My03LjIxTDk3LjExNyAxLjEyYTcuOTcgNy45NyAwIDAgMC05LjA5MyAxLjU0OGwtNTAuNDUgNDYuMDI2TDE1LjYgMzIuMDEzYTUuMzI4IDUuMzI4IDAgMCAwLTYuODA3LjMwMmwtNy4wNDggNi40MTFhNS4zMzUgNS4zMzUgMCAwIDAtLjAwNiA3Ljg4OEwyMC43OTYgNjQgMS43NCA4MS4zODdhNS4zMzYgNS4zMzYgMCAwIDAgLjAwNiA3Ljg4N2w3LjA0OCA2LjQxMWE1LjMyNyA1LjMyNyAwIDAgMCA2LjgwNy4zMDNsMjEuOTc0LTE2LjY4IDUwLjQ1IDQ2LjAyNWE3Ljk2IDcuOTYgMCAwIDAgMi43NDMgMS43OTNabTUuMjUyLTkyLjE4M0w1Ny43NCA2NGwzOC4yOCAyOS4wNThWMzQuOTQzWiIgY2xpcC1ydWxlPSJldmVub2RkIi8+PC9tYXNrPjxnIG1hc2s9InVybCgjYSkiPjxwYXRoIGZpbGw9IiMwMDY1QTkiIGQ9Ik0xMjMuNDcxIDEzLjgyIDk3LjA5NyAxLjEyQTcuOTczIDcuOTczIDAgMCAwIDg4IDIuNjY4TDEuNjYyIDgxLjM4N2E1LjMzMyA1LjMzMyAwIDAgMCAuMDA2IDcuODg3bDcuMDUyIDYuNDExYTUuMzMzIDUuMzMzIDAgMCAwIDYuODExLjMwM2wxMDMuOTcxLTc4Ljg3NWMzLjQ4OC0yLjY0NiA4LjQ5OC0uMTU4IDguNDk4IDQuMjJ2LS4zMDZhOC4wMDEgOC4wMDEgMCAwIDAtNC41MjktNy4yMDhaIi8+PGcgZmlsdGVyPSJ1cmwoI2IpIj48cGF0aCBmaWxsPSIjMDA3QUNDIiBkPSJtMTIzLjQ3MSAxMTQuMTgxLTI2LjM3NCAxMi42OThBNy45NzMgNy45NzMgMCAwIDEgODggMTI1LjMzM0wxLjY2MiA0Ni42MTNhNS4zMzMgNS4zMzMgMCAwIDEgLjAwNi03Ljg4N2w3LjA1Mi02LjQxMWE1LjMzMyA1LjMzMyAwIDAgMSA2LjgxMS0uMzAzbDEwMy45NzEgNzguODc0YzMuNDg4IDIuNjQ3IDguNDk4LjE1OSA4LjQ5OC00LjIxOXYuMzA2YTguMDAxIDguMDAxIDAgMCAxLTQuNTI5IDcuMjA4WiIvPjwvZz48ZyBmaWx0ZXI9InVybCgjYykiPjxwYXRoIGZpbGw9IiMxRjlDRjAiIGQ9Ik05Ny4wOTggMTI2Ljg4MkE3Ljk3NyA3Ljk3NyAwIDAgMSA4OCAxMjUuMzMzYzIuOTUyIDIuOTUyIDggLjg2MSA4LTMuMzE0VjUuOThjMC00LjE3NS01LjA0OC02LjI2Ni04LTMuMzEzYTcuOTc3IDcuOTc3IDAgMCAxIDkuMDk4LTEuNTQ5TDEyMy40NjcgMTMuOEE4IDggMCAwIDEgMTI4IDIxLjAxdjg1Ljk4MmE4IDggMCAwIDEtNC41MzMgNy4yMWwtMjYuMzY5IDEyLjY4MVoiLz48L2c+PHBhdGggZmlsbD0idXJsKCNkKSIgZmlsbC1ydWxlPSJldmVub2RkIiBkPSJNOTAuNjkgMTI3LjEyNmE3Ljk2OCA3Ljk2OCAwIDAgMCA2LjM0OS0uMjQ0bDI2LjM1My0xMi42ODFhOCA4IDAgMCAwIDQuNTMtNy4yMVYyMS4wMDlhOCA4IDAgMCAwLTQuNTMtNy4yMUw5Ny4wMzkgMS4xMmE3Ljk3IDcuOTcgMCAwIDAtOS4wOTMgMS41NDhsLTUwLjQ1IDQ2LjAyNi0yMS45NzQtMTYuNjhhNS4zMjggNS4zMjggMCAwIDAtNi44MDcuMzAybC03LjA0OCA2LjQxMWE1LjMzNiA1LjMzNiAwIDAgMC0uMDA2IDcuODg4TDIwLjcxOCA2NCAxLjY2MiA4MS4zODZhNS4zMzUgNS4zMzUgMCAwIDAgLjAwNiA3Ljg4OGw3LjA0OCA2LjQxMWE1LjMyOCA1LjMyOCAwIDAgMCA2LjgwNy4zMDNsMjEuOTc1LTE2LjY4MSA1MC40NSA0Ni4wMjZhNy45NTkgNy45NTkgMCAwIDAgMi43NDIgMS43OTNabTUuMjUyLTkyLjE4NEw1Ny42NjIgNjRsMzguMjggMjkuMDU3VjM0Ljk0M1oiIGNsaXAtcnVsZT0iZXZlbm9kZCIgb3BhY2l0eT0iMC4yNSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOm92ZXJsYXkiLz48L2c+PGRlZnM+PGZpbHRlciBpZD0iYiIgd2lkdGg9IjE0NC43NDQiIGhlaWdodD0iMTEzLjQwOCIgeD0iLTguNDExMTUiIHk9IjIyLjU5NDQiIGNvbG9yLWludGVycG9sYXRpb24tZmlsdGVycz0ic1JHQiIgZmlsdGVyVW5pdHM9InVzZXJTcGFjZU9uVXNlIj48ZmVGbG9vZCBmbG9vZC1vcGFjaXR5PSIwIiByZXN1bHQ9IkJhY2tncm91bmRJbWFnZUZpeCIvPjxmZUNvbG9yTWF0cml4IGluPSJTb3VyY2VBbHBoYSIgcmVzdWx0PSJoYXJkQWxwaGEiIHZhbHVlcz0iMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMTI3IDAiLz48ZmVPZmZzZXQvPjxmZUdhdXNzaWFuQmx1ciBzdGREZXZpYXRpb249IjQuMTY2NjciLz48ZmVDb2xvck1hdHJpeCB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAuMjUgMCIvPjxmZUJsZW5kIGluMj0iQmFja2dyb3VuZEltYWdlRml4IiBtb2RlPSJvdmVybGF5IiByZXN1bHQ9ImVmZmVjdDFfZHJvcFNoYWRvd18xXzM2Ii8+PGZlQmxlbmQgaW49IlNvdXJjZUdyYXBoaWMiIGluMj0iZWZmZWN0MV9kcm9wU2hhZG93XzFfMzYiIHJlc3VsdD0ic2hhcGUiLz48L2ZpbHRlcj48ZmlsdGVyIGlkPSJjIiB3aWR0aD0iNTYuNjY2NyIgaGVpZ2h0PSIxNDQuMDA3IiB4PSI3OS42NjY3IiB5PSItOC4wMDM1IiBjb2xvci1pbnRlcnBvbGF0aW9uLWZpbHRlcnM9InNSR0IiIGZpbHRlclVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PGZlRmxvb2QgZmxvb2Qtb3BhY2l0eT0iMCIgcmVzdWx0PSJCYWNrZ3JvdW5kSW1hZ2VGaXgiLz48ZmVDb2xvck1hdHJpeCBpbj0iU291cmNlQWxwaGEiIHJlc3VsdD0iaGFyZEFscGhhIiB2YWx1ZXM9IjAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDEyNyAwIi8+PGZlT2Zmc2V0Lz48ZmVHYXVzc2lhbkJsdXIgc3RkRGV2aWF0aW9uPSI0LjE2NjY3Ii8+PGZlQ29sb3JNYXRyaXggdmFsdWVzPSIwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwLjI1IDAiLz48ZmVCbGVuZCBpbjI9IkJhY2tncm91bmRJbWFnZUZpeCIgbW9kZT0ib3ZlcmxheSIgcmVzdWx0PSJlZmZlY3QxX2Ryb3BTaGFkb3dfMV8zNiIvPjxmZUJsZW5kIGluPSJTb3VyY2VHcmFwaGljIiBpbjI9ImVmZmVjdDFfZHJvcFNoYWRvd18xXzM2IiByZXN1bHQ9InNoYXBlIi8+PC9maWx0ZXI+PGxpbmVhckdyYWRpZW50IGlkPSJkIiB4MT0iNjMuOTIyMiIgeDI9IjYzLjkyMjIiIHkxPSIwLjMyOTkwMiIgeTI9IjEyNy42NyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiPjxzdG9wIHN0b3AtY29sb3I9IiNmZmYiLz48c3RvcCBvZmZzZXQ9IjEiIHN0b3AtY29sb3I9IiNmZmYiIHN0b3Atb3BhY2l0eT0iMCIvPjwvbGluZWFyR3JhZGllbnQ+PC9kZWZzPjwvc3ZnPg==" alt=""
+                    aria-hidden="true">VS Code</span>
+                <span class="skill-pill"><img class="brand-icon" src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+T2RvbzwvdGl0bGU+PHBhdGggZD0iTTIxLjEwMDIgMTUuNzk1N2MtMS42MDE1IDAtMi44OTk3LTEuMjk4My0yLjg5OTctMi44OTk4czEuMjk4My0yLjg5OTcgMi44OTk3LTIuODk5N2MxLjYwMTUgMCAyLjg5OTggMS4yOTgyIDIuODk5OCAyLjg5OTcgMCAxLjU5OTktMS4yOTc5IDIuODk5OC0yLjg5OTggMi44OTk4em0wLTEuMmMuOTM4OC4wMDA2IDEuNzAwMy0uNzYwMSAxLjcwMDgtMS42OTg5LjAwMDQtLjkzODgtLjc2MDItMS43MDAzLTEuNjk5LTEuNzAwN2gtLjAwMThjLS45Mzg4LjAwMDQtMS42OTk0Ljc2MTktMS42OTkgMS43MDA3LjAwMDUuOTM4MS43NjEgMS42OTg1IDEuNjk5IDEuNjk5em0tNi4wNjU1IDEuMmMtMS42MDE0IDAtMi44OTk3LTEuMjk4My0yLjg5OTctMi44OTk4czEuMjk4My0yLjg5OTcgMi44OTk3LTIuODk5N2MxLjYwMTUgMCAyLjg5OTggMS4yOTgyIDIuODk5OCAyLjg5OTcgMCAxLjU5OTktMS4yOTk5IDIuODk5OC0yLjg5OTggMi44OTk4em0wLTEuMmMuOTM4OS4wMDA2IDEuNzAwMy0uNzYwMSAxLjcwMDgtMS42OTg5LjAwMDUtLjkzODgtLjc2MDItMS43MDAzLTEuNjk5LTEuNzAwN2gtLjAwMThjLS45Mzg4LjAwMDQtMS42OTk0Ljc2MTktMS42OTkgMS43MDA3LjAwMDUuOTM4MS43NjEgMS42OTg1IDEuNjk5IDEuNjk5ek0xMS44NjUgMTIuODU4YzAgMS42MTk5LTEuMjk3OSAyLjkzNzgtMi44OTc3IDIuOTM3OHMtMi44OTk4LTEuMzE0LTIuODk5OC0yLjkzNTggMS4xNzk5LTIuODU5NyAyLjg5OTgtMi44NTk3Yy42MzU5IDAgMS4yMjM5LjEzNCAxLjY5OTguNDg0di0xLjY4YS42LjYgMCAwIDEgMS4yIDB2NC4wNTM3aC0uMDAyem0tMi44OTc3IDEuNzM5OWMuOTM4OC4wMDA1IDEuNzAwMi0uNzYwMiAxLjcwMDctMS42OTkuMDAwNS0uOTM4OC0uNzYwMi0xLjcwMDMtMS42OTktMS43MDA3aC0uMDAxN2MtLjkzODkuMDAwNC0xLjY5OTUuNzYxOS0xLjY5OSAxLjcwMDcuMDAwNC45MzgxLjc2MDggMS42OTg1IDEuNjk5IDEuNjk5em0tNi4wNjc1IDEuMTk3OUMxLjI5ODMgMTUuNzk1NyAwIDE0LjQ5NzQgMCAxMi44OTU5czEuMjk4My0yLjg5OTcgMi44OTk4LTIuODk5NyAyLjg5OTcgMS4yOTgyIDIuODk5NyAyLjg5OTdjMCAxLjU5OTktMS4yOTk5IDIuODk5OC0yLjg5OTcgMi44OTk4em0wLTEuMmMuOTM4OC4wMDA2IDEuNzAwMi0uNzYwMSAxLjcwMDctMS42OTkuMDAwNS0uOTM4Ny0uNzYwMi0xLjcwMDItMS42OTktMS43MDA2aC0uMDAxN2MtLjkzODguMDAwNC0xLjY5OTUuNzYxOS0xLjY5OSAxLjcwMDcuMDAwNC45MzgxLjc2MDggMS42OTg1IDEuNjk5IDEuNjk5eiIvPjwvc3ZnPg==" alt=""
+                    aria-hidden="true">Odoo</span>
+                <span class="skill-pill"><img class="brand-icon" src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+bjhuPC90aXRsZT48cGF0aCBkPSJNMjEuNDczNyA1LjY4NDJjLTEuMTc3MiAwLTIuMTY2My44MDUxLTIuNDQ2OCAxLjg5NDdoLTIuODk1NWMtMS4yMzUgMC0yLjI4OS44OTMtMi40OTIgMi4xMTFsLS4xMDM4LjYyM2ExLjI2MyAxLjI2MyAwIDAgMS0xLjI0NiAxLjA1NTVIMTEuMjg5Yy0uMjgwNS0xLjA4OTYtMS4yNjk2LTEuODk0Ny0yLjQ0NjgtMS44OTQ3cy0yLjE2NjMuODA1MS0yLjQ0NjcgMS44OTQ3SDQuOTczYy0uMjgwNS0xLjA4OTYtMS4yNjk2LTEuODk0Ny0yLjQ0NjgtMS44OTQ3QzEuMTMxMSA5LjQ3MzcgMCAxMC42MDQ3IDAgMTJzMS4xMzEgMi41MjYzIDIuNTI2MyAyLjUyNjNjMS4xNzcyIDAgMi4xNjYzLS44MDUxIDIuNDQ2OC0xLjg5NDdoMS40MjIzYy4yODA0IDEuMDg5NiAxLjI2OTYgMS44OTQ3IDIuNDQ2NyAxLjg5NDcgMS4xNzcyIDAgMi4xNjYzLS44MDUxIDIuNDQ2OC0xLjg5NDdoMS4wMDA4YTEuMjYzIDEuMjYzIDAgMCAxIDEuMjQ1OSAxLjA1NTVsLjEwMzguNjIzYy4yMDMgMS4yMTggMS4yNTcgMi4xMTEgMi40OTIgMi4xMTFoLjM2OTJjLjI4MDQgMS4wODk1IDEuMjY5NiAxLjg5NDcgMi40NDY4IDEuODk0NyAxLjM5NTIgMCAyLjUyNjMtMS4xMzEgMi41MjYzLTIuNTI2M3MtMS4xMzEtMi41MjYzLTIuNTI2My0yLjUyNjNjLTEuMTc3MiAwLTIuMTY2NC44MDUtMi40NDY4IDEuODk0N2gtLjM2OTJhMS4yNjMgMS4yNjMgMCAwIDEtMS4yNDYtMS4wNTU1bC0uMTAzNy0uNjIzQTIuNTIgMi41MiAwIDAgMCAxMy45NjA3IDEyYTIuNTIgMi41MiAwIDAgMCAuODIxLTEuNDc5NGwuMTAzOC0uNjIzYTEuMjYzIDEuMjYzIDAgMCAxIDEuMjQ1OS0xLjA1NTVoMi44OTU1Yy4yODA1IDEuMDg5NiAxLjI2OTYgMS44OTQ3IDIuNDQ2OCAxLjg5NDcgMS4zOTUyIDAgMi41MjYzLTEuMTMxIDIuNTI2My0yLjUyNjNzLTEuMTMxLTIuNTI2My0yLjUyNjMtMi41MjYzbTAgMS4yNjMyYTEuMjYzIDEuMjYzIDAgMCAxIDEuMjYzMSAxLjI2MzEgMS4yNjMgMS4yNjMgMCAwIDEtMS4yNjMxIDEuMjYzMiAxLjI2MyAxLjI2MyAwIDAgMS0xLjI2MzItMS4yNjMyIDEuMjYzIDEuMjYzIDAgMCAxIDEuMjYzMi0xLjI2MzFNMi41MjYzIDEwLjczNjhBMS4yNjMgMS4yNjMgMCAwIDEgMy43ODk1IDEyYTEuMjYzIDEuMjYzIDAgMCAxLTEuMjYzMiAxLjI2MzJBMS4yNjMgMS4yNjMgMCAwIDEgMS4yNjMyIDEyYTEuMjYzIDEuMjYzIDAgMCAxIDEuMjYzMS0xLjI2MzJtNi4zMTU4IDBBMS4yNjMgMS4yNjMgMCAwIDEgMTAuMTA1MyAxMmExLjI2MyAxLjI2MyAwIDAgMS0xLjI2MzIgMS4yNjMyQTEuMjYzIDEuMjYzIDAgMCAxIDcuNTc5IDEyYTEuMjYzIDEuMjYzIDAgMCAxIDEuMjYzMi0xLjI2MzJtMTAuMTA1MyAzLjc4OTVhMS4yNjMgMS4yNjMgMCAwIDEgMS4yNjMxIDEuMjYzMiAxLjI2MyAxLjI2MyAwIDAgMS0xLjI2MzEgMS4yNjMxIDEuMjYzIDEuMjYzIDAgMCAxLTEuMjYzMi0xLjI2MzEgMS4yNjMgMS4yNjMgMCAwIDEgMS4yNjMyLTEuMjYzMiIvPjwvc3ZnPg==" alt=""
+                    aria-hidden="true">n8n</span>
+                <span class="skill-pill"><img class="brand-icon" src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+RGFWaW5jaSBSZXNvbHZlPC90aXRsZT48cGF0aCBkPSJNMTcuNjIxIDAgNS45NzcuMDA0Yy0xLjM3IDAtMi43NTYuMzQ1LTMuNzYyIDEuMTFhNC45MjUgNC45MjUgMCAwIDAtMS42MSAyLjAwM0MuMjMzIDMuOTMgMCA1LjAyIDAgNS45NTFsLjAxMiAxMi4yYy4wMDIgMS42MDQuNDc5IDMuMDU3IDEuNDYxIDQuMTEyLjk4NCAxLjA1NiAyLjQ2MiAxLjY4MyA0LjMzMSAxLjY5MUwxNi44NTYgMjRjMS4yNi4wMDUgMy4wOTUtLjAzNiA0LjMwMy0uNzE0IDEuMDc1LS42MDUgMi4wMjUtMS41NTYgMi40OTctMi45ODQuMjc4LS44NC4zNDUtMi4wODQuMzQ0LTMuMTQ3bC0uMDIxLTExLjEzYy0uMDAyLS44ODgtLjE1LTIuMDIzLS41NDctMi45MzQtLjQyNS0uOTc2LTEuMTgxLTEuODE1LTIuMzIyLTIuNDI1QzIwLjM1My4yNiAxOS4xMjMgMCAxNy42MjIgMHptMCAuOTNjMS4zNzggMCAyLjUzOC4yOTUgMy4wNC41NjUuOTc3LjUyMyAxLjU0NCAxLjE2NiAxLjg4OSAxLjk2LjMxNS43MjEuNDcgMS43OTMuNDczIDIuNTcybC4wMTggMTEuMTNjLjAwMiAxLjAxMy0uMDk3IDIuMjU3LS4yOTggMi44Ni0uMzk2IDEuMjAyLTEuMTQ2IDEuOTQ2LTIuMDYzIDIuNDYyLS44MTQuNDU3LTIuNjEyLjU5My0zLjgyLjU4OGwtMTEuMDUtLjA0NGMtMS42NTctLjAwNy0yLjgzMi0uNTM0LTMuNjI2LTEuMzg2LS43OTItLjg1MS0xLjIxMi0yLjA2LTEuMjEyLTMuNDg1TC45OTkgNS45NWMwLS44MjkuMTk2LTEuODI3LjQ3NC0yLjQzNy4zNDUtLjc1Ny43NS0xLjIwNyAxLjM2NS0xLjY3NEMzLjU4NSAxLjI3IDQuODY4Ljk3IDYuMDguOTd6bS01LjY2IDMuNDIzYy0xLjk3Ni4wODktMy4yMDQgMS42NTgtMy4yMTQgMy4yOS4wMTkgMS40NDMgMS42MzUgMy40ODEgMi44ODQgNC41My4xMi4wOTkuMTU0LjEwOS4zMy4xOC4wNjIuMDI1LjE5OC0uMDQ3LjMyNy0uMTM1LjM2LS4yNDUuOTkzLS45NDcgMS42NDgtMS43MzhhNy42NyA3LjY3IDAgMCAwIDEuMDMxLTEuNjgzYy40MDktLjg5LjI2MS0xLjU5OS4yMzUtMS44ODhhMy45ODMgMy45ODMgMCAwIDAtLjk5LTEuNjkyIDMuMzYgMy4zNiAwIDAgMC0yLjI1MS0uODY0em00LjE3MiA3LjkyMmExMC4xODUgMTAuMTg1IDAgMCAwLTMuMjQ0LjYxYy0uMTUuMDU4LS4yNi4xLS4zNzQuMTctLjA1Ny4wMzYtLjExLjEzNS0uMTA1LjI5Mi4wMTcuNDMzLjI5IDEuMjc4LjYyNCAyLjI3LjM4NCAxLjEzNSAxLjA2NiAyLjI3IDEuODQ0IDIuNzRhMy4yMyAzLjIzIDAgMCAwIDIuNTMuMzQyYy44MzItLjI0MyAxLjU5NS0uODY4IDEuOTYyLTEuNTQ2Ljk4Ni0xLjgxOC4xOS0zLjU0OC0xLjEyMS00LjQxNy0uNDQ3LS4yOTYtMS4xMzMtLjQ0NS0xLjg5LS40Ni0uMDc0IDAtLjE1LS4wMDItLjIyNi0uMDAxem0tOC40MzIuMDM4YTYuMjAxIDYuMjAxIDAgMCAwLS43NTIuMDQ3Yy0uNTk2LjA3OC0uOTMyLjI3My0xLjI5LjUxYTMuMTc3IDMuMTc3IDAgMCAwLTEuMzY1IDEuOTc5Yy0uMDc1LjU1Mi0uMDg2IDEuMDUzLjAzMyAxLjUwNy40MzMgMS4zODkgMS4zMjYgMi4yMjIgMi44NDcgMi40NTIuNjM2LjAyOCAxLjM3LS4wNjMgMS45OS0uNDUgMS4yNjktLjc4MiAyLjA4LTMuMTcgMi40MTItNC43NDIuMDUzLS4xNzYuMDM1LS4zNTctLjAxMy0uNDItLjAwNS0uMDY3LS4wNDQtLjExMy0uMTktLjE4My0uMzk4LS4xOTItMS4zMi0uNDE3LTIuMzc1LS42YTcuNjggNy42OCAwIDAgMC0xLjI5Ny0uMXoiLz48L3N2Zz4="
+                    alt="" aria-hidden="true">DaVinci Resolve</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="contact-grid">
+          <div data-reveal>
+            <div class="eyebrow" style="color:#e2c997">08 — Contact</div>
+            <h2>Let's build<br>something<br>useful.</h2>
+            <p>If you have a product, workflow, visual idea, or business problem worth solving, let's talk.</p>
+            <div class="status-pill"><span class="status-dot" aria-hidden="true"></span>Available for work</div>
+          </div>
+
+          <div class="contact-list" data-reveal>
+            <a class="contact-row" target="_blank" rel="noopener" href="https://wa.me/201211338750">
+              <span class="icon-label"><img class="brand-icon" data-icon="whatsapp"
+                  src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+V2hhdHNBcHA8L3RpdGxlPjxwYXRoIGQ9Ik0xNy40NzIgMTQuMzgyYy0uMjk3LS4xNDktMS43NTgtLjg2Ny0yLjAzLS45NjctLjI3My0uMDk5LS40NzEtLjE0OC0uNjcuMTUtLjE5Ny4yOTctLjc2Ny45NjYtLjk0IDEuMTY0LS4xNzMuMTk5LS4zNDcuMjIzLS42NDQuMDc1LS4yOTctLjE1LTEuMjU1LS40NjMtMi4zOS0xLjQ3NS0uODgzLS43ODgtMS40OC0xLjc2MS0xLjY1My0yLjA1OS0uMTczLS4yOTctLjAxOC0uNDU4LjEzLS42MDYuMTM0LS4xMzMuMjk4LS4zNDcuNDQ2LS41Mi4xNDktLjE3NC4xOTgtLjI5OC4yOTgtLjQ5Ny4wOTktLjE5OC4wNS0uMzcxLS4wMjUtLjUyLS4wNzUtLjE0OS0uNjY5LTEuNjEyLS45MTYtMi4yMDctLjI0Mi0uNTc5LS40ODctLjUtLjY2OS0uNTEtLjE3My0uMDA4LS4zNzEtLjAxLS41Ny0uMDEtLjE5OCAwLS41Mi4wNzQtLjc5Mi4zNzItLjI3Mi4yOTctMS4wNCAxLjAxNi0xLjA0IDIuNDc5IDAgMS40NjIgMS4wNjUgMi44NzUgMS4yMTMgMy4wNzQuMTQ5LjE5OCAyLjA5NiAzLjIgNS4wNzcgNC40ODcuNzA5LjMwNiAxLjI2Mi40ODkgMS42OTQuNjI1LjcxMi4yMjcgMS4zNi4xOTUgMS44NzEuMTE4LjU3MS0uMDg1IDEuNzU4LS43MTkgMi4wMDYtMS40MTMuMjQ4LS42OTQuMjQ4LTEuMjg5LjE3My0xLjQxMy0uMDc0LS4xMjQtLjI3Mi0uMTk4LS41Ny0uMzQ3bS01LjQyMSA3LjQwM2gtLjAwNGE5Ljg3IDkuODcgMCAwMS01LjAzMS0xLjM3OGwtLjM2MS0uMjE0LTMuNzQxLjk4Mi45OTgtMy42NDgtLjIzNS0uMzc0YTkuODYgOS44NiAwIDAxLTEuNTEtNS4yNmMuMDAxLTUuNDUgNC40MzYtOS44ODQgOS44ODgtOS44ODQgMi42NCAwIDUuMTIyIDEuMDMgNi45ODggMi44OThhOS44MjUgOS44MjUgMCAwMTIuODkzIDYuOTk0Yy0uMDAzIDUuNDUtNC40MzcgOS44ODQtOS44ODUgOS44ODRtOC40MTMtMTguMjk3QTExLjgxNSAxMS44MTUgMCAwMDEyLjA1IDBDNS40OTUgMCAuMTYgNS4zMzUuMTU3IDExLjg5MmMwIDIuMDk2LjU0NyA0LjE0MiAxLjU4OCA1Ljk0NUwuMDU3IDI0bDYuMzA1LTEuNjU0YTExLjg4MiAxMS44ODIgMCAwMDUuNjgzIDEuNDQ4aC4wMDVjNi41NTQgMCAxMS44OS01LjMzNSAxMS44OTMtMTEuODkzYTExLjgyMSAxMS44MjEgMCAwMC0zLjQ4LTguNDEzWiIvPjwvc3ZnPg==" alt=""
+                  aria-hidden="true">WhatsApp</span><span>01211338750 ↗</span>
+            </a>
+            <a class="contact-row" href="mailto:mahmoudtarik200@gmail.com">
+              <span class="icon-label"><img class="brand-icon" data-icon="gmail"
+                  src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+R21haWw8L3RpdGxlPjxwYXRoIGQ9Ik0yNCA1LjQ1N3YxMy45MDljMCAuOTA0LS43MzIgMS42MzYtMS42MzYgMS42MzZoLTMuODE5VjExLjczTDEyIDE2LjY0bC02LjU0NS00LjkxdjkuMjczSDEuNjM2QTEuNjM2IDEuNjM2IDAgMCAxIDAgMTkuMzY2VjUuNDU3YzAtMi4wMjMgMi4zMDktMy4xNzggMy45MjctMS45NjRMNS40NTUgNC42NCAxMiA5LjU0OGw2LjU0NS00LjkxIDEuNTI4LTEuMTQ1QzIxLjY5IDIuMjggMjQgMy40MzQgMjQgNS40NTd6Ii8+PC9zdmc+" alt=""
+                  aria-hidden="true">Email</span><span>mahmoudtarik200@gmail.com ↗</span>
+            </a>
+            <a class="contact-row" target="_blank" rel="noopener" href="https://www.behance.net/mahmoudtarik77">
+              <span class="icon-label"><img class="brand-icon" data-icon="behance"
+                  src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+QmVoYW5jZTwvdGl0bGU+PHBhdGggZD0iTTE2Ljk2OSAxNi45MjdhMi41NjEgMi41NjEgMCAwIDAgMS45MDEuNjc3IDIuNTAxIDIuNTAxIDAgMCAwIDEuNTMxLS40NzVjLjM2Mi0uMjM1LjYzNi0uNTg0Ljc3OS0uOTloMi41ODVhNS4wOTEgNS4wOTEgMCAwIDEtMS45IDIuODk2IDUuMjkyIDUuMjkyIDAgMCAxLTMuMDkxLjg4IDUuODM5IDUuODM5IDAgMCAxLTIuMjg0LS40MzMgNC44NzEgNC44NzEgMCAwIDEtMS43MjMtMS4yMTEgNS42NTcgNS42NTcgMCAwIDEtMS4wOC0xLjg3NCA3LjA1NyA3LjA1NyAwIDAgMS0uMzgzLTIuMzkzYy0uMDA1LS44LjEyOS0xLjU5NS4zOTYtMi4zNDlhNS4zMTMgNS4zMTMgMCAwIDEgNS4wODgtMy42MDQgNC44NyA0Ljg3IDAgMCAxIDIuMzc2LjU2M2MuNjYxLjM2MiAxLjIzMS44NyAxLjY2OCAxLjQ4NWE2LjIgNi4yIDAgMCAxIC45NDMgMi4xMzNjLjE5NC44MjEuMjYzIDEuNjY2LjIwNSAyLjUwOGgtNy42OTljLS4wNjMuNzkuMTg0IDEuNTc0LjY4OCAyLjE4N1pNNi45NDcgNC4wODRhOC4wNjUgOC4wNjUgMCAwIDEgMS45MjguMTk4IDQuMjkgNC4yOSAwIDAgMSAxLjQ5LjYzOGMuNDE4LjMwMy43NDguNzExLjk1OCAxLjE4Mi4yNDEuNTc5LjM1NyAxLjIwMy4zNDEgMS44M2EzLjUwNiAzLjUwNiAwIDAgMS0uNTA2IDEuOTYxIDMuNzI2IDMuNzI2IDAgMCAxLTEuNTAzIDEuMjg3IDMuNTg4IDMuNTg4IDAgMCAxIDIuMDI3IDEuNDM3Yy40NjQuNzQ3LjY5NyAxLjYxNS42NyAyLjQ5NGE0LjU5MyA0LjU5MyAwIDAgMS0uNDIzIDIuMDMyIDMuOTQ1IDMuOTQ1IDAgMCAxLTEuMTYzIDEuNDEzIDUuMTE0IDUuMTE0IDAgMCAxLTEuNjgzLjgwNyA3LjEzNSA3LjEzNSAwIDAgMS0xLjkyOC4yNTlIMFY0LjA4NGg2Ljk0N1ptLS4yMzUgMTIuOWMuMzA4LjAwNC42MTYtLjAyOS45MTYtLjA5OWEyLjE4IDIuMTggMCAwIDAgLjc2Ni0uMzMyYy4yMjgtLjE1OC40MTEtLjM3MS41MzQtLjYxOS4xNDItLjMxNy4yMDgtLjY2My4xOTEtMS4wMDlhMi4wOCAyLjA4IDAgMCAwLS42NDItMS43MTUgMi42MTggMi42MTggMCAwIDAtMS42OTYtLjUwNWgtMy41NHY0LjI3OWgzLjQ3MVptMTMuNjM1LTUuOTY3YTIuMTMgMi4xMyAwIDAgMC0xLjY1NC0uNjE5IDIuMzM2IDIuMzM2IDAgMCAwLTEuMTYzLjI1OSAyLjQ3NCAyLjQ3NCAwIDAgMC0uNzM4LjYyIDIuMzU5IDIuMzU5IDAgMCAwLS4zOTYuNzkyYy0uMDc0LjIzOS0uMTIuNDg1LS4xMzcuNzM0aDQuNzY5YTMuMjM5IDMuMjM5IDAgMCAwLS42NzktMS43ODVsLS4wMDItLjAwMVptLTEzLjgxMy0uNjQ4YTIuMjU0IDIuMjU0IDAgMCAwIDEuNDIzLS40MzNjLjM5OS0uMzU1LjYwNy0uODguNTYtMS40MTNhMS45MTYgMS45MTYgMCAwIDAtLjE3OC0uODkxIDEuMjk4IDEuMjk4IDAgMCAwLS40OTUtLjUzMyAxLjg1MSAxLjg1MSAwIDAgMC0uNzExLS4yNzQgMy45NjYgMy45NjYgMCAwIDAtLjgzNS0uMDczSDMuMjQxdjMuNjMxaDMuMjkzdi0uMDE0Wk0yMS42MiA1LjEyMmgtNS45NzZ2MS41MjdoNS45NzZWNS4xMjJaIi8+PC9zdmc+" alt=""
+                  aria-hidden="true">Behance</span><span>mahmoudtarik77 ↗</span>
+            </a>
+            <a class="contact-row" target="_blank" rel="noopener" href="https://www.facebook.com/profile.php?id=61553988694273&locale=ar_AR">
+              <span class="icon-label"><img class="brand-icon" data-icon="facebook"
+                  src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+RmFjZWJvb2s8L3RpdGxlPjxwYXRoIGQ9Ik05LjEwMSAyMy42OTF2LTcuOThINi42Mjd2LTMuNjY3aDIuNDc0di0xLjU4YzAtNC4wODUgMS44NDgtNS45NzggNS44NTgtNS45NzguNDAxIDAgLjk1NS4wNDIgMS40NjguMTAzYTguNjggOC42OCAwIDAgMSAxLjE0MS4xOTV2My4zMjVhOC42MjMgOC42MjMgMCAwIDAtLjY1My0uMDM2IDI2LjgwNSAyNi44MDUgMCAwIDAtLjczMy0uMDA5Yy0uNzA3IDAtMS4yNTkuMDk2LTEuNjc1LjMwOWExLjY4NiAxLjY4NiAwIDAgMC0uNjc5LjYyMmMtLjI1OC40Mi0uMzc0Ljk5NS0uMzc0IDEuNzUydjEuMjk3aDMuOTE5bC0uMzg2IDIuMTAzLS4yODcgMS41NjRoLTMuMjQ2djguMjQ1QzE5LjM5NiAyMy4yMzggMjQgMTguMTc5IDI0IDEyLjA0NGMwLTYuNjI3LTUuMzczLTEyLTEyLTEycy0xMiA1LjM3My0xMiAxMmMwIDUuNjI4IDMuODc0IDEwLjM1IDkuMTAxIDExLjY0N1oiLz48L3N2Zz4=" alt=""
+                  aria-hidden="true">Facebook</span><span>Photoshop Works ↗</span>
+            </a>
+            <a class="contact-row" target="_blank" rel="noopener" href="https://github.com/7odabs2004-bot">
+              <span class="icon-label"><img class="brand-icon" data-icon="github"
+                  src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+R2l0SHViPC90aXRsZT48cGF0aCBkPSJNMTIgLjI5N2MtNi42MyAwLTEyIDUuMzczLTEyIDEyIDAgNS4zMDMgMy40MzggOS44IDguMjA1IDExLjM4NS42LjExMy44Mi0uMjU4LjgyLS41NzcgMC0uMjg1LS4wMS0xLjA0LS4wMTUtMi4wNC0zLjMzOC43MjQtNC4wNDItMS42MS00LjA0Mi0xLjYxQzQuNDIyIDE4LjA3IDMuNjMzIDE3LjcgMy42MzMgMTcuN2MtMS4wODctLjc0NC4wODQtLjcyOS4wODQtLjcyOSAxLjIwNS4wODQgMS44MzggMS4yMzYgMS44MzggMS4yMzYgMS4wNyAxLjgzNSAyLjgwOSAxLjMwNSAzLjQ5NS45OTguMTA4LS43NzYuNDE3LTEuMzA1Ljc2LTEuNjA1LTIuNjY1LS4zLTUuNDY2LTEuMzMyLTUuNDY2LTUuOTMgMC0xLjMxLjQ2NS0yLjM4IDEuMjM1LTMuMjItLjEzNS0uMzAzLS41NC0xLjUyMy4xMDUtMy4xNzYgMCAwIDEuMDA1LS4zMjIgMy4zIDEuMjMuOTYtLjI2NyAxLjk4LS4zOTkgMy0uNDA1IDEuMDIuMDA2IDIuMDQuMTM4IDMgLjQwNSAyLjI4LTEuNTUyIDMuMjg1LTEuMjMgMy4yODUtMS4yMy42NDUgMS42NTMuMjQgMi44NzMuMTIgMy4xNzYuNzY1Ljg0IDEuMjMgMS45MSAxLjIzIDMuMjIgMCA0LjYxLTIuODA1IDUuNjI1LTUuNDc1IDUuOTIuNDIuMzYuODEgMS4wOTYuODEgMi4yMiAwIDEuNjA2LS4wMTUgMi44OTYtLjAxNSAzLjI4NiAwIC4zMTUuMjEuNjkuODI1LjU3QzIwLjU2NSAyMi4wOTIgMjQgMTcuNTkyIDI0IDEyLjI5N2MwLTYuNjI3LTUuMzczLTEyLTEyLTEyIi8+PC9zdmc+"
+                  style="filter: brightness(0) invert(1);" alt="" aria-hidden="true">Github</span><span>Mahmoud
+                Tarik ↗</span>
+            </a>
+            <a class="contact-row" target="_blank" rel="noopener"
+              href="https://www.linkedin.com/in/mahmoud-tarik-658254346/">
+              <span class="icon-label"><img class="brand-icon" data-icon="linkedin"
+                  src="data:image/svg+xml;base64,PHN2ZyBmaWxsPSIjZmZmZmZmIiByb2xlPSJpbWciIHZpZXdCb3g9IjAgMCAyNCAyNCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48dGl0bGU+TGlua2VkSW48L3RpdGxlPjxwYXRoIGQ9Ik0yMC40NDcgMjAuNDUyaC0zLjU1NHYtNS41NjljMC0xLjMyOC0uMDI3LTMuMDM3LTEuODUyLTMuMDM3LTEuODUzIDAtMi4xMzYgMS40NDUtMi4xMzYgMi45Mzl2NS42NjdIOS4zNTFWOWgzLjQxNHYxLjU2MWguMDQ2Yy40NzctLjkgMS42MzctMS44NSAzLjM3LTEuODUgMy42MDEgMCA0LjI2NyAyLjM3IDQuMjY3IDUuNDU1djYuMjg2ek01LjMzNyA3LjQzM2MtMS4xNDQgMC0yLjA2My0uOTI2LTIuMDYzLTIuMDY1IDAtMS4xMzguOTItMi4wNjMgMi4wNjMtMi4wNjMgMS4xNCAwIDIuMDY0LjkyNSAyLjA2NCAyLjA2MyAwIDEuMTM5LS45MjUgMi4wNjUtMi4wNjQgMi4wNjV6bTEuNzgyIDEzLjAxOUgzLjU1NVY5aDMuNTY0djExLjQ1MnpNMjIuMjI1IDBIMS43NzFDLjc5MiAwIDAgLjc3NCAwIDEuNzI5djIwLjU0MkMwIDIzLjIyNy43OTIgMjQgMS43NzEgMjRoMjAuNDUxQzIzLjIgMjQgMjQgMjMuMjI3IDI0IDIyLjI3MVYxLjcyOUMyNCAuNzc0IDIzLjIgMCAyMi4yMjIgMGguMDAzeiIvPjwvc3ZnPg=="
+                  style="filter: brightness(0) invert(1);" alt="" aria-hidden="true">LinkedIn</span><span>Mahmoud Tarik
+                ↗</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <div class="lightbox-inner" role="dialog" aria-modal="true" aria-label="Graphic design preview">
+      <button class="lightbox-close" id="lightboxClose" aria-label="Close preview"><svg width="18" height="18"
+          viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M6 6l12 12M18 6L6 18" />
+        </svg></button>
+      <div class="lightbox-image-wrap">
+        <button class="lb-nav lb-prev" id="lightboxPrev" type="button" aria-label="Previous design"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M15 5l-7 7 7 7"/></svg></button>
+        <button class="lb-nav lb-next" id="lightboxNext" type="button" aria-label="Next design"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M9 5l7 7-7 7"/></svg></button>
+        <img class="lightbox-image" id="lightboxImage" alt="">
+        <div class="lightbox-placeholder" id="lightboxPlaceholder">Image not found.</div>
+      </div>
+      <div class="lightbox-caption">
+        <div><small id="lightboxCategory"></small>
+          <h3 id="lightboxTitle"></h3>
+          <p id="lightboxDesc">Graphic Design Archive</p>
+        </div>
+        <div class="lightbox-tip"><span id="lightboxCount"></span> · ← → navigate · Esc close</div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <div class="container footer-inner">
+      <small>© <span id="year"></span> Mahmoud Tarik · Built with intent.</small>
+      <div class="footer-links">
+        <a href="#work">Work</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn');
+    const navLinks = document.getElementById('navLinks');
+
+    menuBtn.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open);
+      document.body.classList.toggle('menu-open', open);
+    });
+
+    navLinks.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      document.body.classList.remove('menu-open');
+      menuBtn.setAttribute('aria-expanded', 'false');
+    }));
+
+    const reveal = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+          reveal.unobserve(entry.target);
+        }
+      });
+    }, {threshold: .12});
+
+    document.querySelectorAll('[data-reveal]').forEach(el => reveal.observe(el));
+
+    const sections = [...document.querySelectorAll('main section[id]')];
+    const links = [...document.querySelectorAll('.nav-links a')];
+
+    const activeObserver = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (!entry.isIntersecting) return;
+        links.forEach(link => link.classList.toggle('active', link.getAttribute('href') === '#' + entry.target.id));
+      });
+    }, {rootMargin: '-35% 0px -55% 0px', threshold: 0});
+
+    sections.forEach(section => activeObserver.observe(section));
+
+    // Graphic carousel + lightbox
+    (function () {
+      const reduce = matchMedia('(prefers-reduced-motion: reduce)').matches;
+      const behavior = reduce ? 'auto' : 'smooth';
+      const pad = n => String(n).padStart(2, '0');
+
+      const track = document.getElementById('gTrack');
+      const prevBtn = document.getElementById('gPrev');
+      const nextBtn = document.getElementById('gNext');
+      const bar = document.getElementById('gBar');
+      const count = document.getElementById('gCount');
+      const filtersEl = document.getElementById('gFilters');
+      const slides = [...track.querySelectorAll('.g-slide[data-image]')];
+      const visible = () => slides.filter(sl => !sl.hidden);
+
+      // ----- step / progress / counter
+      const gap = () => parseFloat(getComputedStyle(track).columnGap) || 18;
+      const step = () => {
+        const first = visible()[0] || track.firstElementChild;
+        return first.getBoundingClientRect().width + gap();
+      };
+
+      function update() {
+        const max = track.scrollWidth - track.clientWidth;
+        const left = track.scrollLeft;
+        const atEnd = left >= max - 2;
+        prevBtn.disabled = left <= 2;
+        nextBtn.disabled = atEnd || max <= 2;
+
+        const thumb = Math.min(100, track.clientWidth / track.scrollWidth * 100);
+        bar.style.width = thumb + '%';
+        bar.style.left = (left / track.scrollWidth * 100) + '%';
+
+        const total = visible().length;
+        const perView = Math.max(1, Math.floor((track.clientWidth + gap()) / step()));
+        let first = Math.min(total, Math.round(left / step()) + 1);
+        let last = Math.min(total, first + perView - 1);
+        if (atEnd) last = total;
+        count.textContent = (last > first ? pad(first) + '–' + pad(last) : pad(first)) + ' / ' + pad(total);
+      }
+
+      function numberBadges() {
+        const list = visible();
+        list.forEach((sl, i) => {
+          sl.querySelector('.g-badge').textContent = pad(i + 1) + ' / ' + pad(list.length);
+        });
+      }
+
+      function go(dir) { track.scrollBy({left: dir * step(), behavior}); }
+      prevBtn.addEventListener('click', () => go(-1));
+      nextBtn.addEventListener('click', () => go(1));
+      track.addEventListener('scroll', () => requestAnimationFrame(update), {passive: true});
+      addEventListener('resize', update);
+      track.addEventListener('keydown', e => {
+        if (e.key === 'ArrowRight') {e.preventDefault(); go(1);}
+        if (e.key === 'ArrowLeft') {e.preventDefault(); go(-1);}
+      });
+
+      // ----- filters (built from data-tag on each slide)
+      const tags = [...new Set(slides.map(sl => sl.dataset.tag).filter(Boolean))];
+      if (tags.length > 1) {
+        ['All', ...tags].forEach((t, i) => {
+          const b = document.createElement('button');
+          b.type = 'button';
+          b.className = 'g-chip' + (i === 0 ? ' is-active' : '');
+          b.textContent = t;
+          b.setAttribute('aria-pressed', i === 0 ? 'true' : 'false');
+          b.addEventListener('click', () => {
+            filtersEl.querySelectorAll('.g-chip').forEach(c => {
+              c.classList.toggle('is-active', c === b);
+              c.setAttribute('aria-pressed', c === b ? 'true' : 'false');
+            });
+            slides.forEach(sl => {sl.hidden = !(t === 'All' || sl.dataset.tag === t);});
+            numberBadges();
+            track.scrollTo({left: 0, behavior: 'auto'});
+            update();
+          });
+          filtersEl.appendChild(b);
+        });
+      } else {
+        filtersEl.hidden = true;
+      }
+
+      // ----- mouse drag to scroll
+      let down = false, dragged = false, startX = 0, startLeft = 0;
+      track.addEventListener('mousedown', e => {
+        if (e.button !== 0) return;
+        down = true; dragged = false; startX = e.clientX; startLeft = track.scrollLeft;
+      });
+      addEventListener('mousemove', e => {
+        if (!down) return;
+        const dx = e.clientX - startX;
+        if (!dragged && Math.abs(dx) > 6) {dragged = true; track.classList.add('dragging');}
+        if (dragged) track.scrollLeft = startLeft - dx;
+      });
+      addEventListener('mouseup', () => {
+        if (!down) return;
+        down = false;
+        if (dragged) {
+          track.classList.remove('dragging');
+          // let scroll-snap settle on the nearest slide
+          const target = Math.round(track.scrollLeft / step()) * step();
+          track.scrollTo({left: target, behavior});
+          setTimeout(() => {dragged = false;}, 0);
+        }
+      });
+      track.addEventListener('click', e => {
+        if (dragged) {e.preventDefault(); e.stopPropagation();}
+      }, true);
+
+      // ----- lightbox
+      const lightbox = document.getElementById('lightbox');
+      const lightboxImage = document.getElementById('lightboxImage');
+      const lightboxPlaceholder = document.getElementById('lightboxPlaceholder');
+      const lightboxTitle = document.getElementById('lightboxTitle');
+      const lightboxCategory = document.getElementById('lightboxCategory');
+      const lightboxDesc = document.getElementById('lightboxDesc');
+      const lightboxCount = document.getElementById('lightboxCount');
+      const lightboxClose = document.getElementById('lightboxClose');
+      const lbPrev = document.getElementById('lightboxPrev');
+      const lbNext = document.getElementById('lightboxNext');
+      let items = [], current = 0, lastTrigger = null;
+
+      function show(i) {
+        current = (i + items.length) % items.length;
+        const sl = items[current];
+        lightboxTitle.textContent = sl.dataset.title;
+        lightboxCategory.textContent = sl.dataset.tag || 'Graphic Design';
+        lightboxDesc.textContent = sl.dataset.desc || '';
+        lightboxCount.textContent = pad(current + 1) + ' / ' + pad(items.length);
+        lightboxImage.alt = sl.dataset.title;
+        lightboxPlaceholder.style.display = 'none';
+        lightboxImage.style.display = 'block';
+        lightboxImage.onerror = () => {
+          lightboxImage.style.display = 'none';
+          lightboxPlaceholder.style.display = 'block';
+        };
+        lightboxImage.src = sl.dataset.image;
+        const multi = items.length > 1;
+        lbPrev.hidden = lbNext.hidden = !multi;
+      }
+
+      function openLightbox(sl, trigger) {
+        // every visible slide becomes one or more lightbox frames (galleries are expanded in place)
+        const flat = [];
+        visible().forEach(x => {
+          if (x.dataset.images) {
+            const imgs = x.dataset.images.split('|');
+            const labels = (x.dataset.labels || '').split('|');
+            imgs.forEach((src, i) => flat.push({slide: x, dataset: {
+              image: src,
+              title: x.dataset.title + (labels[i] ? ' — ' + labels[i] : ''),
+              tag: x.dataset.tag, desc: x.dataset.desc
+            }}));
+          } else {
+            flat.push({slide: x, dataset: x.dataset});
+          }
+        });
+        items = flat;
+        lastTrigger = trigger;
+        show(Math.max(0, flat.findIndex(f => f.slide === sl)));
+        lightbox.classList.add('open');
+        lightbox.setAttribute('aria-hidden', 'false');
+        document.body.classList.add('menu-open');
+        lightboxClose.focus({preventScroll: true});
+      }
+
+      function closeLightbox() {
+        lightbox.classList.remove('open');
+        lightbox.setAttribute('aria-hidden', 'true');
+        document.body.classList.remove('menu-open');
+        setTimeout(() => {lightboxImage.removeAttribute('src');}, 350);
+        if (lastTrigger) lastTrigger.focus({preventScroll: true});
+      }
+
+      slides.forEach(sl => {
+        const hit = sl.querySelector('.g-hit');
+        hit.addEventListener('click', () => openLightbox(sl, hit));
+      });
+      lbPrev.addEventListener('click', () => show(current - 1));
+      lbNext.addEventListener('click', () => show(current + 1));
+      lightboxClose.addEventListener('click', closeLightbox);
+      lightbox.addEventListener('click', e => {if (e.target === lightbox) closeLightbox();});
+      document.addEventListener('keydown', e => {
+        if (!lightbox.classList.contains('open')) return;
+        if (e.key === 'Escape') closeLightbox();
+        if (e.key === 'ArrowRight') show(current + 1);
+        if (e.key === 'ArrowLeft') show(current - 1);
+      });
+      let touchX = null;
+      lightbox.addEventListener('touchstart', e => {touchX = e.touches[0].clientX;}, {passive: true});
+      lightbox.addEventListener('touchend', e => {
+        if (touchX === null) return;
+        const dx = e.changedTouches[0].clientX - touchX;
+        touchX = null;
+        if (Math.abs(dx) > 50) show(current + (dx < 0 ? 1 : -1));
+      });
+
+      // workflow screenshots: click to enlarge in the same lightbox
+      document.querySelectorAll('.auto-media img').forEach(img => {
+        const media = img.parentElement;
+        const card = media.closest('.auto-card');
+        media.classList.add('is-zoom');
+        media.setAttribute('role', 'button');
+        media.setAttribute('tabindex', '0');
+        media.setAttribute('aria-label', 'Enlarge: ' + img.alt);
+        const open = () => {
+          const pseudo = {dataset: {
+            image: img.currentSrc || img.src,
+            title: card.querySelector('h3').textContent,
+            tag: card.querySelector('.auto-meta').textContent,
+            desc: card.querySelector('.auto-body p').textContent
+          }};
+          items = [pseudo]; lastTrigger = media;
+          show(0);
+          lightbox.classList.add('open');
+          lightbox.setAttribute('aria-hidden', 'false');
+          document.body.classList.add('menu-open');
+          lightboxClose.focus({preventScroll: true});
+        };
+        media.addEventListener('click', open);
+        media.addEventListener('keydown', e => {if (e.key === 'Enter' || e.key === ' ') {e.preventDefault(); open();}});
+      });
+
+      numberBadges();
+      update();
+      addEventListener('load', update);
+    })();
+
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+  <script>
+    document.querySelectorAll('.brand-icon').forEach(function (img) {
+      img.addEventListener('error', function () {
+        this.style.display = 'none';
+      }, {once: true});
+    });
+  </script>
+
+  <script>
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+    document.documentElement.classList.add('has-cursor');
+    const smartCursor = document.querySelector('.smart-cursor');
+    const cursorLabel = document.querySelector('.cursor-label');
+
+    let mouseX = 0;
+    let mouseY = 0;
+
+    let cursorX = 0;
+    let cursorY = 0;
+
+
+    /* =========================
+       MOUSE MOVEMENT
+    ========================= */
+
+    document.addEventListener('mousemove', (e) => {
+
+      mouseX = e.clientX;
+      mouseY = e.clientY;
+
+    });
+
+
+    /* Smooth movement */
+
+    function animateCursor() {
+
+      cursorX += (mouseX - cursorX) * 0.18;
+      cursorY += (mouseY - cursorY) * 0.18;
+
+      smartCursor.style.left = cursorX + 'px';
+      smartCursor.style.top = cursorY + 'px';
+
+      requestAnimationFrame(animateCursor);
+    }
+
+    animateCursor();
+
+
+    /* =========================
+       NORMAL LINKS
+    ========================= */
+
+    document.querySelectorAll('a, button').forEach(element => {
+
+      element.addEventListener('mouseenter', () => {
+
+        smartCursor.classList.remove('is-view');
+
+        smartCursor.classList.add('is-hover');
+
+        cursorLabel.textContent = 'OPEN';
+
+      });
+
+      element.addEventListener('mouseleave', () => {
+
+        smartCursor.classList.remove('is-hover');
+
+      });
+
+    });
+
+
+    /* =========================
+       PROJECT IMAGES
+    ========================= */
+
+    document.querySelectorAll('.project-media').forEach(element => {
+
+      element.addEventListener('mouseenter', () => {
+
+        smartCursor.classList.remove('is-hover');
+
+        smartCursor.classList.add('is-view');
+
+        cursorLabel.textContent = 'VIEW';
+
+      });
+
+      element.addEventListener('mouseleave', () => {
+
+        smartCursor.classList.remove('is-view');
+
+      });
+
+    });
+
+
+    /* =========================
+       PROJECT CARDS
+    ========================= */
+
+    document.querySelectorAll('.project').forEach(element => {
+
+      element.addEventListener('mouseenter', () => {
+
+        smartCursor.classList.remove('is-view');
+
+        smartCursor.classList.add('is-hover');
+
+        cursorLabel.textContent = 'EXPLORE';
+
+      });
+
+      element.addEventListener('mouseleave', () => {
+
+        smartCursor.classList.remove('is-hover');
+
+      });
+
+    });
+
+
+    /* =========================
+       CONTACT LINKS
+    ========================= */
+
+    document.querySelectorAll('.contact-row').forEach(element => {
+
+      element.addEventListener('mouseenter', () => {
+
+        smartCursor.classList.remove('is-view');
+
+        smartCursor.classList.add('is-hover');
+
+        cursorLabel.textContent = 'CONTACT';
+
+      });
+
+    });
+
+    document.querySelectorAll('.g-hit').forEach(el => {
+      el.addEventListener('mouseenter', () => {
+        smartCursor.classList.remove('is-view');
+        smartCursor.classList.add('is-hover');
+        cursorLabel.textContent = 'VIEW';
+      });
+      el.addEventListener('mouseleave', () => smartCursor.classList.remove('is-hover'));
+    });
+    }
+  </script>
+
+</body>
+
+</html>
